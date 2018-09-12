@@ -8,9 +8,14 @@ wp/wp-content/blogs.dir/
 wp/wp-content/cache/
 wp/wp-content/upgrade/
 wp/wp-content/uploads/
-wp/wp-content/mu-plugins/
 wp/wp-content/wp-cache-config.php
-wp/wp-content/plugins/hello.php
+
+wp/wp-content/plugins/
+
+wp/wp-content/themes/*/node_modules
+wp/wp-content/themes/*/bower_components
+wp/wp-content/themes/*/package-lock.json
+wp/wp-content/themes/*/dist/
 
 wp/.htaccess
 wp/license.txt
@@ -18,3 +23,4 @@ wp/readme.html
 wp/sitemap.xml
 wp/sitemap.xml.gz
 
+.idea/*

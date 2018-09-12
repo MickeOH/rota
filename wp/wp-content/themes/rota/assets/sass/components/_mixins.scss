@@ -1,0 +1,55 @@
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+// Clearfix
+%clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+}
+	
+// Input styles
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+	
+// Fallback for svg
+@mixin svg-background-fallback($image-url, $svg-url) {
+	background: url($image-url);
+	background: url($svg-url), linear-gradient(transparent, transparent);
+}
+
+// Media queries
+@mixin media-breakpoint-up($breakpoint) { 
+	@if map-has-key($grid-breakpoints, $breakpoint) {
+		@media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}
+
+@mixin media-breakpoint-down($breakpoint) { 
+	@if map-has-key($grid-breakpoints, $breakpoint) {
+		@media (max-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

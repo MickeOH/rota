@@ -1,0 +1,38 @@
+.editor_content {
+
+    h1, .h1 {
+        font-size: 3rem;
+        line-height: 3.3rem;
+    }
+    h2, .h2 {
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+    }
+
+    h3, .h3 {
+        font-size: 2rem;
+        line-height: 2.1rem;
+    }
+    
+    h4, .h4 {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0 0 1.44em 0;
+        &:last-of-type {
+            margin: 0 0 0 0;
+        }
+        a {}
+    }
+
+    ul, ol {
+        margin-top: 1.44em;
+        margin-bottom: 1.44em;
+    }
+
+    blockquote, q {}
+
+}
