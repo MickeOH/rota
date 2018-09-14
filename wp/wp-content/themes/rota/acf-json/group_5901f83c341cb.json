@@ -16,120 +16,10 @@
                 "id": ""
             },
             "layouts": {
-                "5901f84fc7dee": {
-                    "key": "5901f84fc7dee",
-                    "name": "global-components",
-                    "label": "Global components",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5901f85acc329",
-                            "label": "Global components",
-                            "name": "global_components",
-                            "type": "post_object",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "global_components"
-                            ],
-                            "taxonomy": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "return_format": "id",
-                            "ui": 1
-                        },
-                        {
-                            "key": "field_5b4dd2350a764",
-                            "label": "Set date for component?",
-                            "name": "show_date_fields",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_5b4dd24c0a765",
-                            "label": "Date",
-                            "name": "date",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_5b4dd2350a764",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "table",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5b4dd2640a766",
-                                    "label": "From",
-                                    "name": "date_from",
-                                    "type": "date_time_picker",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "display_format": "Y-m-d H:i",
-                                    "return_format": "Y-m-d H:i",
-                                    "first_day": 1
-                                },
-                                {
-                                    "key": "field_5b4dd2870a767",
-                                    "label": "To",
-                                    "name": "date_to",
-                                    "type": "date_time_picker",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "display_format": "Y-m-d H:i",
-                                    "return_format": "Y-m-d H:i",
-                                    "first_day": 1
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5b4dd2ad0a768": {
                     "key": "layout_5b4dd2ad0a768",
-                    "name": "guidelines",
-                    "label": "Guidelines",
+                    "name": "articles",
+                    "label": "Articles",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -239,5 +129,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531827767
+    "modified": 1536930531
 }

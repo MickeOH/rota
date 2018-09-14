@@ -46,11 +46,11 @@ require_once(get_template_directory() . '/inc/base-functions.php');
 require_once(get_template_directory() . '/inc/custom-functions.php');
 
 // Scripts and styles
-function awave_scripts() {
+function enqueue_scripts() {
     // JS
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'app', get_template_directory_uri() . '/dist/js/app.min.js', array("jquery"), '1.0.0', true );
     // Styles
     wp_enqueue_style( 'screen', get_template_directory_uri() . '/dist/css/app.min.css', array(),'1.0.0', 'screen' );
 }
-add_action( 'wp_enqueue_scripts', 'awave_scripts',1 );
+add_action( 'wp_enqueue_scripts', 'enqueue_scripts',1 );

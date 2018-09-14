@@ -30,15 +30,15 @@ function theme_setup() {
     // ACF Options page
     if( function_exists('acf_add_options_page') ) {
         $theme_options = acf_add_options_page( array(
-            'page_title'    => __('Theme Settings', 'awave'),
-            'menu_title'    => __('Theme Settings', 'awave'),
+            'page_title'    => __('Temainställningar', 'rota'),
+            'menu_title'    => __('Temainställningar', 'rota'),
             'menu_slug'     => 'theme-settings',
             'capability'    => 'edit_posts',
             'redirect'  => false
         ));
 
         $theme_options_footer = acf_add_options_page( array(
-            'page_title'    => __('Tracking codes', 'awave'),
+            'page_title'    => __('Tracking-koder', 'rota'),
             'parent_slug'   => $theme_options['menu_slug'],
         ));
     }

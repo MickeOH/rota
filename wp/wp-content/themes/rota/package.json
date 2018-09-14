@@ -1,10 +1,10 @@
 {
-  "name": "awave-boilerplate",
-  "version": "2.0.0",
-  "description": "Awave starter template",
+  "name": "Rota",
+  "version": "1.0.0",
+  "description": "Theme for website Rota",
   "author": {
-    "name": "Awave",
-    "url": "https://www.awave.se"
+    "name": "Micke Hasselqvist",
+    "url": "https://www.studio51.se"
   },
   "engines": {
     "node": "6.11.3"
