@@ -134,23 +134,47 @@ a img.aligncenter {
   margin-bottom: 1.44em; }
 
 .site-header {
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
   .site-header .navbar {
     text-align: right; }
     .site-header .navbar ul {
       list-style: none;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      font-size: 0; }
       .site-header .navbar ul li {
-        display: inline-block; }
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 10px; }
 
 body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.66em; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .container-fluid {
   width: 100%;
   max-width: 1170px; }
+
+.component-articles .h1 {
+  text-align: center; }
+
+.component-articles .search-form {
+  text-align: center; }
+
+.article-categories {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+  .article-categories li {
+    display: inline-block;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=app.css.map */

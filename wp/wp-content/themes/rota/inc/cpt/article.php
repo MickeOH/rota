@@ -8,7 +8,7 @@ function create_article_cpt() {
 		'menu_name'             => __( 'Artiklar', 'rota' ),
 		'name_admin_bar'        => __( 'Artiklar', 'rota' ),
 		'all_items'             => __( 'Alla Artiklar', 'rota' ),
-		'add_new_item'          => __( 'Lägg till ny artiklar', 'rota' ),
+		'add_new_item'          => __( 'Lägg till ny artikel', 'rota' ),
 		'add_new'               => __( 'Skapa ny', 'rota' ),
 		'new_item'              => __( 'Ny Artikel', 'rota' ),
 		'edit_item'             => __( 'Redigera Artikel', 'rota' ),
@@ -20,7 +20,7 @@ function create_article_cpt() {
 	$args = array(
 		'label'                 => __( 'Artikel', 'rota' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail' ),
+		'supports'              => array( 'title', 'thumbnail', 'editor' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -50,15 +50,33 @@ function create_article_taxonomy() {
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
-		'show_ui'                    => true,
+		'show_ui'                    => false,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 		'rewrite'                    => false,
 	);
 	register_taxonomy( 'article_category', array( 'article' ), $args );
+
+	$labels = array(
+		'name'                       => _x( 'Taggar', 'Taxonomy General Name', 'rota' ),
+		'singular_name'              => _x( 'Tagg', 'Taxonomy Singular Name', 'rota' ),
+		'menu_name'                  => __( 'Taggar', 'rota' ),
+		'all_items'                  => __( 'Alla taggar', 'rota' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => false,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => false,
+		'show_tagcloud'              => true,
+		'rewrite'                    => false,
+	);
+	register_taxonomy( 'article_tag', array( 'article' ), $args );
 
 }
 add_action( 'init', 'create_article_taxonomy', 0 );

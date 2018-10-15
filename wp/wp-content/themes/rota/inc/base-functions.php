@@ -43,6 +43,8 @@ function theme_setup() {
         ));
     }
 
+    add_image_size( 'article_excerpt', 360, 99999, false );
+
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 

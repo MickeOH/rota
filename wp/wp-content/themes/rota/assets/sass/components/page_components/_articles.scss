@@ -1,0 +1,26 @@
+.component-articles {
+	.h1 {
+		text-align: center;
+	}
+
+	.search-form {
+		text-align: center;
+	}
+}
+
+.article-categories {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+
+.articles_container {
+	
+}

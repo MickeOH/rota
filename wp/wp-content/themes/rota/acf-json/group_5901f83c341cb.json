@@ -1,10 +1,10 @@
 {
     "key": "group_5901f83c341cb",
-    "title": "Page components",
+    "title": "Sidkomponenter",
     "fields": [
         {
             "key": "field_5901f844cc328",
-            "label": "Page components",
+            "label": "Sidkomponenter",
             "name": "page_components",
             "type": "flexible_content",
             "instructions": "",
@@ -19,12 +19,12 @@
                 "layout_5b4dd2ad0a768": {
                     "key": "layout_5b4dd2ad0a768",
                     "name": "articles",
-                    "label": "Articles",
+                    "label": "Artiklar",
                     "display": "row",
                     "sub_fields": [
                         {
                             "key": "field_5b4dd2ad0a76a",
-                            "label": "Set date for component?",
+                            "label": "Sätt datum för komponent?",
                             "name": "show_date_fields",
                             "type": "true_false",
                             "instructions": "",
@@ -43,7 +43,7 @@
                         },
                         {
                             "key": "field_5b4dd2ad0a76b",
-                            "label": "Date",
+                            "label": "Datum",
                             "name": "date",
                             "type": "group",
                             "instructions": "",
@@ -66,7 +66,7 @@
                             "sub_fields": [
                                 {
                                     "key": "field_5b4dd504e400d",
-                                    "label": "From",
+                                    "label": "Från",
                                     "name": "date_from",
                                     "type": "date_time_picker",
                                     "instructions": "",
@@ -83,7 +83,7 @@
                                 },
                                 {
                                     "key": "field_5b4dd525e400e",
-                                    "label": "To",
+                                    "label": "Till",
                                     "name": "date_to",
                                     "type": "date_time_picker",
                                     "instructions": "",
@@ -99,6 +99,155 @@
                                     "first_day": 1
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_5b9fbef759242",
+                            "label": "Sökrubrik",
+                            "name": "header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b9fbf0959243",
+                            "label": "Sökrubrik-tagg",
+                            "name": "header_tag",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "h1": "H1",
+                                "h2": "H2",
+                                "h3": "H3"
+                            },
+                            "allow_null": 0,
+                            "default_value": "h1",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bc47caa7d2a1": {
+                    "key": "layout_5bc47caa7d2a1",
+                    "name": "content",
+                    "label": "Innehåll",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bc47caa7d2a2",
+                            "label": "Sätt datum för komponent?",
+                            "name": "show_date_fields",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5bc47caa7d2a3",
+                            "label": "Datum",
+                            "name": "date",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5bc47caa7d2a2",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5bc47caa7d2a4",
+                                    "label": "Från",
+                                    "name": "date_from",
+                                    "type": "date_time_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y-m-d H:i",
+                                    "return_format": "Y-m-d H:i",
+                                    "first_day": 1
+                                },
+                                {
+                                    "key": "field_5bc47caa7d2a5",
+                                    "label": "Till",
+                                    "name": "date_to",
+                                    "type": "date_time_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y-m-d H:i",
+                                    "return_format": "Y-m-d H:i",
+                                    "first_day": 1
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5bc47cbd7d2a8",
+                            "label": "Innehåll",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -129,5 +278,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536930531
+    "modified": 1539603654
 }

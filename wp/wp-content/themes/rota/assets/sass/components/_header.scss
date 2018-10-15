@@ -1,5 +1,7 @@
 .site-header {
 	margin-top: 20px;
+	margin-bottom: 20px;
+	
 	.navbar {
 		text-align: right;
 
@@ -7,9 +9,12 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
+			font-size: 0;
 
 			li {
 				display: inline-block;
+				font-size: 16px;
+				margin-left: 10px;
 			}
 		}
 	}
