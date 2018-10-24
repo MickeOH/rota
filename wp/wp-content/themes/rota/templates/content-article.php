@@ -1,5 +1,4 @@
 <section class="editor_content">
-	<?php the_post_thumbnail( 'full' ); ?>
 	<h1><?php the_title(); ?></h1>
 	<?php the_content(); ?>
 	<p class="postmeta">

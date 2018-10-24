@@ -23,7 +23,7 @@ else:
 	$args['parent'] = 0;
 endif;
 
-$article_cats = get_terms($args);
+//$article_cats = get_terms($args);
 
 $args = array(
 	'post_type'              => array( 'article' ),
@@ -64,22 +64,19 @@ $url = get_permalink();
 				<<?php echo $header_tag; ?> class="h1">
 					<?php echo $header; ?>
 				</<?php echo $header_tag; ?>>
+				<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+					<label>
+						<span class="screen-reader-text"><?php echo _x( 'Sök efter:', 'label' ) ?></span>
+						<input	type="search" class="search-field"
+								placeholder="<?php echo esc_attr_x( 'Skriv t.ex. namn på en kreatör, en plats, ett livsmedel osv...', 'placeholder' ) ?>"
+								value="<?php echo get_search_query() ?>" name="s"
+								title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+					</label>
+						<input 	type="submit" class="search-submit"
+								value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+				</form>
 			<?php endif; ?>
 		<?php endif; ?>
-
-		
-
-		<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-			<label>
-				<span class="screen-reader-text"><?php echo _x( 'Sök efter:', 'label' ) ?></span>
-				<input type="search" class="search-field"
-				placeholder="<?php echo esc_attr_x( 'Skriv t.ex. namn på en kreatör, en plats, ett livsmedel osv...', 'placeholder' ) ?>"
-				value="<?php echo get_search_query() ?>" name="s"
-				title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-			</label>
-			<input type="submit" class="search-submit"
-		value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-		</form>
 
 		<?php
 
@@ -99,12 +96,15 @@ $url = get_permalink();
                 endforeach;
 			echo '</ul>';
 		endif;
-
+		
+		$counter = 0;
+		$max = 3;
 		if ( $articles->have_posts() ) :
 			?><section class="articles_container row justify-content-center"><?php
-			while ( $articles->have_posts() ) :
+			while ( $articles->have_posts() and ($counter < $max) ) :
 				$articles->the_post();
 				get_template_part('templates/content', 'article_excerpt');
+				   $counter++;
 			endwhile;
 			?></section><?php
 		else:

@@ -10,9 +10,6 @@
 			<?php the_title(); ?>
 		</a>
 	</h2>
-	<p>
-		<?php echo get_the_excerpt(); ?>
-	</p>
 	<p class="postmeta">
 		<?php
 		$article_tags = wp_get_post_terms( get_the_ID(), 'article_tag' );
