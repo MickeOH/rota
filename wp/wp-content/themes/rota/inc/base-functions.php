@@ -43,7 +43,8 @@ function theme_setup() {
         ));
     }
 
-    add_image_size( 'article_excerpt', 360, 99999, false );
+    add_image_size( 'article_excerpt', 360, 240, true );
+    add_image_size( 'category_image', 75, 75, true );
 
 }
 add_action( 'after_setup_theme', 'theme_setup' );

@@ -17,6 +17,11 @@ function create_article_cpt() {
 		'view_items'            => __( 'Se Artiklar', 'rota' ),
 	);
 
+	$slug_args = array(
+		'slug'					=> __('artikel', 'rota'),
+		'with_front'			=> false
+	);
+
 	$args = array(
 		'label'                 => __( 'Artikel', 'rota' ),
 		'labels'                => $labels,
@@ -34,6 +39,7 @@ function create_article_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'rewrite'				=> $slug_args
 	);
 	register_post_type( 'article', $args );
 
@@ -52,11 +58,12 @@ function create_article_taxonomy() {
 		'labels'                     => $labels,
 		'hierarchical'               => true,
 		'public'                     => true,
-		'show_ui'                    => false,
+		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 		'rewrite'                    => false,
+		'meta_box_cb'				 => false,
 	);
 	register_taxonomy( 'article_category', array( 'article' ), $args );
 
@@ -70,11 +77,12 @@ function create_article_taxonomy() {
 		'labels'                     => $labels,
 		'hierarchical'               => false,
 		'public'                     => true,
-		'show_ui'                    => false,
+		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 		'rewrite'                    => false,
+		'meta_box_cb'				 => false,
 	);
 	register_taxonomy( 'article_tag', array( 'article' ), $args );
 

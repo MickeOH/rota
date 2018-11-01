@@ -1,10 +1,12 @@
 <?php
 $header = get_sub_field('header');
 $header_tag = get_sub_field('header_tag');
+$show_featured_articles = get_sub_field('show_featured_articles');
+$featured_articles = get_sub_field('featured_articles');
 
 $args = array(
 	'taxonomy' => 'article_category',
-	'hide_empty' => false,
+	'hide_empty' => true,
 );
 
 parse_str($_SERVER["QUERY_STRING"], $query_array);
@@ -23,11 +25,11 @@ else:
 	$args['parent'] = 0;
 endif;
 
-//$article_cats = get_terms($args);
+$article_cats = get_terms($args);
 
 $args = array(
 	'post_type'              => array( 'article' ),
-	'posts_per_page'         => '5',
+	'posts_per_page'         => '3',
 );
 if($active_cat) :
 	$args['tax_query'] = array(
@@ -37,6 +39,16 @@ if($active_cat) :
 			'terms'    => $active_cat_id,
 		)
 	);
+endif;
+
+if($show_featured_articles && !$active_cat) :
+	//print_r($featured_articles);
+	$articles_to_show = array();
+	foreach($featured_articles as $article) :
+		$articles_to_show[] = $article->ID;
+	endforeach;
+	$args['posts_per_page'] = -1;
+	$args['post__in'] = $articles_to_show;
 endif;
 
 $articles = new WP_Query( $args );
@@ -85,9 +97,16 @@ $url = get_permalink();
                 foreach ( $article_cats as $term ) :
                 	$term_url = url_add_querystring($url, _('kategori'), $term->slug );
                 	$term_name = $term->name;
+
+                	$image = get_field('image', $term);
+
                 	?>
                 	<li>
                 		<a href="<?php echo $term_url; ?>">
+                			<?php if($image) : ?>
+                				<?php echo wp_get_attachment_image( $image['ID'], 'category_image', false, array('class' => 'category_image') ); ?>
+                			<?php endif; ?>
+
                 			<?php echo $term_name; ?>
                 		</a>
                 	</li>
@@ -97,14 +116,11 @@ $url = get_permalink();
 			echo '</ul>';
 		endif;
 		
-		$counter = 0;
-		$max = 3;
 		if ( $articles->have_posts() ) :
 			?><section class="articles_container row justify-content-center"><?php
-			while ( $articles->have_posts() and ($counter < $max) ) :
+			while ( $articles->have_posts() ) :
 				$articles->the_post();
 				get_template_part('templates/content', 'article_excerpt');
-				   $counter++;
 			endwhile;
 			?></section><?php
 		else:

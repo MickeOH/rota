@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-09-13 19:37:28+0000\n"
+"PO-Revision-Date: 2018-10-28 19:00:36+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,97 +11,439 @@ msgstr ""
 "Language: sv_SE\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
 
-#: languages/wordpress-seojs.php:235
+#. Translators: %1$s and $3$s expand to the admin search page for the keyword,
+#. %2$d expands to the number 	   of times this keyword has been used before,
+#. %4$s and %5$s expand to links to yoast.com, %6$s expands to 	   the anchor
+#. end tag
+#: languages/yoast-seo-js.php:407
+msgid "%4$sPreviously used keyphrase%6$s: You've used this keyphrase %1$s%2$d times before%3$s. %5$sDo not use your keyphrase more than once%6$s."
+msgstr "%4$sTidigare använd nyckelordsfras%6$s: Du har använt denna nyckelordsfras %1$s%2$d gånger tidigare%3$s. %5$sAnvänd inte din nyckelordsfras mer än en gång%6$s."
+
+#. Translators: %1$s and %2$s expand to an admin link where the keyword is
+#. already used. %3$s and %4$s 	   expand to links on yoast.com, %4$s expands
+#. to the anchor end tag.
+#: languages/yoast-seo-js.php:401
+msgid "%3$sPreviously used keyphrase%5$s: You've used this keyphrase %1$sonce before%2$s. %4$sDo not use your keyphrase more than once%5$s."
+msgstr "%3$sTidigare använd nyckelordsfras%5$s: Du har använt denna nyckelordsfras %1$sgång tidigare%2$s. %4$sAnvänd inte din nyckelordsfras mer än en gång%5$s."
+
+#: languages/yoast-seo-js.php:396
+msgid "%1$sPreviously used keyphrase%2$s: You've not used this keyphrase before, very good."
+msgstr "%1$sTidigare använd nyckelordsfras%2$s: Du har inte använt denna nyckelordsfras tidigare, mycket bra."
+
+#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:381
+msgid "%1$sKeyphrase in slug%2$s: More than half of your keyphrase appears in the slug. That's great!"
+msgstr "%1$sNyckelordsfrasen i permalänken%2$s: Mer än hälften av nyckelordsfrasen finns i permalänken. Jättebra!"
+
+#. Translators:  %1$s and %2$s expand to links on yoast.com, %3$s expands to
+#. the anchor end tag
+#: languages/yoast-seo-js.php:377
+msgid "%1$sKeyphrase in slug%3$s: (Part of) your keyphrase does not appear in the slug. %2$sChange that%3$s!"
+msgstr "%1$sNyckelordsfrasen i permalänken%3$s: (En del av) din nyckelordsfras saknas i permalänken. %2$sDet bör du åtgärda%3$s!"
+
+#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:372
+msgid "%1$sKeyphrase in slug%2$s: Great work!"
+msgstr "%1$sNyckelordsfrasen i permalänken%2$s: Bra gjort!"
+
+#. Translators: %1$s and %2$s expand to a link on yoast.com, 	   %3$s expands
+#. to the anchor end tag, %4$s expands to the keyword of the article.
+#: languages/yoast-seo-js.php:368
+msgid "%1$sKeyphrase in title%3$s: Not all the words from your keyphrase \"%4$s\" appear in the SEO title. %2$sTry to use the exact match of your keyphrase in the SEO title%3$s."
+msgstr "%1$sNyckelordsfrasen i rubriken%3$s: Några ord i din nyckelordsfras ”%4$s” saknas i SEO-rubriken. %2$sSträva efter att ha en exakt kopia av din nyckelordsfras i SEO-rubriken%3$s."
+
+#. Translators: %1$s and %2$s expand to a link on yoast.com, 	   %3$s expands
+#. to the anchor end tag.
+#: languages/yoast-seo-js.php:363
+msgid "%1$sKeyphrase in title%3$s: Does not contain the exact match. %2$sTry to write the exact match of your keyphrase in the SEO title%3$s."
+msgstr "%1$sNyckelordfras i rubrik%3$s: Innehåller inte exakt matchning. %2$sFörsök skriva den exakta matchningen för din nyckelordsfras i SEO-rubriken%3$s."
+
+#. Translators: %1$s and %2$s expand to a link on yoast.com, 	   %3$s expands
+#. to the anchor end tag.
+#: languages/yoast-seo-js.php:357
+msgid "%1$sKeyphrase in title%3$s: The exact match of the keyphrase appears in the SEO title, but not at the beginning. %2$sTry to move it to the beginning%3$s."
+msgstr "%1$sNyckelordsfras i rubrik%3$s: Den exakta matchningen av nyckelordsfrasen visas i SEO-rubriken, men inte i början. %2$sFörsök flytta den till början%3$s."
+
+#. Translators: %1$s expands to a link on yoast.com, 	   %2$s expands to the
+#. anchor end tag.
+#: languages/yoast-seo-js.php:352
+msgid "%1$sKeyphrase in title%2$s: The exact match of the keyphrase appears at the beginning of the SEO title. Good job!"
+msgstr "%1$sNyckelordsfras i rubrik%2$s: Den exakta matchningen av nyckelordsfrasen visas i början av SEO-rubriken. Bra jobbat!"
+
+#. Translators: The preceding sentence is "Text length: The text contains x
+#. words.", 	   %3$s expands to a link on yoast.com, 	   %4$s expands to the
+#. anchor end tag, 	   %5$d expands to the recommended minimum of words.
+#: languages/yoast-seo-js.php:329
+msgid "This is far below the recommended minimum of %5$d word. %3$sAdd more content%4$s."
+msgid_plural "This is far below the recommended minimum of %5$d words. %3$sAdd more content%4$s."
+msgstr[0] "Detta ligger långt under det rekommenderade minimumet av %5$d ord. %3$sLägg till mer innehåll%4$s."
+msgstr[1] "Detta ligger långt under det rekommenderade minimumet av %5$d ord. %3$sLägg till mer innehåll%4$s."
+
+#. Translators: The preceding sentence is "Text length: The text contains x
+#. words.", 	   %3$s expands to a link on yoast.com, 	   %4$s expands to the
+#. anchor end tag, 	   %5$d expands to the recommended minimum of words.
+#: languages/yoast-seo-js.php:321
+msgid "This is below the recommended minimum of %5$d word. %3$sAdd more content%4$s."
+msgid_plural "This is below the recommended minimum of %5$d words. %3$sAdd more content%4$s."
+msgstr[0] "Detta är under rekommenderat minimum av %5$d ord. %3$sLägg till mer innehåll%4$s."
+msgstr[1] "Detta är under rekommenderat minimum av %5$d ord. %3$sLägg till mer innehåll%4$s."
+
+#. Translators: %1$d expands to the number of words in the text, 	   %2$s
+#. expands to a link on yoast.com, %4$d expands to the anchor end tag.
+#. Translators: %1$d expands to the number of words in the text, 	   %2$s
+#. expands to a link on yoast.com, %4$s expands to the anchor end tag.
+#: languages/yoast-seo-js.php:304
+msgid "%2$sText length%4$s: The text contains %1$d word."
+msgid_plural "%2$sText length%4$s: The text contains %1$d words."
+msgstr[0] "%2$sTextlängd%4$s: Texten innehåller %1$d ord."
+msgstr[1] "%2$sTextlängd%4$s: Texten innehåller %1$d ord."
+
+#. Translators: %1$d expands to the number of words in the text, 	   %2$s
+#. expands to a link on yoast.com, %3$s expands to the anchor end tag
+#: languages/yoast-seo-js.php:291
+msgid "%2$sText length%3$s: The text contains %1$d word. Good job!"
+msgid_plural "%2$sText length%3$s: The text contains %1$d words. Good job!"
+msgstr[0] "%2$sTextlängd%3$s: Texten innehåller %1$d ord. Bra jobbat!"
+msgstr[1] "%2$sTextlängd%3$s: Texten innehåller %1$d ord. Bra jobbat!"
+
+#. Translators: %1$s and %2$s expand to links on yoast.com, %3$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:285
+msgid "%1$sSEO title width%3$s: %2$sPlease create an SEO title%3$s."
+msgstr "%1$sSEO rubrikbredd%3$s: %2$sSkapa en SEO-rubrik%3$s."
+
+#. Translators: %1$s and %2$s expand to links on yoast.com, %3$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:281
+msgid "%1$sSEO title width%3$s: The SEO title wider than the viewable limit. %2$sTry to make it shorter%3$s."
+msgstr "%1$sSEO rubrikbredd%3$s: SEO-rubriken bredare än den synliga gränsen. %2$sFörsök att göra den kortare%3$s."
+
+#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:277
+msgid "%1$sSEO title width%2$s: Good job!"
+msgstr "%1$sSEO rubrikbredd%2$s: Bra jobbat!"
+
+#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:253
+msgid "%1$sMeta description length%2$s: Well done!"
+msgstr "%1$sMetabeskrivningslängd%2$s: Bra gjort!"
+
+#: languages/yoast-seo-js.php:234
+msgid "%1$sKeyphrase in meta description%2$s: The meta description has been specified, but it does not contain the keyphrase. %3$sFix that%4$s!"
+msgstr "%1$sNyckelordsfras i metabeskrivning%2$s: Metabeskrivningen har specificerats, men den innehåller inte nyckelordsfrasen. %3$sÅtgärda det%4$s!"
+
+#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
+#. end tag.
+#: languages/yoast-seo-js.php:228
+msgid "%1$sKeyphrase in meta description%2$s: Keyphrase or synonym appear in the meta description. Well done!"
+msgstr "%1$sNyckelordsfras i metabeskrivning%2$s: Nyckelordsfras eller synonym visas i metabeskrivningen. Bra gjort!"
+
+#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
+#. end tag.
+#: languages/yoast-seo-js.php:206
+msgid "%1$sKeyphrase length%2$s: Good job!"
+msgstr "%1$sNyckelordsfraslängd%2$s: Bra jobbat!"
+
+#. Translators: %1$s and %2$s expand to links on yoast.com, %3$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:198
+msgid "%1$sKeyphrase length%3$s: %2$sSet a keyphrase in order to calculate your SEO score%3$s."
+msgstr "%1$sLängd på nyckelordsfras%3$s: %2$sAnge en nyckelordsfras för att räkna ut din SEO-poäng%3$s."
+
+#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
+#. end tag.
+#: languages/yoast-seo-js.php:167
+msgid "%1$sKeyphrase in introduction%2$s: Well done!"
+msgstr "%1$sNyckelordsfras i inledning%2$s: Bra gjort!"
+
+#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
+#. end tag
+#: languages/yoast-seo-js.php:159
+msgid "%1$sInternal links%2$s: You have enough internal links. Good job!"
+msgstr "%1$sInterna länkar%2$s: Du har tillräckligt med interna länkar. Bra jobbat!"
+
+#. Translators: %1$s and %2$s expand to links on yoast.com, %3$s expands to the
+#. anchor end tag
+#: languages/yoast-seo-js.php:151
+msgid "%1$sInternal links%3$s: No internal links appear in this page, %2$smake sure to add some%3$s!"
+msgstr "%1$sInterna länkar%3$s: Inga interna länkar visas på denna sida, %2$s var noga med att lägga till några%3$s!"
+
+#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
+#. end tag
+#: languages/yoast-seo-js.php:84
+msgid "%1$sSentence length%2$s: Great!"
+msgstr "%1$sMeningslängd%2$s: Bra!"
+
+#: languages/yoast-seo-js.php:14
+msgid "Good job!"
+msgstr "Bra jobbat!"
+
+#: languages/wordpress-seojs.php:78
+msgid "Focus keyphrase"
+msgstr "Fokusnyckelordsfras"
+
+#: languages/wordpress-seojs.php:71
+msgid "Help on choosing the perfect focus keyphrase"
+msgstr "Hjälp att välja den perfekta fokusnyckelordsfrasen"
+
+#: languages/wordpress-seojs.php:65
+msgid "Would you like to add a related keyphrase?"
+msgstr "Vill du lägga till en relaterad nyckelordsfras?"
+
+#. translators: %1$s expands to object type. %2$s expands to the object ID.
+#: inc/exceptions/class-rest-request-exception.php:25
+msgid "%1$s with ID %2$s couldn't be patched"
+msgstr "%1$s med ID %2$s kunde inte patchas"
+
+#. translators: %1$s expands to the indexable's ID.
+#: inc/exceptions/class-invalid-indexable-exception.php:41
+msgid "Invalid POST request. Meta values already exist for object with ID %1$s."
+msgstr "Ogiltig POST-förfråga. Meta-värden finns redan för objekt med ID %1$s."
+
+#. translators: %1$s expands to the object ID. %2$s resolved to the object
+#. type.
+#: inc/exceptions/class-invalid-argument-exception.php:147
+msgid "No object with ID %1$s and %2$s could be found"
+msgstr "Inget objekt med ID %1$s och %2$s kunde hittas"
+
+#. translators: %1$s expands to the object subtype. %2$s resolved to the object
+#. type.
+#: inc/exceptions/class-invalid-argument-exception.php:128
+msgid "`%1$s` is not a valid subtype of `%2$s`"
+msgstr "”%1$s” är inte en giltig undertyp av ”%2$s”"
+
+#. translators: %1$s expands to the object type.
+#: inc/exceptions/class-invalid-argument-exception.php:110
+msgid "The object type `%1$s` is invalid"
+msgstr "Objekttypen ”%1$s” är ogiltig"
+
+#. translators: %1$s expands to the parameter name. %2$s expands to the
+#. expected type and %3$s expands to the expected type.
+#: inc/exceptions/class-invalid-argument-exception.php:43
+msgid "Invalid type for parameter `%1$s` passed. Expected `%2$s`, but got `%3$s`"
+msgstr "Ogiltig typ för parameter ”%1$s” passerade. Förväntade ”%2$s”, men fick ”%3$s”"
+
+#. translators: %1$s expands to the parameter name.
+#: inc/exceptions/class-invalid-argument-exception.php:24
+msgid "The parameter `%1$s` cannot be empty."
+msgstr "Parametern ”%1$s” kan inte vara tom."
+
+#: inc/class-wpseo-rank.php:120
+msgid "SEO: No Focus Keyphrase"
+msgstr "SEO: Inga fokusnyckelfraser"
+
+#: admin/views/tabs/network/features.php:55
+msgid "Disable"
+msgstr "Inaktivera"
+
+#: admin/views/tabs/network/features.php:54
+msgid "Allow Control"
+msgstr "Tillåt kontroll"
+
+#: admin/views/licenses.php:174
+msgid "optimize a single post for synonyms and related keyphrases."
+msgstr "optimera ett enskilt inlägg för synonymer och relaterade nyckelordsfraser."
+
+#: admin/taxonomy/class-taxonomy-metabox.php:283
+msgid "Optimize a single post for synonyms and related keyphrases."
+msgstr "Optimera ett enskilt inlägg för synonymer och relaterade nyckelordsfraser."
+
+#: admin/taxonomy/class-taxonomy-metabox.php:282 admin/views/licenses.php:173
+msgid "Synonyms & related keyphrases"
+msgstr "Synonymer och relaterade nyckelordsfraser"
+
+#: admin/metabox/class-metabox-multiple-keywords-config.php:22
+#: languages/wordpress-seojs.php:68
+msgid "Add related keyphrase"
+msgstr "Lägg till relaterad nyckelordsfras"
+
+#: admin/formatter/class-metabox-formatter.php:56
+msgid "Remove keyphrase"
+msgstr "Ta bort nyckelordsfras"
+
+#: admin/formatter/class-metabox-formatter.php:55
+msgid "Keyphrase:"
+msgstr "Nyckelordsfras:"
+
+#: admin/class-yoast-form.php:731
+msgid "This feature has been disabled by the network admin."
+msgstr "Denna funktion har inaktiverats av nätverksadministratören."
+
+#: admin/class-premium-upsell-admin-block.php:47
+msgid "Multiple keyphrases"
+msgstr "Flera nyckelordsfraser"
+
+#. translators: %s expands to 'Yoast SEO Premium'.
+#. translators: %s expands to Yoast SEO Premium
+#. translators: %s expands to 'Yoast SEO Premium'.
+#. translators: %s expands to 'Yoast SEO Premium'.
+#. translators: %s expands to Yoast SEO Premium.
+#. translators: %s is replaced by the plugin name
+#: admin/class-add-keyword-modal.php:36
+#: admin/class-keyword-synonyms-modal.php:36
+#: admin/class-multiple-keywords-modal.php:36 admin/class-premium-popup.php:80
+#: admin/formatter/class-metabox-formatter.php:200
+#: admin/metabox/class-metabox-keyword-synonyms-config.php:25
+#: admin/metabox/class-metabox-keyword-synonyms-config.php:28
+#: admin/metabox/class-metabox-multiple-keywords-config.php:25
+#: admin/metabox/class-metabox-multiple-keywords-config.php:28
+#: admin/taxonomy/class-taxonomy-metabox.php:290 admin/views/sidebar.php:38
+#: languages/wordpress-seojs.php:62
+msgid "Get %s"
+msgstr "Skaffa %s"
+
+#: languages/wordpress-seojs.php:200
+msgid "Optional. Customize how you want to describe the duration of the instruction"
+msgstr "Valfritt. Anpassa hur du vill beskriva varaktigheten av instruktionen"
+
+#: languages/wordpress-seojs.php:197
+msgid "Describe the duration of the instruction:"
+msgstr "Beskriv varaktigheten av instruktionen:"
+
+#: languages/wordpress-seojs.php:48
+msgid "Learn more about the readability analysis"
+msgstr "Lär dig mer om läsbarhetsanalysen"
+
+#: inc/class-wpseo-admin-bar-menu.php:619
+msgid "There is a new notification."
+msgid_plural "There are new notifications."
+msgstr[0] "Det finns en ny notis."
+msgstr[1] "Det finns nya notiser."
+
+#: admin/config-ui/fields/class-field-separator.php:25
+msgid "Colon"
+msgstr "Kolon"
+
+#. translators: %1$s expands to Yoast SEO, %2$s: 'SEO' plugin name of possibly
+#. conflicting plugin with regard to the creation of duplicate SEO meta.
+#: admin/class-plugin-conflict.php:165
+msgid "Both %1$s and %2$s manage the SEO of your site. Running two SEO plugins at the same time is detrimental."
+msgstr "Både %1$s och %2$s hanterar SEO på din webbplats. Att köra två SEO-tillägg samtidigt är skadlig."
+
+#: languages/yoast-components.php:29
+msgid "This is a list of related content to which you could link in your post. {{a}}Read our article about site structure{{/a}} to learn more about how internal linking can help improve your SEO."
+msgstr "Detta är en lista med relaterat innehåll som du kan länka i ditt inlägg. {{a}}Läs vår artikel om webbplatsstruktur{{/a}} för att lära dig mer om hur intern länkning kan bidra till att förbättra din SEO."
+
+#: languages/wordpress-seojs.php:248
 msgid "%s, %s and %s"
 msgstr "%s, %s och %s"
 
-#: languages/wordpress-seojs.php:232
+#: languages/wordpress-seojs.php:244
 msgid "%s and %s"
 msgstr "%s och %s"
 
-#: languages/wordpress-seojs.php:229
+#: languages/wordpress-seojs.php:240
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minut"
 msgstr[1] "%d minuter"
 
-#: languages/wordpress-seojs.php:226
+#: languages/wordpress-seojs.php:236
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d timme"
 msgstr[1] "%d timmar"
 
-#: languages/wordpress-seojs.php:223
+#: languages/wordpress-seojs.php:232
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] "%d dag"
 msgstr[1] "%d dagar"
 
-#: languages/wordpress-seojs.php:205
+#: languages/wordpress-seojs.php:213
 msgid "Enter a step title"
 msgstr "Ange ett stegrubrik"
 
-#: languages/wordpress-seojs.php:172
+#: languages/wordpress-seojs.php:194
+msgid "Optional. This can give you better control over the styling of the steps."
+msgstr "Valfritt. Detta kan ge dig bättre kontroll över utseendet på stegen."
+
+#: languages/wordpress-seojs.php:191
+msgid "CSS class(es) to apply to the steps"
+msgstr "CSS-klass(er) som ska tillämpas på steget"
+
+#: languages/wordpress-seojs.php:182
 msgid "minutes"
 msgstr "minuter"
 
-#: languages/wordpress-seojs.php:169
+#: languages/wordpress-seojs.php:179
 msgid "hours"
 msgstr "timmar"
 
-#: languages/wordpress-seojs.php:166
+#: languages/wordpress-seojs.php:176
 msgid "days"
 msgstr "dagar"
 
-#: languages/wordpress-seojs.php:20
+#: languages/wordpress-seojs.php:155
+msgid "Create a How-to guide in an SEO-friendly way. You can only use one How-to block per post."
+msgstr "Skapa en Hur-gör-man-guide på ett SEO-vänligt sätt. Du kan endast använda ett Hur-gör-man-block per inlägg."
+
+#: languages/wordpress-seojs.php:121
+msgid "List your Frequently Asked Questions in an SEO-friendly way. You can only use one FAQ block per post."
+msgstr "Lista dina FAQs på ett SEO-vänligt sätt. Du kan endast använda ett FAQ-block per inlägg."
+
+#: languages/wordpress-seojs.php:26
 msgid "Copy error"
 msgstr "Kopiera fel"
 
-#: languages/wordpress-seojs.php:178
+#: languages/wordpress-seojs.php:23
+msgid "An error occurred loading the %s primary taxonomy picker."
+msgstr "Ett fel uppstod under hämtning av %s primära taxonomi-väljaren."
+
+#. translators: %1$s expands to Yoast.
+#: inc/class-structured-data-blocks.php:61
+msgid "%1$s Structured Data Blocks"
+msgstr "%1$s strukturerade datablock"
+
+#: languages/wordpress-seojs.php:210
 msgid "Time needed:"
 msgstr "Tid som behövs:"
 
-#: languages/wordpress-seojs.php:151
+#: languages/wordpress-seojs.php:152
 msgid "Move question down"
 msgstr "Flytta fråga ner"
 
-#: languages/wordpress-seojs.php:148
+#: languages/wordpress-seojs.php:149
 msgid "Move question up"
 msgstr "Flytta fråga upp"
 
-#: languages/wordpress-seojs.php:145
+#: languages/wordpress-seojs.php:146
 msgid "Insert question"
 msgstr "Infoga fråga"
 
-#: languages/wordpress-seojs.php:142
+#: languages/wordpress-seojs.php:143
 msgid "Delete question"
 msgstr "Ta bort fråga"
 
-#: languages/wordpress-seojs.php:135
+#: languages/wordpress-seojs.php:136
 msgid "Enter the answer to the question"
 msgstr "Ange svaret på frågan"
 
-#: languages/wordpress-seojs.php:132
+#: languages/wordpress-seojs.php:133
 msgid "Enter a question"
 msgstr "Ange en fråga"
 
-#: languages/wordpress-seojs.php:129
+#: languages/wordpress-seojs.php:130
 msgid "Add question"
 msgstr "Lägg till fråga"
 
-#: languages/wordpress-seojs.php:126
+#: languages/wordpress-seojs.php:127
 msgid "Frequently Asked Questions"
 msgstr "Vanliga frågor"
 
-#: languages/wordpress-seojs.php:74
+#: languages/wordpress-seojs.php:81
 msgid "Great news: you can, with %s!"
 msgstr "Bra nyheter: du kan, med %s!"
 
-#: languages/wordpress-seojs.php:41
+#: languages/wordpress-seojs.php:57
 msgid "(Opens in a new browser tab!)"
 msgstr "(Öppnas i en ny webbläsarflik!)"
 
-#: languages/wordpress-seojs.php:23
+#: languages/wordpress-seojs.php:29
 msgid "Select the primary %s"
 msgstr "Välj den primära %s"
 
@@ -109,99 +451,127 @@ msgstr "Välj den primära %s"
 msgid "Check links to this URL"
 msgstr "Kontrollera länkar till denna URL"
 
-#: languages/yoast-components.php:176
-msgid "Are you trying to use multiple keywords? You should add them separately below."
-msgstr "Försöker du använda flera sökord? Du ska lägga till dem separat nedan."
+#: inc/class-wpseo-admin-bar-menu.php:221
+msgid "Keyword research training"
+msgstr "Träning i nyckelordsforskning"
 
-#: languages/yoast-components.php:179
-msgid "Focus keyword:"
-msgstr "Fokusnyckelord:"
+#. translators: %1$s is the archive template link start tag, %2$s is the link
+#. closing tag, %3$s is a comma separated string with content types.
+#: admin/notifiers/class-post-type-archive-notification-handler.php:99
+msgid "Please check the %1$sarchive template%2$s for the following content type: %3$s."
+msgid_plural " Please check the %1$sarchive templates%2$s for the following content types: %3$s."
+msgstr[0] "Kolla i %1$sarkivmallen%2$s efter följande innehållstyp: %3$s."
+msgstr[1] "Kolla i %1$sarkivmallarna%2$s efter följande innehållstyper: %3$s."
+
+#: languages/yoast-components.php:176
+msgid "Are you trying to use multiple keyphrases? You should add them separately below."
+msgstr "Försöker du använda flera nyckelordsfraser? Du borde lägga till dem separat nedan."
 
 #: languages/yoast-components.php:170
 msgid "Mark as cornerstone content"
 msgstr "Markera som grundstensinnehåll"
 
-#: languages/wordpress-seojs.php:211
+#: languages/wordpress-seojs.php:228
+msgid "Move step down"
+msgstr "Flytta steg ner"
+
+#: languages/wordpress-seojs.php:225
+msgid "Move step up"
+msgstr "Flytta steg upp"
+
+#: languages/wordpress-seojs.php:222
+msgid "Insert step"
+msgstr "Infoga steg"
+
+#: languages/wordpress-seojs.php:219
 msgid "Delete step"
 msgstr "Ta bort steg"
 
-#: languages/wordpress-seojs.php:139
+#: languages/wordpress-seojs.php:140
 msgid "Add image"
 msgstr "Lägg till bild"
 
-#: languages/wordpress-seojs.php:208
+#: languages/wordpress-seojs.php:216
 msgid "Enter a step description"
 msgstr "Ange en stegbeskrivning"
 
-#: languages/wordpress-seojs.php:202
+#: languages/wordpress-seojs.php:206
 msgid "Enter a description"
 msgstr "Ange en beskrivning"
 
-#: languages/wordpress-seojs.php:181
+#: languages/wordpress-seojs.php:203
+msgid "Unordered list"
+msgstr "Osorterad lista"
+
+#: languages/wordpress-seojs.php:170
+msgid "Showing step items as an ordered list."
+msgstr "Visar stegobjekt i en sorterad lista."
+
+#: languages/wordpress-seojs.php:167
+msgid "Showing step items as an unordered list"
+msgstr "Visar stegobjekt i en osorterad lista."
+
+#: languages/wordpress-seojs.php:164
 msgid "Add step"
 msgstr "Lägg till steg"
 
-#: languages/wordpress-seojs.php:175
+#: languages/wordpress-seojs.php:185
 msgid "Delete total time"
 msgstr "Ta bort total tid"
 
-#: languages/wordpress-seojs.php:163
+#: languages/wordpress-seojs.php:173
 msgid "Add total time"
 msgstr "Lägg till total tid"
 
-#: languages/wordpress-seojs.php:160
+#: languages/wordpress-seojs.php:161
 msgid "How to"
 msgstr "Hur man gör"
 
-#: languages/wordpress-seojs.php:14
+#: languages/wordpress-seojs.php:158
+msgid "How-to"
+msgstr "Hur-man-gör"
+
+#: languages/wordpress-seojs.php:20
 msgid "Snippet Preview"
 msgstr "Förhandsgranska förhandsvisningstext"
 
-#: languages/wordpress-seojs.php:68
-msgid "Analysis results:"
-msgstr "Analysresultat:"
+#: languages/wordpress-seojs.php:45
+msgid "Analysis results"
+msgstr "Analysresultat"
 
-#: languages/wordpress-seojs.php:65
-msgid "Learn more about the Keyword Analysis."
-msgstr "Lär dig mer om nyckelordsanalyser."
+#: languages/wordpress-seojs.php:74
+msgid "Enter a focus keyphrase to calculate the SEO score"
+msgstr "Ange en fokus-nyckelordsfras för att beräkna SEO-poängen"
 
-#: languages/wordpress-seojs.php:62
-msgid "A focus keyword is the term (or phrase) you'd like to be found with, in search engines. Enter it below to see how you can improve your text for this term."
-msgstr "Ett fokusnyckelord är den term (eller fras) som du vill bli hittad med i sökmotorer. Ange det nedan för att se hur du kan förbättra din text för denna term."
-
-#: languages/wordpress-seojs.php:55
-msgid "Enter a focus keyword to calculate the SEO score"
-msgstr "Ange ett fokusord för att beräkna SEO-poängen"
-
-#: languages/wordpress-seojs.php:11
+#: languages/wordpress-seojs.php:17
 msgid "Learn more about Cornerstone Content."
 msgstr "Lär dig mer om grundstensinnehåll."
 
-#: languages/wordpress-seojs.php:8
+#: languages/wordpress-seojs.php:14
 msgid "Cornerstone content should be the most important and extensive articles on your site."
 msgstr "Grundstensinnehåll ska vara de viktigaste och mest omfattande artiklarna på din webbplats."
 
-#: admin/pages/network.php:19
+#: admin/pages/network.php:20
 msgid "Restore Site"
 msgstr "Återställ webbplats"
-
-#: admin/metabox/class-metabox-multiple-keywords-config.php:22
-#: languages/wordpress-seojs.php:52
-msgid "Add additional keyword"
-msgstr "Lägg till ytterligare nyckelord"
 
 #: admin/menu/class-network-admin-menu.php:34
 msgid "Network Settings"
 msgstr "Nätverksinställningar"
 
-#: admin/class-yoast-network-admin.php:253
+#: admin/class-yoast-network-admin.php:256
 msgid "You are not allowed to perform this action."
 msgstr "Du saknar behörighet att utföra denna åtgärd."
 
 #. translators: %s: error message
-#: admin/class-yoast-network-admin.php:190
+#: admin/class-yoast-network-admin.php:188
 msgid "Error: %s"
 msgstr "Fel: %s"
+
+#. translators: %s: success message
+#: admin/class-yoast-network-admin.php:186
+msgid "Success: %s"
+msgstr "Klart: %s"
 
 #. translators: %s expands to the ID of a site within a multisite network.
 #: admin/class-yoast-network-admin.php:148
@@ -220,13 +590,9 @@ msgstr "Du saknar behörighet att modifiera oregistrerade nätverksinställninga
 msgid "deleted"
 msgstr "borttaget"
 
-#: admin/class-multiple-keywords-modal.php:21 languages/wordpress-seojs.php:49
-msgid "Would you like to add another keyword?"
-msgstr "Vill du lägga till ett annat nyckelord?"
-
-#: languages/yoast-seo-js.php:165
-msgid "The exact-match %3$skeyword density%4$s is %1$s, which is too low; the focus keyword was found %2$d times."
-msgstr "Den exakta matchningens %3$snyckelordsdensitet%4$s är %1$s, vilket är för lågt. Fokusordet hittades %2$d gånger."
+#: admin/class-multiple-keywords-modal.php:21
+msgid "Would you like to add another keyphrase?"
+msgstr "Vill du lägga till en till nyckelordsfras?"
 
 #: languages/yoast-components.php:113
 msgid "image preview"
@@ -299,60 +665,6 @@ msgstr "Vi har nyligen förbättrat funktionaliteten för inställningar för s�
 msgid "Not all required fields are given. Missing field %1$s"
 msgstr "Alla obligatoriska fält är inte ifyllda. Fältet %1$s saknas"
 
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:259
-msgid "Please create an %1$sSEO title%2$s."
-msgstr "Skapa en %1$sSEO-rubrik%2$s."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:251
-msgid "The %1$sSEO title%2$s has a nice length."
-msgstr "%1$sSEO-rubriken%2$s har en bra längd."
-
-#. Translators: %1$s expands to the number of outbound links, %2$s expands to a
-#. link on yoast.com, 	   %3$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:243
-msgid "This page has %1$s %2$soutbound link(s)%3$s."
-msgstr "Denna sida har %1$s %2$sutgående länk(ar)%3$s."
-
-#. Translators: %1$s expands to a link to a Yoast.com article about keyword and
-#. topic distribution, 	   %2$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:201
-msgid "Your keyword is %1$sdistributed%2$s evenly throughout the text. That's great."
-msgid_plural "Your keyword and its synonyms are %1$sdistributed%2$s evenly throughout the text. That's great."
-msgstr[0] "Ditt nyckelord är %1$sdistribuerat%2$s jämnt i hela texten. Det är utmärkt."
-msgstr[1] "Ditt nyckelord och dess synonymer är %1$sdistribuerat%2$s jämnt i hela texten. Det är utmärkt."
-
-#. Translators: %1$s expands to a link to a Yoast.com article about keyword and
-#. topic distribution, 	   %2$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:196
-msgid "Some parts of your text do not contain the keyword. Try to %1$sdistribute%2$s the keyword more evenly."
-msgid_plural "Some parts of your text do not contain the keyword or its synonyms. Try to %1$sdistribute%2$s them more evenly."
-msgstr[0] "Vissa delar av din text innehåller inte nyckelordet. Försök att %1$sdistribuera%2$s nyckelordet jämnare."
-msgstr[1] "Vissa delar av din text innehåller inte nyckelordet eller dess synonymer. Försök att %1$sdistribuera%2$s dem jämnare."
-
-#. Translators: %1$s expands to a link to a Yoast.com article about keyword and
-#. topic distribution, 	   %2$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:191
-msgid "Large parts of your text do not contain the keyword. Try to %1$sdistribute%2$s the keyword more evenly."
-msgid_plural "Large parts of your text do not contain the keyword or its synonyms. Try to %1$sdistribute%2$s them more evenly."
-msgstr[0] "Stora delar av din text innehåller inte nyckelordet. Försök att %1$sdistribuer%2$s nyckelordet jämnare."
-msgstr[1] "Stora delar av din text innehåller inte nyckelordet eller dess synonymer. Försök att %1$sdistribuera%2$s dem jämnare."
-
-#. Translators: %1$s expands to a link to a Yoast.com article about keyword and
-#. topic distribution, 	   %2$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:186
-msgid "Use your keyword or synonyms more often in your text so that we can check %1$skeyword distribution%2$s."
-msgstr "Använd ditt nyckelordord eller synonymer oftare i din text så att vi kan kontrollera %1$snyckelorddistribution%2$s."
-
-#. Translators: %1$s expands to the number of internal links, %2$s expands to a
-#. link on yoast.com, 	   %3$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:141
-msgid "This page has %1$s %2$sinternal link(s)%3$s."
-msgstr "Denna sida har %1$s %2$sinterna länk/länkar%3$s."
-
 #. translators: %s expands to Yoast SEO Premium.
 #: admin/views/sidebar.php:119
 msgid "Upgrade to %s »"
@@ -404,28 +716,28 @@ msgid "Free: %1$sSEO for Beginners course%2$s"
 msgstr "Gratis: %1$sSEO-kurs för nybörjare%2$s"
 
 #: admin/metabox/class-metabox-keyword-synonyms-config.php:22
-#: languages/wordpress-seojs.php:71
+#: languages/wordpress-seojs.php:51
 msgid "Add synonyms"
 msgstr "Lägg till synonymer"
 
 #. translators: %1$s resolves to Basic SEO training, 2: Yoast SEO
-#: admin/config-ui/components/class-component-suggestions.php:54
+#: admin/config-ui/components/class-component-suggestions.php:61
 msgid "Do you want to learn how you can improve your SEO yourself? In our %1$s you'll learn practical SEO skills from keyword research and copywriting to technical SEO and off-page SEO. Using the %2$s plugin is one thing. Doing good SEO day-to-day is another. You simply won't get the results you want without putting in work yourself. The %1$s teaches you how."
 msgstr "Vill du lära dig hur du kan förbättra din SEO? I vår %1$s kommer du lära dig praktiska SEO-färdigheter från nyckelordsforskning och copywriting, till teknisk SEO och extern SEO. Att använda %2$stillägget är en sak, att göra bra SEO-arbete varje dag en annan. Du kommer helt enkelt inte få resultaten du vill utan att själv arbeta för det. %1$s lär dig hur."
 
 #. translators: %1$s resolves to Basic SEO training
-#: admin/config-ui/components/class-component-suggestions.php:49
+#: admin/config-ui/components/class-component-suggestions.php:56
 msgid "Learn all about SEO with our %1$s"
 msgstr "Lär dig allt om SEO med vår %1$s"
 
-#: admin/class-keyword-synonyms-modal.php:21 languages/wordpress-seojs.php:38
-msgid "Would you like to add keyword synonyms?"
-msgstr "Vill du lägga till nyckelordssynonymer?"
+#: admin/class-keyword-synonyms-modal.php:21 languages/wordpress-seojs.php:54
+msgid "Would you like to add keyphrase synonyms?"
+msgstr "Vill du lägga till nyckelordsfras-synonymer?"
 
 #: admin/class-add-keyword-modal.php:21
-#: admin/formatter/class-metabox-formatter.php:185
-msgid "Would you like to add more than one keyword?"
-msgstr "Vill du lägga till mer än ett nyckelord?"
+#: admin/formatter/class-metabox-formatter.php:186
+msgid "Would you like to add more than one keyphrase?"
+msgstr "Vill du lägga till mer än en nyckelordsfras?"
 
 #. translators: %s expands to 'Yoast SEO'.
 #: admin/config-ui/components/class-component-configuration-choices.php:73
@@ -453,62 +765,35 @@ msgstr "Du kan redigera dina SEO meta-data för denna anpassade typ på %1$sbuti
 msgid "You haven't set a Shop page in your WooCommerce settings. Please do this first."
 msgstr "Du har inte angivit någon sida för din butik i inställningarna för WooCommerce. Gör det först."
 
-#: languages/wordpress-seojs.php:238
+#: languages/wordpress-seojs.php:251
 msgid "Current year"
 msgstr "Nuvarande år"
 
-#. Translators: %1$s expands to a link to https://yoa.st/headings, %2$s expands
-#. to the link closing tag.
-#: languages/yoast-seo-js.php:102
-msgid "You are not using any %1$ssubheadings%2$s, but your text is short enough and probably doesn't need them."
-msgstr "Du använder inte %1$sunderrubriker%2$s, men din text är tillräckligt kort och behöver antagligen inte dem."
-
-#. Translators: %1$s expands to a link to https://yoa.st/headings, %2$s expands
-#. to the link closing tag.
-#: languages/yoast-seo-js.php:98
-msgid "You are not using any subheadings, although your text is rather long. Try and add  some %1$ssubheadings%2$s."
-msgstr "Du använder inte underrubriker, trots att din text är rätt lång. Prova att lägga till några %1$sunderrubriker%2$s."
-
-#. Translators: %1$d expands to the number of subheadings, %2$d expands to the
-#. recommended number 	   of words following a subheading, %3$s expands to a
-#. link to https://yoa.st/headings, 	   %4$s expands to the link closing tag.
-#: languages/yoast-seo-js.php:94
-msgid "%1$d section of your text is longer than %2$d words and is not separated by any subheadings. Add %3$ssubheadings%4$s to improve readability."
-msgid_plural "%1$d sections of your text are longer than %2$d words and are not separated by any subheadings. Add %3$ssubheadings%4$s to improve readability."
-msgstr[0] "%1$d avsnitt av din text är längre än %2$d ord och separeras inte av underrubriker. Lägg till %3$sunderrubriker%4$s för att förbättra läsbarheten."
-msgstr[1] "%1$d avsnitt av din text är längre än %2$d ord och separeras inte av underrubriker. Lägg till %3$sunderrubriker%4$s för att förbättra läsbarheten."
-
-#. Translators: %1$s expands to a link to https://yoa.st/headings, %2$s expands
-#. to the link closing tag.
-#: languages/yoast-seo-js.php:86
-msgid "Great job with using %1$ssubheadings%2$s!"
-msgstr "Du har använt %1$sunderrubriker%2$s bra!"
-
-#: languages/yoast-components.php:247
+#: languages/yoast-components.php:244
 msgid "Something went wrong. Please reload the page."
 msgstr "Något gick fel. Vänligen ladda om sidan."
 
-#: languages/yoast-components.php:241
+#: languages/yoast-components.php:238
 msgid "Url preview"
 msgstr "Förhandsgranskning av URL"
 
-#: languages/yoast-components.php:235
+#: languages/yoast-components.php:232
 msgid "Please provide a meta description by editing the snippet below. If you don’t, Google will try to find a relevant part of your post to show in the search results."
 msgstr "Ange en metabeskrivning genom att ändra förhandsvisningstexten nedan. Om du inte gör detta, kommer Google att försöka hitta en relevant del av ditt inlägg för visning i sökresultaten."
 
-#: languages/yoast-components.php:203
+#: languages/yoast-components.php:200
 msgid "Insert snippet variable"
-msgstr "Lägg till förhandsvisningstextvariabel"
+msgstr "Infoga förhandsvisningstextvariabel"
 
-#: inc/class-wpseo-replace-vars.php:1304 languages/wordpress-seojs.php:253
+#: inc/class-wpseo-replace-vars.php:1304 languages/wordpress-seojs.php:266
 msgid "Tagline"
 msgstr "Slogan"
 
-#: languages/wordpress-seojs.php:247
+#: languages/wordpress-seojs.php:260
 msgid "Page"
 msgstr "Sida"
 
-#: languages/wordpress-seojs.php:26 languages/yoast-components.php:220
+#: languages/wordpress-seojs.php:32 languages/yoast-components.php:217
 msgid "Modify your meta description by editing it right here"
 msgstr "Redigera din metabeskrivning genom att ändra den här"
 
@@ -548,7 +833,7 @@ msgstr "Sidnummer"
 msgid "User description"
 msgstr "Användarbeskrivning"
 
-#: inc/class-wpseo-replace-vars.php:1336 languages/wordpress-seojs.php:244
+#: inc/class-wpseo-replace-vars.php:1336 languages/wordpress-seojs.php:257
 msgid "ID"
 msgstr "ID"
 
@@ -564,11 +849,11 @@ msgstr "Inläggstyp (plural)"
 msgid "Post type (singular)"
 msgstr "Inläggstyp (singular)"
 
-#: inc/class-wpseo-replace-vars.php:1315 languages/wordpress-seojs.php:274
+#: inc/class-wpseo-replace-vars.php:1315 languages/wordpress-seojs.php:287
 msgid "Separator"
 msgstr "Avgränsare"
 
-#: inc/class-wpseo-replace-vars.php:1314 languages/wordpress-seojs.php:250
+#: inc/class-wpseo-replace-vars.php:1314 languages/wordpress-seojs.php:263
 msgid "Search phrase"
 msgstr "Sökfras"
 
@@ -576,23 +861,23 @@ msgstr "Sökfras"
 msgid "Term title"
 msgstr "Termrubrik"
 
-#: inc/class-wpseo-replace-vars.php:1312 languages/wordpress-seojs.php:286
+#: inc/class-wpseo-replace-vars.php:1312 languages/wordpress-seojs.php:299
 msgid "Term description"
 msgstr "Termbeskrivning"
 
-#: inc/class-wpseo-replace-vars.php:1311 languages/wordpress-seojs.php:283
+#: inc/class-wpseo-replace-vars.php:1311 languages/wordpress-seojs.php:296
 msgid "Tag description"
 msgstr "Etikettbeskrivning"
 
-#: inc/class-wpseo-replace-vars.php:1310 languages/wordpress-seojs.php:280
+#: inc/class-wpseo-replace-vars.php:1310 languages/wordpress-seojs.php:293
 msgid "Category description"
 msgstr "Kategoribeskrivning"
 
-#: inc/class-wpseo-replace-vars.php:1309 languages/wordpress-seojs.php:271
+#: inc/class-wpseo-replace-vars.php:1309 languages/wordpress-seojs.php:284
 msgid "Primary category"
 msgstr "Huvudkategori"
 
-#: inc/class-wpseo-replace-vars.php:1308 languages/wordpress-seojs.php:259
+#: inc/class-wpseo-replace-vars.php:1308 languages/wordpress-seojs.php:272
 msgid "Category"
 msgstr "Kategori"
 
@@ -600,15 +885,15 @@ msgstr "Kategori"
 msgid "Tag"
 msgstr "Etikett"
 
-#: inc/class-wpseo-replace-vars.php:1306 languages/wordpress-seojs.php:277
+#: inc/class-wpseo-replace-vars.php:1306 languages/wordpress-seojs.php:290
 msgid "Excerpt only"
 msgstr "Endast utdrag"
 
-#: inc/class-wpseo-replace-vars.php:1305 languages/wordpress-seojs.php:268
+#: inc/class-wpseo-replace-vars.php:1305 languages/wordpress-seojs.php:281
 msgid "Excerpt"
 msgstr "Utdrag"
 
-#: inc/class-wpseo-replace-vars.php:1303 languages/wordpress-seojs.php:256
+#: inc/class-wpseo-replace-vars.php:1303 languages/wordpress-seojs.php:269
 msgid "Site title"
 msgstr "Sidrubrik"
 
@@ -616,11 +901,11 @@ msgstr "Sidrubrik"
 msgid "Archive title"
 msgstr "Arkivrubrik"
 
-#: inc/class-wpseo-replace-vars.php:1301 languages/wordpress-seojs.php:265
+#: inc/class-wpseo-replace-vars.php:1301 languages/wordpress-seojs.php:278
 msgid "Parent title"
 msgstr "Överordnad rubrik"
 
-#: inc/class-wpseo-replace-vars.php:1299 languages/wordpress-seojs.php:241
+#: inc/class-wpseo-replace-vars.php:1299 languages/wordpress-seojs.php:254
 msgid "Date"
 msgstr "Datum"
 
@@ -681,29 +966,21 @@ msgstr "Inställningar för enskilda %s-URL:er"
 msgid "The settings on this page allow you to specify what the default search appearance should be for any type of content you have. You can choose which content types appear in search results and what their default description should be."
 msgstr "Inställningarna på denna sida låter dig ange vilket sökutseende som ska användas som standard för vilken typ av innehåll du har. Du kan välja vilka inläggstyper som ska synas i sökresultat och vad deras beskrivning ska vara som standard."
 
-#: languages/yoast-components.php:250
+#: languages/yoast-components.php:247
 msgid "Dismiss this notice"
-msgstr "Stäng detta meddelande"
+msgstr "Avfärda denna notis"
 
-#: languages/wordpress-seojs.php:114
-msgid "Learn more about the Snippet Preview."
-msgstr "Läs mer om förhandsvisningstext."
-
-#: languages/wordpress-seojs.php:111
-msgid "This is a rendering of what this post might look like in Google's search results."
-msgstr "Det här är en återgivning av hur detta inlägg kan se ut i ett sökresultat hos Google."
-
-#: languages/yoast-components.php:209
+#: languages/yoast-components.php:206
 msgid "No results"
 msgstr "Inga resultat"
 
-#: languages/yoast-components.php:206
+#: languages/yoast-components.php:203
 msgid "%d result found, use up and down arrow keys to navigate"
 msgid_plural "%d results found, use up and down arrow keys to navigate"
 msgstr[0] "%d resultat hittades. Navigera med pilarna upp/ned"
 msgstr[1] "%d resultat hittades. Navigera med pilarna upp/ned"
 
-#: languages/yoast-components.php:185
+#: languages/yoast-components.php:182
 msgid "Your site language is set to %s. If this is not correct, contact your site administrator."
 msgstr "Språket för din webbplats är inställt till %s. Om detta inte stämmer bör du kontakta webbplatsens administratör."
 
@@ -751,14 +1028,8 @@ msgstr "Om du vet vad detta betyder och inte vill se det här meddelandet längr
 msgid "Your site's settings currently allow attachment URLs on your site to exist. Please read %1$sthis post about a potential issue%2$s with attachment URLs and check whether you have the correct setting for your site."
 msgstr "Dina webbplatsinställningar tillåter för närvarande att det finns webbadresser till bilagor. Läs %1$sdetta inlägg om en eventuell risk%2$s med webbadresser till bilagor och kontrollera om du har rätt inställningar för din webbplats."
 
-#. translators: %1$s expands to the requested indexable type. %2$s expands to
-#. the request id
-#: admin/services/class-indexable.php:40
-msgid "Object %1$s with id %2$s not found"
-msgstr "Objekt %1$s med id %2$s hittades inte"
-
 #. translators: %1$s expands to the requested indexable type
-#: admin/services/class-indexable.php:28
+#: admin/services/class-indexable.php:92
 msgid "Unknown type %1$s"
 msgstr "Okänd typ %1$s"
 
@@ -805,7 +1076,7 @@ msgstr "Visa alla innehållstyper"
 
 #. translators: %1$s resolves to the opening tag of the link to the comment
 #. setting page, %2$s resolves to the closing tag of the link
-#: admin/class-admin-init.php:182
+#: admin/class-admin-init.php:184
 msgid "To fix this uncheck the box in front of the \"Break comments into pages...\" on the %1$sComment settings page%2$s."
 msgstr "För att åtgärda detta, avmarkera rutan innan ”Dela upp kommentarer i sidor...” på %1$sinställningssidan för kommentarer%2$s."
 
@@ -919,11 +1190,6 @@ msgstr "%s data hittades inte."
 msgid "Improve your SEO skills"
 msgstr "Förbättra din SEO-kompetens"
 
-#. translators: %s is replaced by the plugin name
-#: admin/views/sidebar.php:38
-msgid "Get %s now"
-msgstr "Skaffa %s nu"
-
 #: admin/views/sidebar.php:32
 msgid "No ads"
 msgstr "Inga annonser"
@@ -943,10 +1209,6 @@ msgstr "Få realtidsförslag till interna länkar"
 #: admin/views/sidebar.php:28
 msgid "Preview your page in Facebook and Twitter"
 msgstr "Förhandsgranska din sida i Facebook och Twitter"
-
-#: admin/views/sidebar.php:27 languages/wordpress-seojs.php:77
-msgid "Rank for up to 5 focus keywords per page"
-msgstr "Ranka för upp till 5 fokusnyckelord per sida"
 
 #. translators: %1$s expands to the plugin name
 #: admin/views/sidebar.php:23
@@ -1136,47 +1398,47 @@ msgstr "Du kan använda rutorna nedan för att verifiera med olika webbmaster-ve
 msgid "Learn more about the Webmaster Tools verification"
 msgstr "Lär dig mer om verifiering med webbmaster-verktygen"
 
-#: admin/views/tabs/dashboard/features.php:152
-#: languages/yoast-components.php:191
+#: admin/views/tabs/dashboard/features.php:54
+#: languages/yoast-components.php:188
 msgid "On"
 msgstr "På"
 
 #. translators: %s expands to a feature's name
-#: admin/views/tabs/dashboard/features.php:145
+#: admin/views/tabs/dashboard/features.php:47
+#: admin/views/tabs/network/features.php:47
 msgid "Help on: %s"
 msgstr "Hjälp med: %s"
 
 #. translators: %1$s expands to Yoast SEO
-#: admin/views/tabs/dashboard/features.php:110
+#: admin/views/tabs/dashboard/features.php:26
 msgid "%1$s comes with a lot of features. You can enable / disable some of them below. Clicking the question mark gives more information about the feature."
 msgstr "%1$s kommer med många funktioner. Du kan aktivera/inaktivera några av dem nedan. Om du klickar på frågetecknet får du mer information om funktionen."
 
-#: admin/views/tabs/dashboard/features.php:91
-#: admin/views/tabs/dashboard/features.php:153
-#: languages/yoast-components.php:194
+#: admin/views/class-yoast-feature-toggles.php:130
+#: admin/views/tabs/dashboard/features.php:55
+#: languages/yoast-components.php:191
 msgid "Off"
 msgstr "Av"
 
-#. translators: %1$s expands to Yoast SEO, %2$s expands to the translated
-#. version of "Off"
-#: admin/views/tabs/dashboard/features.php:89
+#. translators: 1: Yoast SEO, 2: translated version of "Off"
+#: admin/views/class-yoast-feature-toggles.php:128
 msgid "The advanced section of the %1$s meta box allows a user to remove posts from the search results or change the canonical. These are things you might not want any author to do. That's why, by default, only editors and administrators can do this. Setting to \"%2$s\" allows all users to change these settings."
 msgstr "Den avancerade sektionen av %1$s-metaboxen låter an användare ta bort inlägg från sökresultat eller ändra den kanoniska. Detta är saker som du kanske inte vill att författare ska göra. Därför kan endast redaktörer och administratörer göra detta som standard. Om du ändrar till ”%2$s” kommer alla användare kunna ändra dessa inställningar."
 
-#: admin/views/tabs/dashboard/features.php:85
+#: admin/views/class-yoast-feature-toggles.php:124
 msgid "Security: no advanced settings for authors"
 msgstr "Säkerhet: inga avancerade inställningar för författare"
 
-#: admin/views/tabs/dashboard/features.php:61
+#: admin/views/class-yoast-feature-toggles.php:100
 msgid "Read why XML Sitemaps are important for your site."
 msgstr "Läs om varför XML-webbplatskartor är viktiga för din webbplats."
 
-#. translators: %s expands to Yoast SEO
-#: admin/views/tabs/dashboard/features.php:60
+#. translators: %s: Yoast SEO
+#: admin/views/class-yoast-feature-toggles.php:99
 msgid "Enable the XML sitemaps that %s generates."
 msgstr "Aktivera XML-webbplatskartan som %s genererar."
 
-#: admin/views/tabs/dashboard/features.php:21
+#: admin/views/class-yoast-feature-toggles.php:59
 msgid "See the XML sitemap."
 msgstr "Visa XML-webbplatskartan."
 
@@ -1217,13 +1479,13 @@ msgstr "Media"
 msgid "Content Types"
 msgstr "Innehållstyper"
 
-#: admin/notifiers/class-configuration-notifier.php:100
+#: admin/notifiers/class-configuration-notifier.php:101
 msgid "Check SEO configuration"
 msgstr "Kontrollera SEO-konfigurationen"
 
 #. translators: %1$s expands to Yoast SEO, %2$s is a link start tag to the
 #. Onboarding Wizard, %3$s is the link closing tag.
-#: admin/notifiers/class-configuration-notifier.php:94
+#: admin/notifiers/class-configuration-notifier.php:95
 msgid "Want to make sure your %1$s settings are still OK? %2$sOpen the configuration wizard again%3$s to validate them."
 msgstr "Vill du se till att dina inställningar för %1$s fortfarande är okej? %2$sÖppna konfigurationsguiden igen %3$s för att verifiera dem."
 
@@ -1244,7 +1506,7 @@ msgstr "Standard för %2$s, för närvarande: %1$s"
 msgid "Allow search engines to show this %s in search results?"
 msgstr "Tillåt sökmotorer att visa denna %s i sökresultat?"
 
-#: admin/menu/class-admin-menu.php:89 frontend/class-frontend.php:1223
+#: admin/menu/class-admin-menu.php:89 frontend/class-frontend.php:1184
 msgid "Search Appearance"
 msgstr "Sökutseende"
 
@@ -1269,12 +1531,12 @@ msgstr "Synlighet för sökmotorer"
 
 #. translators: %s expands to an indexable object's name, like a post type or
 #. taxonomy
-#: admin/class-yoast-form.php:628
+#: admin/class-yoast-form.php:675
 msgid "Show %s in search results?"
 msgstr "Visa %s i sökresultaten?"
 
 #. translators: %1$s expands to Yoast SEO.
-#: admin/class-plugin-conflict.php:154
+#: admin/class-plugin-conflict.php:157
 msgid "Toggle %1$s's XML Sitemap"
 msgstr "Slå på/av XML-webbplatskartan för %1$s"
 
@@ -1286,11 +1548,11 @@ msgstr "Aktivera den här funktionen om du vill att Twitter ska visa en förhand
 msgid "Search result"
 msgstr "Sökresultat"
 
-#: admin/views/tabs/dashboard/features.php:25
+#: admin/views/class-yoast-feature-toggles.php:64
 msgid "SEO analysis"
 msgstr "SEO-analys"
 
-#: admin/views/tabs/dashboard/features.php:51
+#: admin/views/class-yoast-feature-toggles.php:90
 msgid "The text link counter helps you improve your site structure."
 msgstr "Textlänkräknaren hjälper dig förbättra strukturen för din webbplats."
 
@@ -1308,53 +1570,53 @@ msgstr "Ny supportförfrågan"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:81
+#: admin/formatter/class-metabox-formatter.php:82
 msgid "Readability: %1$sNot available%2$s"
 msgstr "Läsbarhet: %1$sInte tillgänglig%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:87
+#: admin/formatter/class-metabox-formatter.php:88
 msgid "Readability: %1$sNeeds improvement%2$s"
 msgstr "Läsbarhet: %1$sBehöver förbättras%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:93
+#: admin/formatter/class-metabox-formatter.php:94
 msgid "Readability: %1$sOK%2$s"
 msgstr "Läsbarhet: %1$sOK%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:99
+#: admin/formatter/class-metabox-formatter.php:100
 msgid "Readability: %1$sGood%2$s"
 msgstr "Läsbarhet: %1$sBra%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:107
+#: admin/formatter/class-metabox-formatter.php:108
 msgid "SEO: %1$sNot available%2$s"
 msgstr "SEO: %1$sInte tillgänglig%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:113
+#: admin/formatter/class-metabox-formatter.php:114
 msgid "SEO: %1$sNeeds improvement%2$s"
 msgstr "SEO: %1$sBehöver förbättras%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:119
+#: admin/formatter/class-metabox-formatter.php:120
 msgid "SEO: %1$sOK%2$s"
 msgstr "SEO: %1$sOK%2$s"
 
 #. translators: %1$s expands to an opening strong tag, %2$s expands to a
 #. closing strong tag.
-#: admin/formatter/class-metabox-formatter.php:125
+#: admin/formatter/class-metabox-formatter.php:126
 msgid "SEO: %1$sGood%2$s"
 msgstr "SEO: %1$sBra%2$s"
 
-#: admin/formatter/class-metabox-formatter.php:165
+#: admin/formatter/class-metabox-formatter.php:166
 #: languages/yoast-components.php:167
 msgid "Good results"
 msgstr "Bra resultat"
@@ -1372,41 +1634,41 @@ msgstr "Förbättra dina kontaktsidor med Google Maps, öppettider och en butiks
 msgid "Allow customers to pick up their %s order locally"
 msgstr "Låt dina kunder hämta upp deras order från %s lokalt"
 
-#: admin/views/tabs/dashboard/features.php:27
+#: admin/views/class-yoast-feature-toggles.php:66
 msgid "The SEO analysis offers suggestions to improve the SEO of your text."
 msgstr "SEO-analysen visar dig hur du kan förbättra SEO för din text."
 
-#: admin/views/tabs/dashboard/features.php:28
+#: admin/views/class-yoast-feature-toggles.php:67
 msgid "Learn how the SEO analysis can help you rank."
 msgstr "Lär dig hur SEO-analysen kan hjälpa dig ranka."
 
-#: admin/views/tabs/dashboard/features.php:35
+#: admin/views/class-yoast-feature-toggles.php:74
 msgid "The readability analysis offers suggestions to improve the structure and style of your text."
 msgstr "Läsbarhetsanalysen visar dig hur du förbättrar strukturen och stilen för din text."
 
-#: admin/views/tabs/dashboard/features.php:36
+#: admin/views/class-yoast-feature-toggles.php:75
 msgid "Discover why readability is important for SEO."
 msgstr "Få reda på varför läsbarhet är viktigt för SEO."
 
-#: admin/views/tabs/dashboard/features.php:43
+#: admin/views/class-yoast-feature-toggles.php:82
 msgid "The cornerstone content feature lets you to mark and filter cornerstone content on your website."
 msgstr "Funktionen grundstensinnehåll låter dig markera och filtrera grundstensinnehåll på din webbplats."
 
-#: admin/views/tabs/dashboard/features.php:44
+#: admin/views/class-yoast-feature-toggles.php:83
 msgid "Find out how cornerstone content can help you improve your site structure."
 msgstr "Få reda på hur grundstensinnehåll kan hjälpa dig förbättra strukturen för din webbplats."
 
-#: admin/views/tabs/dashboard/features.php:52
+#: admin/views/class-yoast-feature-toggles.php:91
 msgid "Find out how the text link counter can enhance your SEO."
 msgstr "Få reda på hur textlänkräknaren kan förbättra din SEO."
 
-#. translators: %s expands to Ryte.
-#: admin/views/tabs/dashboard/features.php:68
+#. translators: %s: Ryte
+#: admin/views/class-yoast-feature-toggles.php:107
 msgid "%s integration"
 msgstr "Integration med %s"
 
-#. translators: %s expands to Ryte.
-#: admin/views/tabs/dashboard/features.php:73
+#. translators: %s: Ryte
+#: admin/views/class-yoast-feature-toggles.php:112
 msgid "Read more about how %s works."
 msgstr "Läs mer om hur %s fungerar."
 
@@ -1414,15 +1676,8 @@ msgstr "Läs mer om hur %s fungerar."
 msgid "Enable this feature if you want Facebook and other social media to display a preview with images and a text excerpt when a link to your site is shared."
 msgstr "Aktivera den här funktionen om du vill att Facebook och andra sociala medier ska visa en förhandsgranskning med bilder och ett textutdrag när en länk till din webbplats delas."
 
-#. Translators: %1$d expands to the number of subheadings containing the
-#. keyword, %2$d expands to the 	   total number of subheadings, %3$s expands
-#. to a link on yoast.com, %4$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:264
-msgid "The focus keyword appears in %1$d (out of %2$d) %3$ssubheadings%4$s in your copy."
-msgstr "Nyckelordet förekommer i %2$d (av %1$d) %3$sunderrubriker%4$s i ditt innehåll."
-
 #. translators: %s expands to Yoast SEO Premium.
-#: admin/class-social-admin.php:183
+#: admin/class-social-admin.php:184
 msgid "Find out why you should upgrade to %s"
 msgstr "Ta reda på varför du borde uppgradera till %s"
 
@@ -1434,7 +1689,7 @@ msgstr "https://yoa.st/1uk"
 msgid "https://yoa.st/1uj"
 msgstr "https://yoa.st/1uj"
 
-#: admin/metabox/class-metabox.php:298
+#: admin/metabox/class-metabox.php:306
 #: admin/taxonomy/class-taxonomy-metabox.php:69
 msgid "Meta box"
 msgstr "Metaruta"
@@ -1456,71 +1711,50 @@ msgstr "Skriv här för att söka&hellip;"
 msgid "Search the Yoast Knowledge Base for answers to your questions:"
 msgstr "Sök i kunskapsbasen på Yoast för svar på dina frågor:"
 
-#. Translators: %1$s and $3$s expand to the admin search page for the focus
-#. keyword, %2$d expands to the number 	   of times this focus keyword has been
-#. used before, %4$s and %5$s expand to a link to an article on yoast.com
-#. about why you should not use a keyword more than once.
-#: languages/yoast-seo-js.php:376
-msgid "You've used this focus keyword %1$s%2$d times before%3$s. It’s probably a good idea to read about %4$swhy you should not use your focus keyword more than once%5$s."
-msgstr "Du har använt detta fokusnyckelord %1$s%2$d gånger tidigare%3$s. Det är nog en bra idé att läsa om %4$svarför du inte bör använda ditt fokusnyckelord mer än en gång%5$s."
-
-#. Translators: %1$s and %2$s expand to an admin link where the focus keyword
-#. is already used. %3$s and %4$s 	   expand to a link to an article on
-#. yoast.com about why you should not use a keyword more than once.
-#: languages/yoast-seo-js.php:370
-msgid "You've used this focus keyword %1$sonce before%2$s. It’s probably a good idea to read about %3$swhy you should not use your focus keyword more than once%4$s."
-msgstr "Du har använt detta fokusnyckelord %1$sen gång tidigare%2$s. Det är nog en bra idé att läsa om %3$svarför du inte bör använda ditt fokusnyckelord mer än en gång%4$s."
-
-#: admin/formatter/class-metabox-formatter.php:169
+#: admin/formatter/class-metabox-formatter.php:170
 #: languages/yoast-components.php:149
 msgid "Remove highlight from the text"
 msgstr "Ta bort markering från texten"
 
-#: admin/formatter/class-metabox-formatter.php:166
+#: admin/formatter/class-metabox-formatter.php:167
 msgid "Your site language is set to {language}."
 msgstr "Ditt språk är angivet som {language}."
 
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:224
-msgid "The %1$smeta description%2$s has a nice length."
-msgstr "%1$sMetabeskrivningen%2$s har en bra längd."
-
 #. translators: %1$s expands to Yoast SEO, %2$s is a link start tag to the
 #. Onboarding Wizard, %3$s is the link closing tag.
-#: admin/notifiers/class-configuration-notifier.php:111
+#: admin/notifiers/class-configuration-notifier.php:112
 msgid "Get started quickly with the %1$s %2$sconfiguration wizard%3$s!"
 msgstr "Kom igång snabbt med hjälp av %2$skonfigurationsguiden%3$s för %1$s!"
 
-#: admin/notifiers/class-configuration-notifier.php:117
+#: admin/notifiers/class-configuration-notifier.php:118
 msgid "First-time SEO configuration"
 msgstr "Startkonfiguration för SEO"
 
-#: admin/formatter/class-metabox-formatter.php:167
+#: admin/formatter/class-metabox-formatter.php:168
 msgid "Your site language is set to {language}. If this is not correct, contact your site administrator."
 msgstr "Ditt angivna språk är {language}. Kontakta webbplatsens administratör om detta inte stämmer."
 
-#: languages/yoast-components.php:182
+#: languages/yoast-components.php:179
 msgid "Your site language is set to %s. "
 msgstr "Ditt språk på webbplatsen är inställt på %s."
 
-#: admin/formatter/class-metabox-formatter.php:168
+#: admin/formatter/class-metabox-formatter.php:169
 #: languages/yoast-components.php:152
 msgid "Highlight this result in the text"
 msgstr "Markera detta resultat i texten"
 
-#: admin/formatter/class-metabox-formatter.php:164
+#: admin/formatter/class-metabox-formatter.php:165
 #: languages/yoast-components.php:164
 msgid "Considerations"
 msgstr "Överväganden"
 
-#: admin/formatter/class-metabox-formatter.php:161
+#: admin/formatter/class-metabox-formatter.php:162
 #: languages/yoast-components.php:155
 msgid "Errors"
 msgstr "Fel"
 
-#: admin/formatter/class-metabox-formatter.php:160
-#: languages/yoast-components.php:188
+#: admin/formatter/class-metabox-formatter.php:161
+#: languages/yoast-components.php:185
 msgid "Change language"
 msgstr "Byt språk"
 
@@ -1609,7 +1843,7 @@ msgstr "Integrera %2$s med %1$s problemfritt för innehållsanalysen!"
 
 #. translators: %1$s expands to Yoast SEO, %2$s expands to the plugin version,
 #. %3$s expands to the plugin name
-#: admin/class-admin-init.php:339
+#: admin/class-admin-init.php:341
 msgid "%1$s and %2$s can work together a lot better by adding a helper plugin. Please install %3$s to make your life better."
 msgstr "%1$s och %2$s kan fungera tillsammans mycket bättre genom att lägga till ett hjälptillägg. Vänligen installera %3$s för att göra ditt liv enklare."
 
@@ -1624,7 +1858,7 @@ msgstr "Inställningarna för sökutseende för %1$s består av variabler som er
 
 #. translators: %1$s expands to the posttype label, %2$s expands anchor to blog
 #. post about cornerstone content, %3$s expands to </a>
-#: admin/filters/class-cornerstone-filter.php:65
+#: admin/filters/class-cornerstone-filter.php:81
 msgid "Mark the most important %1$s as 'cornerstone content' to improve your site structure. %2$sLearn more about cornerstone content%3$s."
 msgstr "Markera de viktigaste %1$s som ”grundstensinnehåll” för att förbättra din webbplatsstruktur. %2$sLäs mer om grundstensinnehåll%3$s."
 
@@ -1652,12 +1886,12 @@ msgstr "Gå tillbaka"
 msgid "Go back to the search results"
 msgstr "Gå tillbaka till sökresultaten"
 
-#: admin/class-add-keyword-modal.php:38 admin/class-help-center.php:263
+#: admin/class-add-keyword-modal.php:40 admin/class-help-center.php:263
 #: admin/class-keyword-synonyms-modal.php:40
 #: admin/class-multiple-keywords-modal.php:40
-#: admin/formatter/class-metabox-formatter.php:171
-#: admin/formatter/class-metabox-formatter.php:202
-#: languages/yoast-components.php:253
+#: admin/formatter/class-metabox-formatter.php:172
+#: admin/formatter/class-metabox-formatter.php:203
+#: languages/yoast-components.php:250
 msgid "(Opens in a new browser tab)"
 msgstr "(Öppnas i en ny webbläsarflik)"
 
@@ -1668,12 +1902,6 @@ msgstr "Följ vår träning ”Yoast SEO for WordPress” och bli en certifierad
 #: admin/class-help-center.php:118
 msgid "Want to be a Yoast SEO Expert?"
 msgstr "Vill du bli en expert på Yoast SEO?"
-
-#. translators: %1$s expands to an opening strong tag, %2$s expands to a
-#. closing strong tag
-#: admin/statistics/class-statistics-service.php:197
-msgid "Posts %1$swithout%2$s a focus keyword"
-msgstr "Inlägg %1$sutan%2$s ett fokusnyckelord"
 
 #: admin/statistics/class-statistics-service.php:65
 msgid "Hey, your SEO is doing pretty well! Check out the stats:"
@@ -1876,7 +2104,7 @@ msgstr "Avfärdade problem:"
 
 #. translators: %1$s expands to the social network's name, %2$s to Yoast SEO
 #. Premium.
-#: admin/class-social-admin.php:176
+#: admin/class-social-admin.php:177
 msgid "Do you want to preview what it will look like if people share this post on %1$s? You can, with %2$s."
 msgstr "Vill du förhandsgranska hur det kommer att se ut om folk delar det här inlägget på %1$s? Det kan du med %2$s."
 
@@ -1887,7 +2115,7 @@ msgstr "Få reda på varför du borde uppgradera till %s &raquo;"
 
 #: admin/class-premium-upsell-admin-block.php:73
 msgid "Go premium!"
-msgstr "Skaffa premium!"
+msgstr "Skaffa Premium!"
 
 #. translators: %s expands to "Yoast SEO Premium".
 #: admin/class-premium-upsell-admin-block.php:60
@@ -1905,49 +2133,49 @@ msgstr ""
 "Funktionen <strong>Textlänkräknaren</strong> (introducerad i %1$s %2$s) är för närvarande inaktiverad. För att denna funktion ska fungera behöver %1$s skapa en tabell i din databas. Vi kunde inte skapa denna tabell automatiskt.\n"
 "\t\t\t\t\tVänligen läs följande %3$skunskapsartikel%4$s för att få reda på hur du löser detta problem."
 
-#: admin/links/class-link-reindex-dashboard.php:191
+#: admin/links/class-link-reindex-dashboard.php:158
 msgid "Good job! All the links in your texts have been counted."
 msgstr "Bra jobbat! Alla länkarna i dina texter har räknats."
 
-#: admin/links/class-link-reindex-dashboard.php:169
+#: admin/links/class-link-reindex-dashboard.php:136
 msgid "Calculation completed."
 msgstr "Beräkning slutförd."
 
-#: admin/links/class-link-reindex-dashboard.php:168
+#: admin/links/class-link-reindex-dashboard.php:135
 msgid "Calculation in progress..."
 msgstr "Beräkning pågår..."
 
-#: admin/links/class-link-reindex-dashboard.php:143
+#: admin/links/class-link-reindex-dashboard.php:110
 msgid "Stop counting"
 msgstr "Sluta räkna"
 
-#: admin/links/class-link-reindex-dashboard.php:136
+#: admin/links/class-link-reindex-dashboard.php:103
 msgid "Counting links in your texts"
 msgstr "Räknar länkar i dina texter"
 
 #. translators: 1: expands to a <span> containing the number of items
 #. recalculated. 2: expands to a <strong> containing the total number of items.
-#: admin/links/class-link-reindex-dashboard.php:126
+#: admin/links/class-link-reindex-dashboard.php:93
 msgid "Text %1$s of %2$s processed."
 msgstr "Text %1$s av %2$s bearbetad."
 
-#: admin/links/class-link-reindex-dashboard.php:119
+#: admin/links/class-link-reindex-dashboard.php:86
 msgid "All your texts are already counted, there is no need to count them again."
 msgstr "Alla dina texter är redan räknade, de behöver inte räknas igen."
 
-#: admin/links/class-link-reindex-dashboard.php:221
+#: admin/links/class-link-reindex-dashboard.php:188
 msgid "Count links in your texts"
 msgstr "Räknar länkar i dina texter"
 
 #. translators: 1: link to yoast.com post about internal linking suggestion. 4:
 #. is Yoast.com 3: is anchor closing.
-#: admin/links/class-link-reindex-dashboard.php:83
+#: admin/links/class-link-reindex-dashboard.php:209
 msgid "The links in all your public texts need to be counted. This will provide insights of which texts need more links to them. If you want to know more about the why and how of internal linking, check out %1$sthe article about internal linking on %2$s%3$s."
 msgstr "Länkarna i alla dina publika texter behöver räknas. Detta kommer att ge insikter om vilka texter som behöver fler länkar till dem. Om du vill veta mer om hur interna länkar fungerar, kolla in %1$sartikeln om intern länkning på %2$s%3$s."
 
 #: admin/links/class-link-reindex-dashboard.php:56
-#: admin/links/class-link-reindex-dashboard.php:80
-#: admin/views/tabs/dashboard/features.php:49
+#: admin/links/class-link-reindex-dashboard.php:206
+#: admin/views/class-yoast-feature-toggles.php:88
 msgid "Text link counter"
 msgstr "Textlänkräknare"
 
@@ -2010,31 +2238,12 @@ msgstr "%s kolumner"
 msgid "Readability score"
 msgstr "Läsbarhetspoäng"
 
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag
-#: languages/yoast-seo-js.php:131
-msgid "No %1$sinternal links%2$s appear in this page, consider adding some as appropriate."
-msgstr "Det finns inga %1$sinterna länkar%2$s på denna sida. Du kanske borde lägga till några som passar?"
-
-#. Translators: %1$s expands to the number of nofollow links, %2$s expands to a
-#. link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s to the
-#. number of internal links
-#: languages/yoast-seo-js.php:146
-msgid "This page has %1$s nofollowed %2$sinternal link(s)%3$s and %4$s normal internal link(s)."
-msgstr "Denna sida har %1$s %2$sintern(a) länk(ar)%3$s med parametern nofollow och %4$s normal(a) intern(a) länk(ar)."
-
-#. Translators: %1$s expands the number of internal links, %2$s expands to a
-#. link on yoast.com, 	   %3$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:136
-msgid "This page has %1$s %2$sinternal link(s)%3$s, all nofollowed."
-msgstr "Denna sida har %1$s %2$sintern(a) länk(ar)%3$s, alla med parametern nofollow."
-
 #. translators: %s expands to 'Yoast SEO Premium'.
 #: admin/class-add-keyword-modal.php:30
 #: admin/class-keyword-synonyms-modal.php:30
 #: admin/class-multiple-keywords-modal.php:30
-#: admin/formatter/class-metabox-formatter.php:194
-#: languages/wordpress-seojs.php:101
+#: admin/formatter/class-metabox-formatter.php:195
+#: languages/wordpress-seojs.php:108
 msgid "Other benefits of %s for you:"
 msgstr "Fler fördelar för dig med %s:"
 
@@ -2049,7 +2258,7 @@ msgstr "Konfigurera %s i några få steg"
 msgid "%1$sSocial media preview%2$s: Facebook &amp; Twitter"
 msgstr "%1$sFörhandsvisning på sociala medier%2$s: Facebook och Twitter"
 
-#: languages/yoast-components.php:232 languages/yoast-seo-js.php:457
+#: languages/yoast-components.php:229 languages/yoast-seo-js.php:488
 msgid "Scroll to see the preview content."
 msgstr "Rulla ner för att se en förhandsvisning av innehållet."
 
@@ -2057,33 +2266,34 @@ msgstr "Rulla ner för att se en förhandsvisning av innehållet."
 msgid "Enter authorization code here..."
 msgstr "Ange auktoriseringskod här&hellip;"
 
-#: admin/filters/class-cornerstone-filter.php:48
-#: admin/views/tabs/dashboard/features.php:41 languages/wordpress-seojs.php:5
+#: admin/filters/class-cornerstone-filter.php:64
+#: admin/views/class-yoast-feature-toggles.php:80
+#: languages/wordpress-seojs.php:11
 msgid "Cornerstone content"
 msgstr "Grundstensinnehåll"
 
 #. translators: %1$s expands to Yoast SEO.
 #: admin/config-ui/fields/class-field-success-message.php:21
-msgid "%1$s will now take care of all the needed technical optimization of your site. To really improve your site's performance in the search results, it's important to start creating content that ranks well for keywords you care about. Check out this video in which we explain how to use the %1$s metabox when you edit posts or pages."
-msgstr "%1$s tar nu hand om all teknisk optimering som behövs av din webbplats. För att verkligen förbättra webbplatsens prestanda i sökresultaten är det viktigt att börja skapa innehåll som rankas bra för nyckelord du bryr dig om. Kolla in den här videon där vi förklarar hur du använder metaboxen %1$s när du redigerar inlägg eller sidor."
+msgid "%1$s will now take care of all the needed technical optimization of your site. To really improve your site's performance in the search results, it's important to start creating content that ranks well for keyphrases you care about. Check out this video in which we explain how to use the %1$s metabox when you edit posts or pages."
+msgstr "%1$s tar nu hand om all teknisk optimering som behövs för din webbplats. För att verkligen förbättra webbplatsens prestanda i sökresultaten är det viktigt att börja skapa innehåll som rankas bra för nyckelordsfraser du bryr dig om. Kolla in den här videon där vi förklarar hur du använder metaboxen %1$s när du redigerar inlägg eller sidor."
 
 #. translators: %1$s resolves to Local SEO
-#: admin/config-ui/components/class-component-suggestions.php:84
+#: admin/config-ui/components/class-component-suggestions.php:105
 msgid "If you want to outrank the competition in a specific town or region, check out our %1$s plugin! You’ll be able to easily insert Google maps, opening hours, contact information and a store locator. Besides that %1$s helps you to improve the usability of your contact page."
 msgstr "Om du vill överträffa konkurrenterna i en viss ort eller region, kolla in vårt tillägg %1$s! Du kan enkelt lägga in Google Maps, öppettider, kontaktuppgifter och en butikssökare. Förutom det, hjälper även %1$s dig att förbättra användbarheten för din kontaktsida."
 
-#: admin/config-ui/components/class-component-suggestions.php:82
+#: admin/config-ui/components/class-component-suggestions.php:103
 msgid "Attract more customers near you"
 msgstr "Locka fler kunder nära dig"
 
 #. translators: %1$s resolves to Yoast SEO
-#: admin/config-ui/components/class-component-suggestions.php:70
+#: admin/config-ui/components/class-component-suggestions.php:84
 msgid "Do you want to know all the ins and outs of the %1$s plugin? Do you want to learn all about our advanced settings? Want to be able to really get the most out of the %1$s plugin? Check out our %1$s plugin training and start outranking the competition!"
 msgstr "Vill du veta allt om tillägget %1$s? Vill du lära dig allt om våra avancerade inställningar? Vill du verkligen kunna få ut det mesta av tillägget %1$s? Kolla in vår tilläggsutbildning %1$s och börja överträffa konkurrenterna!"
 
 #. translators: %1$s resolves to Yoast SEO, %2$s resolves to Yoast SEO plugin
 #. training
-#: admin/config-ui/components/class-component-suggestions.php:68
+#: admin/config-ui/components/class-component-suggestions.php:82
 msgid "Get the most out of %1$s with the %2$s"
 msgstr "Få ut det mesta av %1$s med %2$s"
 
@@ -2093,8 +2303,8 @@ msgstr "Uppgradera till premium"
 
 #. translators: %1$s resolves to Yoast SEO Premium
 #: admin/config-ui/components/class-component-suggestions.php:36
-msgid "Do you want to outrank your competition? %1$s gives you awesome additional features that'll help you to set up your SEO strategy like a professional. Use the multiple focus keywords functionality, the redirect manager and our internal linking tool. %1$s will also give you access to premium support."
-msgstr "Vill du överträffa dina konkurrenter? %1$s ger dig fantastiska ytterligare funktioner som hjälper dig att ställa in din SEO-strategi som en professionell användare. Använd funktionaliteten för flera nyckelord, omdirigeringshanteraren och vårt interna länkverktyg. %1$s ger dig också tillgång till premium-support."
+msgid "Do you want to outrank your competition? %1$s gives you awesome additional features that'll help you to set up your SEO strategy like a professional. Add synonyms and related keywords, use our Premium SEO analysis, the redirect manager and our internal linking tool. %1$s will also give you access to premium support."
+msgstr "Vill du överträffa dina konkurrenter? %1$s ger dig fantastiska ytterligare funktioner som hjälper dig att ställa in din SEO-strategi som en professionell användare. Lägg till synonymer och relaterade nyckelord,använd vår premium SEO-analys, omdirigeringshanteraren och vårt interna länkverktyg. %1$s ger dig också tillgång till premium-support."
 
 #. translators: %s resolves to Yoast SEO Premium
 #: admin/config-ui/components/class-component-suggestions.php:34
@@ -2126,11 +2336,11 @@ msgstr "Nyhetsbrev"
 
 #. translators: %1$s resolves to Yoast SEO, %2$s resolves to the starting tag
 #. of the link to the wizard, %3$s resolves to the closing link tag
-#: admin/config-ui/class-configuration-page.php:234
+#: admin/config-ui/class-configuration-page.php:219
 msgid "We have detected that you have not finished this wizard yet, so we recommend you to %2$sstart the configuration wizard to configure %1$s%3$s."
 msgstr "Vi har upptäckt att du inte har slutfört den här guiden ännu, så vi rekommenderar att du %2$s startar konfigurationsguiden för att konfigurera %1$s %3$s."
 
-#: admin/config-ui/class-configuration-page.php:230
+#: admin/config-ui/class-configuration-page.php:215
 msgid "The configuration wizard helps you to easily configure your site to have the optimal SEO settings."
 msgstr "Konfigurationsguiden hjälper dig att enkelt konfigurera din webbplats så den har optimala SEO-inställningar."
 
@@ -2140,7 +2350,7 @@ msgstr "Skaffa Premium och våra experter kommer finnas där för dig och svara 
 
 #: admin/class-help-center.php:216
 #: admin/class-premium-upsell-admin-block.php:51
-#: languages/wordpress-seojs.php:93
+#: languages/wordpress-seojs.php:100
 msgid "24/7 support"
 msgstr "Support 24/7"
 
@@ -2153,41 +2363,41 @@ msgstr "Supersnabba interna länkningsförslag"
 #: admin/class-add-keyword-modal.php:24
 #: admin/class-keyword-synonyms-modal.php:24
 #: admin/class-multiple-keywords-modal.php:24
-#: admin/formatter/class-metabox-formatter.php:188
-#: languages/wordpress-seojs.php:108
+#: admin/formatter/class-metabox-formatter.php:189
+#: languages/wordpress-seojs.php:115
 msgid "Great news: you can, with %1$s!"
 msgstr "Goda nyheter: du kan, med %1$s!"
 
-#: admin/class-yoast-form.php:149
+#: admin/class-yoast-form.php:150
 msgid "Save changes"
 msgstr "Spara ändringar"
 
-#: admin/class-add-keyword-modal.php:37
+#: admin/class-add-keyword-modal.php:39
 #: admin/class-keyword-synonyms-modal.php:39
 #: admin/class-multiple-keywords-modal.php:39 admin/class-premium-popup.php:85
-#: admin/formatter/class-metabox-formatter.php:201
-#: languages/wordpress-seojs.php:105
+#: admin/formatter/class-metabox-formatter.php:202
+#: languages/wordpress-seojs.php:112
 msgid "1 year free updates and upgrades included!"
 msgstr "1 års fria uppdateringar och uppgraderingar ingår!"
 
 #. translators: %2$s expands to 'RS Head Cleaner' plugin name of possibly
 #. conflicting plugin with regard to differentiating output between search
 #. engines and normal users.
-#: admin/class-plugin-conflict.php:159
+#: admin/class-plugin-conflict.php:162
 msgid "The plugin %2$s changes your site's output and in doing that differentiates between search engines and normal users, a process that's called cloaking. We highly recommend that you disable it."
 msgstr "Tillägget %2$s ändrar din webbplats output och skiljer genom det mellan sökmotorer och vanliga användare, en process som kallas cloaking. Vi rekommenderar starkt att du inaktiverar det."
 
-#: languages/wordpress-seojs.php:89
+#: languages/wordpress-seojs.php:96
 msgid "%1$sSocial media preview%2$s: Facebook & Twitter"
 msgstr "%1$sFörhandsgranskning för sociala medier%2$s: Facebook och Twitter"
 
-#: admin/class-help-center.php:210 languages/wordpress-seojs.php:85
+#: admin/class-help-center.php:210 languages/wordpress-seojs.php:92
 msgid "Superfast internal links suggestions"
 msgstr "Supersnabba interna länkförslag"
 
 #. translators: %1$s expands to a 'strong' start tag, %2$s to a 'strong' end
 #. tag.
-#: admin/class-help-center.php:208 languages/wordpress-seojs.php:81
+#: admin/class-help-center.php:208 languages/wordpress-seojs.php:88
 msgid "%1$sNo more dead links%2$s: easy redirect manager"
 msgstr "%1$sGör dig av med döda länkar%2$s: easy redirect manager"
 
@@ -2202,7 +2412,7 @@ msgstr "Skaffa Premium så kommer våra experter att finnas där för dig och sv
 
 #: admin/class-help-center.php:217
 #: admin/class-premium-upsell-admin-block.php:52
-#: languages/wordpress-seojs.php:97
+#: languages/wordpress-seojs.php:104
 msgid "No ads!"
 msgstr "Ingen reklam!"
 
@@ -2226,18 +2436,6 @@ msgstr "Inga fler döda länkar"
 msgid "Increase your SEO reach"
 msgstr "Öka din SEO-räckvidd"
 
-#: admin/class-premium-upsell-admin-block.php:47
-msgid "Multiple keywords"
-msgstr "Flera nyckelord"
-
-#. Translators: %1$s opens a link to a Yoast article about stop words, %2$s
-#. closes the link
-#: languages/yoast-seo-js.php:181
-msgid "The focus keyword contains a stop word. This may or may not be wise depending on the circumstances. %1$sLearn more about the stop words%2$s."
-msgid_plural "The focus keyword contains %3$d stop words. This may or may not be wise depending on the circumstances. %1$sLearn more about the stop words%2$s."
-msgstr[0] "Fokusnyckelordet innehåller ett stoppord. Detta kan eventuellt vara klokt, beroende på omständigheterna. %1$sLär dig mer om stoppord%2$s."
-msgstr[1] "Fokusnyckelordet innehåller %3$d stoppord. Detta kan eventuellt vara klokt, beroende på omständigheterna. %1$sLär dig mer om stoppord%2$s."
-
 #: admin/views/tabs/metas/paper-content/rss-content.php:30
 #: inc/class-wpseo-replace-vars.php:1042
 msgid "Variable"
@@ -2257,14 +2455,8 @@ msgstr "Om du vill ha mer hjälp med att skapa fantastiskt innehåll, kolla in v
 msgid "Scroll to see the table content."
 msgstr "Rulla för att se innehållet i tabellen."
 
-#: languages/yoast-seo-js.php:177
-msgid "The exact-match %4$skeyword density%5$s is %1$s, which is way over the advised %3$s maximum; the focus keyword was found %2$d time."
-msgid_plural "The exact-match %4$skeyword density%5$s is %1$s, which is way over the advised %3$s maximum; the focus keyword was found %2$d times."
-msgstr[0] "Den exakta matchningens %4$snyckelordsdensitet%5$s är %1$s, vilket är långt över det rekommenderade maxvärdet på %3$s. Fokusnyckelordet hittades %2$d gång."
-msgstr[1] "Den exakta matchningens %4$snyckelordsdensitet%5$s är %1$s, vilket är långt över det rekommenderade maxvärdet på %3$s. Fokusnyckelordet hittades %2$d gånger."
-
 #. Translators: %1$s expands to the name of the assessment.
-#: languages/yoast-seo-js.php:362
+#: languages/yoast-seo-js.php:393
 msgid "An error occurred in the '%1$s' assessment"
 msgstr "Ett fel uppstod i utvärderingen av '%1$s'"
 
@@ -2272,7 +2464,7 @@ msgstr "Ett fel uppstod i utvärderingen av '%1$s'"
 #. to a link on yoast.com, 	   %3$d expands to the recommended maximum number
 #. of syllables, 	   %4$s expands to the anchor end tag, %5$s expands to the
 #. recommended maximum number of syllables.
-#: languages/yoast-seo-js.php:127
+#: languages/yoast-seo-js.php:144
 msgid "%1$s of the words contain %2$sover %3$s syllables%4$s, which is more than the recommended maximum of %5$s."
 msgstr "%1$s av orden %2$söver %3$s stavelser%4$s, vilket är mer än det rekommenderade maximala  %5$s."
 
@@ -2280,102 +2472,23 @@ msgstr "%1$s av orden %2$söver %3$s stavelser%4$s, vilket är mer än det rekom
 #. to a link on yoast.com, 	   %3$d expands to the recommended maximum number
 #. of syllables, 	   %4$s expands to the anchor end tag, %5$s expands to the
 #. recommended maximum number of syllables.
-#: languages/yoast-seo-js.php:121
+#: languages/yoast-seo-js.php:138
 msgid "%1$s of the words contain %2$sover %3$s syllables%4$s, which is less than or equal to the recommended maximum of %5$s."
 msgstr "%1$s av orden innehåller %2$söver %3$s stavelser%4$s, vilket är mindre än eller lika med det rekommenderade maximala %5$s."
 
-#. Translators: %1$s opens a link to a wikipedia article about stop words, %2$s
-#. closes the link
-#: languages/yoast-seo-js.php:354
-msgid "The slug for this page contains a %1$sstop word%2$s, consider removing it."
-msgid_plural "The slug for this page contains %1$sstop words%2$s, consider removing them."
-msgstr[0] "Permalänken på denna sida innehåller ett %1$stoppord%2$s, som bör tas bort."
-msgstr[1] "Permalänken på denna sida innehåller %1$stoppord%2$s, som bör tas bort."
-
-#. Translators: %1$s expands to the number of sentences containing transition
-#. words, %2$s expands to a link on yoast.com, 	   %3$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:115
-msgid "%1$s of the sentences contain a %2$stransition word%3$s or phrase, which is great."
-msgstr "%1$s av meningarna innehåller ett %2$sövergångsord%3$s eller fras, vilket är väldigt bra."
-
-#. Translators: %1$s expands to the number of sentences containing transition
-#. words, %2$s expands to a link on yoast.com, 	   %3$s expands to the anchor
-#. end tag, %4$s expands to the recommended value.
-#: languages/yoast-seo-js.php:110
-msgid "%1$s of the sentences contain a %2$stransition word%3$s or phrase, which is less than the recommended minimum of %4$s."
-msgstr "%1$s av meningarna innehåller ett %2$sövergångsord%3$s eller fras, som är mindre än det rekommenderade minimum %4$s."
-
-#. Translators: %1$s expands to the keyphrase, %2$s expands to a link on
-#. yoast.com, 	   %3$s expands to the anchor end tag.
-#: languages/yoast-seo-js.php:331
-msgid "The focus keyword '%1$s' does not appear in the %2$sSEO title%3$s."
-msgstr "Fokusnyckelordet ”%1$s” förekommer inte i %2$sSEO-titeln%3$s."
-
-#. Translators: The preceding sentence is "The text contains x words.", %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag,
-#. %4$s expands to the recommended minimum of words.
-#: languages/yoast-seo-js.php:306
-msgid "This is far below the %2$srecommended minimum%3$s of %4$d word. Add more content that is relevant for the topic."
-msgid_plural "This is far below the %2$srecommended minimum%3$s of %4$d words. Add more content that is relevant for the topic."
-msgstr[0] "Detta är långt under %2$srekommenderat minimum%3$s på %4$d ord. Lägg till mer innehåll som är relevant för ämnet."
-msgstr[1] "Detta är långt under %2$srekommenderat minimum%3$s på %4$d ord. Lägg till mer innehåll som är relevant för ämnet."
-
-#. Translators: The preceding sentence is "The text contains x words.", %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s
-#. expands to the recommended minimum of words.
-#: languages/yoast-seo-js.php:300
-msgid "This is below the %2$srecommended minimum%3$s of %4$d word. Add more content that is relevant for the topic."
-msgid_plural "This is below the %2$srecommended minimum%3$s of %4$d words. Add more content that is relevant for the topic."
-msgstr[0] "Detta är under %2$srekommenderat minimum %3$s på %4$d ord. Lägg till mer innehåll som är relevant för ämnet."
-msgstr[1] "Detta är under %2$srekommenderat minimum %3$s på %4$d ord. Lägg till mer innehåll som är relevant för ämnet."
-
-#. Translators: The preceding sentence is "The text contains x words.", %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s
-#. expands to the recommended minimum of words.
-#: languages/yoast-seo-js.php:293
-msgid "This is slightly below the %2$srecommended minimum%3$s of %4$d word. Add a bit more copy."
-msgid_plural "This is slightly below the %2$srecommended minimum%3$s of %4$d words. Add a bit more copy."
-msgstr[0] "Detta är något under %2$srekommenderat minimum%3$s antal – %4$d ord. Lägg till lite mer text."
-msgstr[1] "Detta är något under %2$srekommenderat minimum%3$s antal – %4$d ord. Lägg till lite mer text."
-
-#. Translators: The preceding sentence is "The text contains x words.", %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag,	%4$s
-#. expands to the recommended minimum of words.
-#: languages/yoast-seo-js.php:287
-msgid "This is more than or equal to the %2$srecommended minimum%3$s of %4$d word."
-msgid_plural "This is more than or equal to the %2$srecommended minimum%3$s of %4$d words."
-msgstr[0] "Detta är fler än eller lika med det %2$srekommenderat minimum%3$s antal – %4$d ord."
-msgstr[1] "Detta är fler än eller lika med det %2$srekommenderat minimum%3$s antal – %4$d ord."
-
-#. Translators: %1$d expands to the number of words in the text.
-#. Translators: %1$d expands to the number of words in the text
-#: languages/yoast-seo-js.php:281
-msgid "The text contains %1$d word."
-msgid_plural "The text contains %1$d words."
-msgstr[0] "Texten innehåller %1$d ord."
-msgstr[1] "Texten innehåller %1$d ord."
-
-#. Translators: %1$d expands to percentage of sentences, %2$s expands to a link
-#. on yoast.com, 	   %3$s expands to the recommended maximum sentence length,
-#. %4$s expands to the anchor end tag, 	   %5$s expands to the recommended
-#. maximum percentage.
-#: languages/yoast-seo-js.php:81
-msgid "%1$s of the sentences contain %2$smore than %3$s words%4$s, which is more than the recommended maximum of %5$s. Try to shorten the sentences."
-msgstr "%1$s av meningarna innehåller %2$smer än %3$s ord %4$s, vilket är mer än det rekommenderade maximala antalet %5$s. Försök att förkorta meningarna."
-
-#. Translators: %1$d expands to percentage of sentences, %2$s expands to a link
-#. on yoast.com, 	   %3$s expands to the recommended maximum sentence length,
-#. %4$s expands to the anchor end tag, 	   %5$s expands to the recommended
-#. maximum percentage.
-#: languages/yoast-seo-js.php:75
-msgid "%1$s of the sentences contain %2$smore than %3$s words%4$s, which is less than or equal to the recommended maximum of %5$s."
-msgstr "%1$s av meningarna innehåller %2$smer än %3$s ord %4$s, vilket är mindre än eller lika med det rekommenderade maximala antalet %5$s."
+#. Translators: The preceding sentence is "Text length: The text contains x
+#. words.", 	   %3$s expands to a link on yoast.com, 	   %4$s expands to the
+#. anchor end tag, 	   %5$d expands to the recommended minimum of words.
+#: languages/yoast-seo-js.php:312
+msgid "This is slightly below the recommended minimum of %5$d word. %3$sAdd a bit more copy%4$s."
+msgid_plural "This is slightly below the recommended minimum of %5$d words. %3$sAdd a bit more copy%4$s."
+msgstr[0] "Detta är något under det rekommenderade minsta antalet på %5$d ord. %3$sLägg till lite mer text%4$s."
+msgstr[1] "Detta är något under det rekommenderade minsta antalet på %5$d ord. %3$sLägg till lite mer text%4$s."
 
 #. Translators: %1$d expands to number of sentences, %2$s expands to a link on
 #. yoast.com, 	   %3$s expands to the recommended maximum sentence length, %4$s
 #. expands to the anchor end tag.
-#: languages/yoast-seo-js.php:69
+#: languages/yoast-seo-js.php:80
 msgid "The meta description contains %1$d sentence %2$sover %3$s words%4$s. Try to shorten this sentence."
 msgid_plural "The meta description contains %1$d sentences %2$sover %3$s words%4$s. Try to shorten these sentences."
 msgstr[0] "Metabeskrivningen innehåller %1$d mening %2$söver %3$s ord%4$s. Försök att förkorta denna mening."
@@ -2383,53 +2496,9 @@ msgstr[1] "Metabeskrivningen innehåller %1$d meningar %2$söver %3$s ord%4$s. F
 
 #. Translators: %1$s expands to a link on yoast.com, %2$s expands to the
 #. recommended maximum sentence length, 	   %3$s expands to the anchor end tag.
-#: languages/yoast-seo-js.php:64
+#: languages/yoast-seo-js.php:75
 msgid "The meta description contains no sentences %1$sover %2$s words%3$s."
 msgstr "Metabeskrivningen innehåller inga meningar %1$söver %2$s ord %3$s."
-
-#. Translators: %1$d expands to the number of instances where 3 or more
-#. consecutive sentences start with the same word. 	   %2$d expands to the
-#. number of consecutive sentences starting with the same word.
-#: languages/yoast-seo-js.php:59
-msgid "The text contains %2$d consecutive sentences starting with the same word. Try to mix things up!"
-msgid_plural "The text contains %1$d instances where %2$d or more consecutive sentences start with the same word. Try to mix things up!"
-msgstr[0] "Texten innehåller %2$d sammanhängande mening som börjar med samma ord. Prova att blanda om orden lite."
-msgstr[1] "Texten innehåller %1$d instanser där %2$d eller fler sammanhängande meningar börjar med samma ord. Prova att blanda om orden lite."
-
-#. Translators: %1$s expands to the number of sentences in passive voice, %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s
-#. expands to the recommended value.
-#: languages/yoast-seo-js.php:54
-msgid "%1$s of the sentences contain %2$spassive voice%3$s, which is more than the recommended maximum of %4$s. Try to use their active counterparts."
-msgstr "%1$s av meningarna innehåller %2$spassiv röst %3$s, vilket är mer än det rekommenderade maximala antalet %4$s. Försök att använda deras aktiva motsvarigheter."
-
-#. Translators: %1$s expands to the number of sentences in passive voice, %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s
-#. expands to the recommended value.
-#: languages/yoast-seo-js.php:49
-msgid "%1$s of the sentences contain %2$spassive voice%3$s, which is less than or equal to the recommended maximum of %4$s."
-msgstr "%1$s av meningarna innehåller %2$spassiv röst %3$s, vilket är mindre än eller lika med det rekommenderade maximala antalet %4$s."
-
-#. Translators: %1$d expands to the number of paragraphs, %2$d expands to the
-#. recommended value
-#: languages/yoast-seo-js.php:44
-msgid "%1$d of the paragraphs contains more than the recommended maximum of %2$d words. Are you sure all information is about the same topic, and therefore belongs in one single paragraph?"
-msgid_plural "%1$d of the paragraphs contain more than the recommended maximum of %2$d words. Are you sure all information within each of these paragraphs is about the same topic, and therefore belongs in a single paragraph?"
-msgstr[0] "%1$d av styckena innehåller mer än det rekommenderade maximala antalet %2$d ord. Är du säker på att all information är om samma ämne, och därför hör hemma i ett enda stycke?"
-msgstr[1] "%1$d av styckena innehåller mer än det rekommenderade maximala antalet %2$d ord. Är du säker på att all information i varje stycke är om samma ämne, och därför hör hemma i ett enda stycke?"
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag, 	   %3$d expands to	the total available number of characters in the
-#. meta description
-#: languages/yoast-seo-js.php:220
-msgid "The %1$smeta description%2$s is over %3$d characters. Reducing the length will ensure the entire description will be visible."
-msgstr "%1$sMetabeskrivningen%2$s är över %3$d tecken. Genom att minska längden säkerhetsställer du att hela beskrivningen kommer vara synlig."
-
-#: languages/yoast-seo-js.php:168
-msgid "The exact-match %3$skeyword density%4$s is %1$s, which is too low; the focus keyword was found %2$d time."
-msgid_plural "The exact-match %3$skeyword density%4$s is %1$s, which is too low; the focus keyword was found %2$d times."
-msgstr[0] "Den exakta matchningens %3$snyckelordsdensitet%4$s är %1$s, vilket är för lågt. Fokusnyckelordet hittades %2$d gång."
-msgstr[1] "Den exakta matchningens %3$snyckelordsdensitet%4$s är %1$s, vilket är för lågt. Fokusnyckelordet hittades %2$d gånger."
 
 #: languages/yoast-components.php:68
 msgid "Step %1$d: %2$s"
@@ -2453,23 +2522,16 @@ msgstr "Spara allt"
 msgid "Save"
 msgstr "Spara"
 
-#. translators: %d resolves to the number of alerts being added.
-#: inc/class-wpseo-admin-bar-menu.php:620
-msgid "You have %d new issue concerning your SEO!"
-msgid_plural "You have %d new issues concerning your SEO!"
-msgstr[0] "Du har %d nytt ärende som rör din SEO!"
-msgstr[1] "Du har %d nya ärenden som rör din SEO!"
-
 #. translators: 1: Author name; 2: Site name.
-#: inc/options/class-wpseo-option-titles.php:197
+#: inc/options/class-wpseo-option-titles.php:203
 msgid "%1$s, Author at %2$s"
 msgstr "%1$s, författare på %2$s"
 
-#: languages/yoast-components.php:197 languages/yoast-seo-js.php:454
+#: languages/yoast-components.php:194 languages/yoast-seo-js.php:485
 msgid "Mobile preview"
 msgstr "Förhandsvisning för mobil"
 
-#: languages/yoast-components.php:200 languages/yoast-seo-js.php:451
+#: languages/yoast-components.php:197 languages/yoast-seo-js.php:482
 msgid "Desktop preview"
 msgstr "Förhandsvisning för skrivbord"
 
@@ -2501,126 +2563,76 @@ msgstr "<b>Varning!</b> Din %s licens är inaktiv vilket innebär att du går mi
 msgid "<b>Warning!</b> You didn't set your %s license key yet, which means you're missing out on updates and support! <a href=\"%s\">Enter your license key</a> or <a href=\"%s\" target=\"_blank\">get a license here</a>."
 msgstr "<b>Varning!</b> Du har inte ställ in din %s licensnyckel ännu, vilket betyder att du går miste om uppdateringar och support! <a href=\"%s\">Ange din licensnyckel</a> eller <a href=\"%s\" target=\"_blank\">skaffa en licens här</a>."
 
-#: languages/yoast-seo-js.php:460
+#: languages/yoast-seo-js.php:491
 msgid "Please provide an SEO title by editing the snippet below."
 msgstr "Vänligen ange en SEO-titel genom att redigera förhandsvisningstexten nedan."
 
-#: languages/yoast-seo-js.php:445
+#: languages/yoast-seo-js.php:476
 msgid "Meta description preview:"
 msgstr "Metabeskrivning förhandsvisning:"
 
-#: languages/yoast-seo-js.php:442
+#: languages/yoast-seo-js.php:473
 msgid "Slug preview:"
 msgstr "Förhandsgranskning av permalänk:"
 
-#: languages/yoast-seo-js.php:439
+#: languages/yoast-seo-js.php:470
 msgid "SEO title preview:"
 msgstr "Förhandsvisning av SEO-titel:"
 
-#: languages/yoast-components.php:223 languages/yoast-seo-js.php:433
+#: languages/yoast-components.php:220 languages/yoast-seo-js.php:464
 msgid "Close snippet editor"
 msgstr "Stäng redigeraren för förhandsvisningstexten"
 
-#: languages/yoast-components.php:229 languages/yoast-seo-js.php:427
+#: languages/yoast-components.php:226 languages/yoast-seo-js.php:458
 msgid "Slug"
 msgstr "Permalänk"
 
-#: languages/yoast-seo-js.php:418
+#: languages/yoast-seo-js.php:449
 msgid "Remove marks in the text"
 msgstr "Ta bort markeringar i texten"
 
-#: languages/yoast-seo-js.php:415
+#: languages/yoast-seo-js.php:446
 msgid "Mark this result in the text"
 msgstr "Markera detta resultat i texten"
 
-#: admin/formatter/class-metabox-formatter.php:170
-#: languages/yoast-components.php:146 languages/yoast-seo-js.php:412
+#: admin/formatter/class-metabox-formatter.php:171
+#: languages/yoast-components.php:146 languages/yoast-seo-js.php:443
 msgid "Marks are disabled in current view"
 msgstr "Markeringen är inaktiverade i aktuell vy"
 
-#: languages/yoast-seo-js.php:406
+#: languages/yoast-seo-js.php:437
 msgid "Content optimization: Good SEO score"
 msgstr "Innehållsoptimering: Bra SEO-poäng"
 
-#: languages/yoast-seo-js.php:403
+#: languages/yoast-seo-js.php:434
 msgid "Good SEO score"
 msgstr "Bra SEO-poäng"
 
-#: languages/yoast-seo-js.php:397
+#: languages/yoast-seo-js.php:428
 msgid "Content optimization: OK SEO score"
 msgstr "Innehållsoptimering: OK SEO-poäng"
 
-#: languages/yoast-seo-js.php:394
+#: languages/yoast-seo-js.php:425
 msgid "OK SEO score"
 msgstr "OK SEO-poäng"
 
-#: languages/yoast-seo-js.php:388
+#: languages/yoast-seo-js.php:419
 msgid "Content optimization: Bad SEO score"
 msgstr "Innehållsoptimering: Dålig SEO-poäng"
 
-#: languages/yoast-seo-js.php:385
+#: languages/yoast-seo-js.php:416
 msgid "Bad SEO score"
 msgstr "Dålig SEO-poäng"
 
-#: languages/yoast-seo-js.php:382
+#: languages/yoast-seo-js.php:413
 msgid "Content optimization: Has feedback"
 msgstr "Innehållsoptimering: Har återkoppling"
 
-#: languages/yoast-seo-js.php:379
+#: languages/yoast-seo-js.php:410
 msgid "Feedback"
 msgstr "Återkoppling"
 
-#. Translators: this link is referred to in the content analysis when a slug
-#. contains one or more stop words
-#: languages/yoast-seo-js.php:358
-msgid "http://en.wikipedia.org/wiki/Stop_words"
-msgstr "http://en.wikipedia.org/wiki/Stop_words"
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:347
-msgid "The focus keyword appears in the %1$sURL%2$s for this page."
-msgstr "Nyckelordet förekommer i sidans %1$sURL%2$s."
-
-#: languages/yoast-seo-js.php:105
-msgid "You have far too little content, please add some content to enable a good analysis."
-msgstr "Du har för lite innehåll, lägg till mer innehåll för att skapa en bra analys."
-
-#: languages/yoast-seo-js.php:323
-msgid "The %1$simages%2$s on this page contain alt attributes."
-msgstr "%1$sBilderna%2$s på denna sida har alt-attribut."
-
-#: languages/yoast-seo-js.php:320
-msgid "The %1$simages%2$s on this page do not have alt attributes containing the focus keyword."
-msgstr "%1$sBilderna%2$s på denna sida har inte alt-attribut som innehåller nyckelordet."
-
-#: languages/yoast-seo-js.php:317
-msgid "The %1$simages%2$s on this page contain alt attributes with the focus keyword."
-msgstr "%1$sBilderna%2$s på denna sida har alt-attribut som innehåller nyckelordet."
-
-#: languages/yoast-seo-js.php:40
-msgid "None of the paragraphs are too long, which is great."
-msgstr "Inget av styckena är för långt, vilket är bra."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:255
-msgid "The %1$sSEO title%2$s is wider than the viewable limit."
-msgstr "%1$sSEO-rubriken%2$s är längre än vad som kan visas."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:247
-msgid "The %1$sSEO title%2$s is too short. Use the space to add keyword variations or create compelling call-to-action copy."
-msgstr "%1$sSEO-rubriken%2$s är för kort. Använd utrymmet till att lägga till varianter av nyckelordet eller skapa en lockande call-to-action-text."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag
-#: languages/yoast-seo-js.php:162
-msgid "The %1$skeyphrase%2$s is over 10 words, a keyphrase should be shorter."
-msgstr "%1$sNyckelfrasen%2$s är över 10 ord, en nyckelfras bör vara kortare."
-
-#: languages/yoast-seo-js.php:21
+#: languages/yoast-seo-js.php:26
 msgid "ok"
 msgstr "ok"
 
@@ -2668,23 +2680,23 @@ msgstr "Autentisera med Google igen"
 msgid "To allow %s to fetch your Google Search Console information, please enter your Google Authorization Code. Clicking the button below will open a new window."
 msgstr "För att tillåta %s att hämta din Google Search Console information, vänligen ange din Google auktoriseringskod. Klickar du på knappen nedan öppnas ett nytt fönster."
 
-#: languages/wordpress-seojs.php:117 languages/yoast-seo-js.php:463
+#: languages/wordpress-seojs.php:118 languages/yoast-seo-js.php:494
 msgid "Please provide a meta description by editing the snippet below."
 msgstr "Vänligen ange en metabeskrivning genom att redigera förhandsvisningstexten nedan."
 
-#: languages/yoast-components.php:226 languages/yoast-seo-js.php:421
+#: languages/yoast-components.php:223 languages/yoast-seo-js.php:452
 msgid "Edit snippet"
 msgstr "Redigera förhandsvisningstext"
 
-#: languages/yoast-seo-js.php:448
+#: languages/yoast-seo-js.php:479
 msgid "You can click on each element in the preview to jump to the Snippet Editor."
 msgstr "Du kan klicka på varje element i förhandsgranskningen för att gå till redigeraren för förhandsvisningstexten."
 
-#: languages/yoast-components.php:238
+#: languages/yoast-components.php:235
 msgid "SEO title preview"
 msgstr "Förhandsgranskning av SEO-titel"
 
-#: languages/yoast-components.php:244
+#: languages/yoast-components.php:241
 msgid "Meta description preview"
 msgstr "Förhandsgranskning av meta-beskrivning"
 
@@ -2707,24 +2719,6 @@ msgstr "Nästa steg"
 #: admin/views/tool-import-export.php:88
 msgid "Export settings"
 msgstr "Exportera inställningar"
-
-#. translators: %s expands to 'Yoast SEO Premium'.
-#. translators: %s expands to Yoast SEO Premium
-#. translators: %s expands to 'Yoast SEO Premium'.
-#. translators: %s expands to 'Yoast SEO Premium'.
-#. translators: %s expands to Yoast SEO Premium.
-#: admin/class-add-keyword-modal.php:35
-#: admin/class-keyword-synonyms-modal.php:36
-#: admin/class-multiple-keywords-modal.php:36 admin/class-premium-popup.php:80
-#: admin/formatter/class-metabox-formatter.php:199
-#: admin/metabox/class-metabox-keyword-synonyms-config.php:25
-#: admin/metabox/class-metabox-keyword-synonyms-config.php:28
-#: admin/metabox/class-metabox-multiple-keywords-config.php:25
-#: admin/metabox/class-metabox-multiple-keywords-config.php:28
-#: admin/taxonomy/class-taxonomy-metabox.php:290
-#: languages/wordpress-seojs.php:46
-msgid "Get %s now!"
-msgstr "Skaffa %s nu!"
 
 #. translators: %1$s expands to Yoast SEO Premium.
 #: admin/taxonomy/class-taxonomy-metabox.php:279
@@ -2768,15 +2762,11 @@ msgstr "Inställningar för datumarkiv"
 msgid "Author archives settings"
 msgstr "Inställningar för författararkiv"
 
-#: admin/formatter/class-metabox-formatter.php:56
-msgid "Remove keyword"
-msgstr "Ta bort nyckelord"
-
 #. translators: %1$s expands to the image recommended width, %2$s to its
 #. height.
 #: admin/class-social-admin.php:49 admin/class-social-admin.php:52
-#: admin/taxonomy/class-taxonomy-social-fields.php:99
-#: admin/taxonomy/class-taxonomy-social-fields.php:103
+#: admin/taxonomy/class-taxonomy-social-fields.php:104
+#: admin/taxonomy/class-taxonomy-social-fields.php:108
 msgid "%1$s by %2$s"
 msgstr "%1$s av %2$s"
 
@@ -2790,12 +2780,6 @@ msgstr "Varning: Variabeln %s kan inte användas i denna mall. Se hjälpcentret 
 msgid "Choose your settings.zip file"
 msgstr "Välj din settings.zip-fil"
 
-#. translators: %1$s expands anchor to premium plugin page, %2$s expands to
-#. </a>
-#: admin/class-product-upsell-notice.php:120
-msgid "By the way, did you know we also have a %1$sPremium plugin%2$s? It offers advanced features, like a redirect manager and support for multiple keywords. It also comes with 24/7 personal support."
-msgstr "Förresten, visste du att vi har också ett %1$sPremium-tillägg%2$s? Det erbjuder avancerade funktioner, som en omdirigeringshanterare och stöd för flera sökord. Det kommer också med 24/7 personlig support."
-
 #: admin/class-bulk-editor-list-table.php:796
 msgid "(no title)"
 msgstr "(ingen titel)"
@@ -2804,21 +2788,23 @@ msgstr "(ingen titel)"
 msgid "%s installation wizard"
 msgstr "Installationsguide för %s"
 
-#. translators: %1$s expands to Yoast SEO
-#: admin/views/tabs/dashboard/features.php:81
+#. translators: 1: Yoast SEO
+#: admin/views/class-yoast-feature-toggles.php:120
 msgid "The %1$s admin bar menu contains useful links to third-party tools for analyzing pages and makes it easy to see if you have new notifications."
 msgstr "Administratörsmenyn %1$s innehåller användbara länkar till tredje-parts-verktyg för att analysera sidor och gör det lätt att se om du har nya notiser."
 
-#: admin/views/tabs/dashboard/features.php:78
+#: admin/views/class-yoast-feature-toggles.php:117
 msgid "Admin bar menu"
 msgstr "Administratörsmeny"
 
-#. translators: %1$s expands to Ryte.
-#: admin/views/tabs/dashboard/features.php:71
+#. translators: 1: Ryte
+#: admin/views/class-yoast-feature-toggles.php:110
 msgid "%1$s will check weekly if your site is still indexable by search engines and Yoast SEO will notify you when this is not the case."
 msgstr "%1$s kan dagligen kontrollera om din webbplats fortfarande kan indexeras av sökmotorer och Yoast SEO meddelar dig om så inte är fallet."
 
-#: admin/pages/dashboard.php:49 admin/views/tabs/dashboard/features.php:105
+#: admin/pages/dashboard.php:49 admin/pages/network.php:19
+#: admin/views/tabs/dashboard/features.php:21
+#: admin/views/tabs/network/features.php:21
 msgid "Features"
 msgstr "Funktioner"
 
@@ -2842,16 +2828,12 @@ msgstr "Se hur ditt inlägg på Facebook eller Twitter kommer att se ut."
 msgid "Social Previews"
 msgstr "Sociala förhandsgranskningar"
 
-#: admin/taxonomy/class-taxonomy-metabox.php:283
-msgid "Optimize a single post for up to 5 keywords."
-msgstr "Optimera ett enda inlägg för upp till 5 nyckelord."
-
 #: admin/taxonomy/class-taxonomy-metabox.php:281
 msgid "Create and manage redirects within your WordPress install."
 msgstr "Skapa och hantera omdirigeringar inom din WordPress-installation."
 
-#: admin/metabox/class-metabox.php:60 languages/yoast-components.php:213
-#: languages/yoast-seo-js.php:424
+#: admin/metabox/class-metabox.php:60 languages/yoast-components.php:210
+#: languages/yoast-seo-js.php:455
 msgid "SEO title"
 msgstr "SEO-titel"
 
@@ -2870,43 +2852,43 @@ msgstr "Välkommen till konfigurationsguiden %1$s. I några enkla steg hjälper 
 msgid "Google shows your website's name in the search results, if you want to change it, you can do that here."
 msgstr "Google visar webbplatsens namn i sökresultaten. Om du vill ändra det så kan du göra det här."
 
-#: admin/config-ui/fields/class-field-separator.php:34
+#: admin/config-ui/fields/class-field-separator.php:35
 msgid "Greater than sign"
 msgstr "Större än-tecken"
 
-#: admin/config-ui/fields/class-field-separator.php:33
+#: admin/config-ui/fields/class-field-separator.php:34
 msgid "Less than sign"
 msgstr "Mindre än-tecken"
 
-#: admin/config-ui/fields/class-field-separator.php:32
+#: admin/config-ui/fields/class-field-separator.php:33
 msgid "Right angle quotation mark"
 msgstr "Högervinklat citationstecken"
 
-#: admin/config-ui/fields/class-field-separator.php:31
+#: admin/config-ui/fields/class-field-separator.php:32
 msgid "Left angle quotation mark"
 msgstr "Vänstervinklat citationstecken"
 
-#: admin/config-ui/fields/class-field-separator.php:30
+#: admin/config-ui/fields/class-field-separator.php:31
 msgid "Small tilde"
 msgstr "Liten tilde"
 
-#: admin/config-ui/fields/class-field-separator.php:29
+#: admin/config-ui/fields/class-field-separator.php:30
 msgid "Vertical bar"
 msgstr "Lodrätt streck"
 
-#: admin/config-ui/fields/class-field-separator.php:28
+#: admin/config-ui/fields/class-field-separator.php:29
 msgid "Low asterisk"
 msgstr "Låg asterisk"
 
-#: admin/config-ui/fields/class-field-separator.php:27
+#: admin/config-ui/fields/class-field-separator.php:28
 msgid "Asterisk"
 msgstr "Asterisk"
 
-#: admin/config-ui/fields/class-field-separator.php:26
+#: admin/config-ui/fields/class-field-separator.php:27
 msgid "Bullet"
 msgstr "Punkt"
 
-#: admin/config-ui/fields/class-field-separator.php:25
+#: admin/config-ui/fields/class-field-separator.php:26
 msgid "Middle dot"
 msgstr "Mellanpunkt"
 
@@ -2931,7 +2913,7 @@ msgstr "Välj symbolen som ska användas som din titelavgränsare. Detta visas t
 msgid "The name of the person"
 msgstr "Personens namn"
 
-#: admin/class-yoast-form.php:620
+#: admin/class-yoast-form.php:667
 #: admin/config-ui/fields/class-field-choice-post-type.php:31
 #: admin/config-ui/fields/class-field-multiple-authors.php:25
 #: admin/metabox/class-metabox.php:72 admin/metabox/class-metabox.php:77
@@ -2940,7 +2922,7 @@ msgstr "Personens namn"
 msgid "No"
 msgstr "Nej"
 
-#: admin/class-yoast-form.php:619
+#: admin/class-yoast-form.php:666
 #: admin/config-ui/fields/class-field-choice-post-type.php:30
 #: admin/config-ui/fields/class-field-multiple-authors.php:24
 #: admin/metabox/class-metabox.php:71 admin/metabox/class-metabox.php:76
@@ -3069,14 +3051,6 @@ msgstr "se hur dina inlägg på Facebook eller Twitter kommer se ut."
 msgid "Social previews"
 msgstr "Social förhandsgranskning"
 
-#: admin/views/licenses.php:174
-msgid "optimize a single post for up to 5 keywords."
-msgstr "optimera ett enskilt inlägg för upp till fem nyckelord."
-
-#: admin/taxonomy/class-taxonomy-metabox.php:282 admin/views/licenses.php:173
-msgid "Multiple focus keywords"
-msgstr "Flera olika fokusnyckelord"
-
 #: admin/views/licenses.php:170
 msgid "create and manage redirects from within your WordPress install."
 msgstr "skapa och hantera omdirigeringar inom din WordPress-installation."
@@ -3157,7 +3131,7 @@ msgstr "Ändra ”%s”;"
 msgid "Premium"
 msgstr "Premium"
 
-#: admin/metabox/class-metabox.php:429
+#: admin/metabox/class-metabox.php:437
 #: admin/taxonomy/class-taxonomy-metabox.php:245
 msgid "Go Premium"
 msgstr "Skaffa Premium"
@@ -3172,8 +3146,8 @@ msgid "Notifications"
 msgstr "Notiser"
 
 #: admin/views/user-profile.php:44
-msgid "Removes the keyword tab from the metabox and disables all SEO-related suggestions."
-msgstr "Tar bort fliken nyckelord från metarutan och inaktiverar alla SEO-relaterade förslag."
+msgid "Removes the focus keyphrase section from the metabox and disables all SEO-related suggestions."
+msgstr "Tar bort sektionen nyckelordsfras från metarutan och inaktiverar alla SEO-relaterade förslag."
 
 #: admin/views/user-profile.php:41
 msgid "Disable SEO analysis"
@@ -3215,7 +3189,7 @@ msgstr "Inställningar för synliga sökvägar"
 msgid "Make primary"
 msgstr "Gör till primär"
 
-#: admin/metabox/class-metabox.php:383 admin/metabox/class-metabox.php:386
+#: admin/metabox/class-metabox.php:391 admin/metabox/class-metabox.php:394
 #: admin/taxonomy/class-taxonomy-metabox.php:135
 #: admin/taxonomy/class-taxonomy-metabox.php:138
 msgid "Content optimization"
@@ -3260,19 +3234,19 @@ msgid "Disable readability analysis"
 msgstr "Inaktivera läsbarhetsanalys"
 
 #: admin/views/user-profile.php:56
-msgid "Removes the readability tab from the metabox and disables all readability-related suggestions."
-msgstr "Tar bort fliken läsbarhet från metarutan och inaktiverar alla läsbarhetsrelaterade förslag."
+msgid "Removes the readability analysis section from the metabox and disables all readability-related suggestions."
+msgstr "Tar bort sektionen läsbarhetsanalys från metarutan och inaktiverar alla läsbarhetsrelaterade förslag."
 
-#: admin/views/tabs/dashboard/features.php:33
+#: admin/views/class-yoast-feature-toggles.php:72
+#: languages/wordpress-seojs.php:41
 msgid "Readability analysis"
 msgstr "Läsbarhetsanalys"
 
-#: inc/class-wpseo-rank.php:105 languages/yoast-seo-js.php:391
+#: inc/class-wpseo-rank.php:105 languages/yoast-seo-js.php:422
 msgid "Needs improvement"
 msgstr "Behöver förbättras"
 
 #: admin/formatter/class-metabox-formatter.php:54
-#: languages/wordpress-seojs.php:35
 msgid "Readability"
 msgstr "Läsbarhet"
 
@@ -3281,11 +3255,7 @@ msgstr "Läsbarhet"
 msgid "You are trying to load non-minified files. These are only available in our development package. Check out %1$s to see all the source files."
 msgstr "Du försöker ladda icke-minifierade filer, dessa är endast tillgängliga i vårt utvecklingspaket. Kolla in %1$s för att se alla källfilerna."
 
-#: inc/class-wpseo-admin-bar-menu.php:625
-msgid "You have a new issue concerning your SEO!"
-msgstr "Du har ett nytt ärende som rör din SEO!"
-
-#: admin/formatter/class-metabox-formatter.php:163
+#: admin/formatter/class-metabox-formatter.php:164
 #: languages/yoast-components.php:161
 msgid "Improvements"
 msgstr "Förbättringar"
@@ -3294,7 +3264,7 @@ msgstr "Förbättringar"
 msgid "Restore this item."
 msgstr "Återställ detta objekt."
 
-#: admin/notifiers/class-configuration-notifier.php:149
+#: admin/notifiers/class-configuration-notifier.php:150
 #: admin/views/partial-alerts-template.php:20
 msgid "Dismiss this item."
 msgstr "Avfärda detta objekt."
@@ -3307,22 +3277,18 @@ msgstr "Bra jobbat! Vi kan inte upptäcka några allvarliga SEO-problem."
 msgid "We have detected the following issues that affect the SEO of your site."
 msgstr "Vi har upptäckt följande ärenden som påverkar SEO på din webbplats."
 
-#: admin/formatter/class-metabox-formatter.php:162
+#: admin/formatter/class-metabox-formatter.php:163
 #: admin/views/partial-alerts-errors.php:11 languages/yoast-components.php:158
 msgid "Problems"
 msgstr "Problem"
 
-#: admin/formatter/class-metabox-formatter.php:133
+#: admin/formatter/class-metabox-formatter.php:134
 msgid "Analysis"
 msgstr "Analys"
 
 #: inc/class-wpseo-rank.php:103
 msgid "Not available"
 msgstr "Inte tillgängligt"
-
-#: admin/formatter/class-metabox-formatter.php:55
-msgid "Keyword:"
-msgstr "Nyckelord:"
 
 #: admin/class-meta-columns.php:202
 msgid "Filter by SEO Score"
@@ -3367,11 +3333,11 @@ msgstr "Panel"
 
 #. translators: %1$s resolves to the starting tag of the link to the permalink
 #. settings page, %2$s resolves to the closing tag of the link
-#: admin/class-admin-init.php:229
+#: admin/class-admin-init.php:231
 msgid "You can fix this on the %1$sPermalink settings page%2$s."
 msgstr "Du kan åtgärda detta på %1$sinställningssidan för permalänkar%2$s."
 
-#: admin/class-admin-init.php:177
+#: admin/class-admin-init.php:179
 msgid "Paging comments is enabled, this is not needed in 999 out of 1000 cases, we recommend to disable it."
 msgstr "Kommentarspaginering är aktiverat, detta behövs inte i 999 ur 1000 fall, vi rekommenderar att du inaktiverar den."
 
@@ -3493,18 +3459,18 @@ msgstr "Termen är inställd på noindex."
 msgid "Author archives"
 msgstr "Arkiv för författare"
 
-#: admin/class-yoast-form.php:650
+#: admin/class-yoast-form.php:697
 msgid "Show"
 msgstr "Visa"
 
-#: admin/class-yoast-form.php:307
+#: admin/class-yoast-form.php:309
 #: admin/views/tabs/metas/paper-content/author-archive-settings.php:15
 #: admin/views/tabs/metas/paper-content/date-archives-settings.php:15
 #: admin/views/tabs/metas/paper-content/taxonomy-content.php:18
 msgid "Enabled"
 msgstr "Aktiverad"
 
-#: admin/class-yoast-form.php:307
+#: admin/class-yoast-form.php:309
 #: admin/views/tabs/metas/paper-content/author-archive-settings.php:16
 #: admin/views/tabs/metas/paper-content/date-archives-settings.php:16
 #: admin/views/tabs/metas/paper-content/taxonomy-content.php:18
@@ -3575,7 +3541,7 @@ msgstr "%1$sDin startsida kan inte indexeras av sökmotorer%2$s. Detta är mycke
 msgid "Once Weekly"
 msgstr "En gång per vecka"
 
-#: admin/metabox/class-metabox.php:442 admin/metabox/class-metabox.php:445
+#: admin/metabox/class-metabox.php:450 admin/metabox/class-metabox.php:453
 msgid "Add-ons"
 msgstr "Tillägg"
 
@@ -3594,8 +3560,8 @@ msgid "Facebook / Open Graph metadata"
 msgstr "Facebook / Open Graph metadata"
 
 #: admin/class-recalculate-scores.php:47
-msgid "Recalculating SEO scores for all pieces of content with a focus keyword."
-msgstr "Räknar om SEO-poäng för alla delar av innehåll med ett fokusnyckelord."
+msgid "Recalculating SEO scores for all pieces of content with a focus keyphrase."
+msgstr "Räknar om SEO-poäng för alla delar av innehåll med en fokusnyckelfras."
 
 #. translators: 1: expands to a <span> containing the number of posts
 #. recalculated. 2: expands to a <strong> containing the total number of posts.
@@ -3605,7 +3571,7 @@ msgstr "%1$s av %2$s klart."
 
 #. translators: 1: is a link to 'admin_url /
 #. admin.php?page=wpseo_tools&recalculate=1' 2: closing link tag
-#: admin/class-admin-init.php:429
+#: admin/class-admin-init.php:431
 msgid "We've updated our SEO score algorithm. %1$sRecalculate the SEO scores%2$s for all posts and pages."
 msgstr "Vi har uppdaterat vår SEO poäng-algoritm. %1$sRäkna om SEO-poäng%2$s för alla inlägg och sidor."
 
@@ -3617,7 +3583,7 @@ msgstr "Team Yoast"
 msgid "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more."
 msgstr "Den första riktiga allt-i-ett SEO-lösningen för WordPress, inklusive innehållsanalys på sidor, XML webbplatskartor och mycket mer."
 
-#. #-#-#-#-#  wordpress-seo-code.pot (Yoast SEO 8.2)  #-#-#-#-#
+#. #-#-#-#-#  wordpress-seo-code.pot (Yoast SEO 9.0.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/capabilities/class-capability-manager-integration.php:68
 msgid "Yoast SEO"
@@ -3823,10 +3789,6 @@ msgstr "Kontrollera sidhuvud"
 msgid "Check Google Cache"
 msgstr "Kontrollera Google Cache"
 
-#: inc/class-wpseo-admin-bar-menu.php:284
-msgid "Check Keyword Density"
-msgstr "Kontrollera nyckelordstäthet"
-
 #: inc/class-wpseo-admin-bar-menu.php:271
 msgid "Analyze this page"
 msgstr "Analysera denna sida"
@@ -3844,89 +3806,89 @@ msgid "Keyword Research"
 msgstr "Nyckelordsforskning"
 
 #. translators: %s expands to an invalid URL.
-#: inc/options/class-wpseo-option.php:313
+#: inc/options/class-wpseo-option.php:323
 msgid "%s does not seem to be a valid url. Please correct."
 msgstr "%s verkar inte vara en giltig url. Vänligen korrigera."
 
 #. translators: 1: Verification string from user input; 2: Service name.
-#: inc/options/class-wpseo-option.php:278
+#: inc/options/class-wpseo-option.php:288
 msgid "%1$s does not seem to be a valid %2$s verification string. Please correct."
 msgstr "%1$s verkar inte vara en giltig %2$s-verifieringssträng. Vänligen korrigera."
 
 #. translators: %s expands to the name of a post type (plural).
-#: inc/options/class-wpseo-option-titles.php:248
+#: inc/options/class-wpseo-option-titles.php:242
 msgid "%s Archive"
 msgstr "%s arkiv"
 
 #. translators: %s expands to the search phrase.
-#: inc/options/class-wpseo-option-titles.php:199
+#: inc/options/class-wpseo-option-titles.php:205
 msgid "You searched for %s"
 msgstr "Du sökte efter %s"
 
 #. translators: %s expands to a twitter user name.
-#: inc/options/class-wpseo-option-social.php:169
+#: inc/options/class-wpseo-option-social.php:180
 msgid "%s does not seem to be a valid Twitter user-id. Please correct."
 msgstr "%s ser inte ut att vara ett korrekt användar-id för Twitter. Var vänlig korrigera."
 
-#: inc/options/class-wpseo-option-social.php:93
+#: inc/options/class-wpseo-option-social.php:95
 msgid "Summary with large image"
 msgstr "Sammanfattning med stor bild"
 
-#: inc/options/class-wpseo-option-social.php:92
+#: inc/options/class-wpseo-option-social.php:94
 msgid "Summary"
 msgstr "Sammanfattning"
 
 #. translators: 1: link to post; 2: link to blog.
-#: inc/options/class-wpseo-option-titles.php:202
+#: inc/options/class-wpseo-option-titles.php:208
 msgid "The post %1$s appeared first on %2$s."
 msgstr "Inlägget %1$s dök först upp på %2$s."
 
-#: inc/options/class-wpseo-option-ms.php:186
+#: inc/options/class-wpseo-option-ms.php:197
 msgid "No numeric value was received."
 msgstr "Inget numeriskt värde mottogs."
 
 #. translators: %s is the ID number of a blog.
-#: inc/options/class-wpseo-option-ms.php:174
+#: inc/options/class-wpseo-option-ms.php:185
 msgid "This must be an existing blog. Blog %s does not exist or has been marked as deleted."
 msgstr "Detta måste vara en existerande blogg. Bloggen %s finns inte eller har markerats som borttagen."
 
-#: inc/options/class-wpseo-option-ms.php:170
-#: inc/options/class-wpseo-option-ms.php:186
+#: inc/options/class-wpseo-option-ms.php:181
+#: inc/options/class-wpseo-option-ms.php:197
 msgid "The default blog setting must be the numeric blog id of the blog you want to use as default."
 msgstr "Inställningen för standard-bloggens ID måste vara det numeriska blogg-ID:et för den blogg du vill ha som standard-blogg."
 
 #. translators: %1$s expands to the option name and %2$sexpands to Yoast SEO
-#: inc/options/class-wpseo-option-ms.php:150
+#: inc/options/class-wpseo-option-ms.php:161
 msgid "%1$s is not a valid choice for who should be allowed access to the %2$s settings. Value reset to the default."
 msgstr "%1$s är inte ett giltigt val för vem som ska ha tillgång till inställningarna för %2$s. Värdet har återställts till det ursprungliga."
 
 #. translators: %s expands to a taxonomy slug.
-#: inc/options/class-wpseo-option-titles.php:466
+#: inc/options/class-wpseo-option-titles.php:450
 msgid "Please select a valid post type for taxonomy \"%s\""
 msgstr "Var vänlig välj en giltig posttyp för taxonomi \"%s\""
 
 #. translators: %s expands to a post type.
-#: inc/options/class-wpseo-option-titles.php:429
+#: inc/options/class-wpseo-option-titles.php:413
 msgid "Please select a valid taxonomy for post type \"%s\""
 msgstr "Var vänlig välj en korrekt taxanomi för posttypen \"%s\""
 
-#: inc/options/class-wpseo-option-titles.php:207
+#: inc/options/class-wpseo-option-titles.php:213
 msgid "You searched for"
 msgstr "Du sökte efter"
 
-#: inc/options/class-wpseo-option-titles.php:206
+#: inc/options/class-wpseo-option-titles.php:212
 msgid "Home"
 msgstr "Hem"
 
-#: inc/options/class-wpseo-option-titles.php:205
+#: inc/options/class-wpseo-option-titles.php:211
 msgid "Archives for"
 msgstr "Arkiv för"
 
-#: inc/options/class-wpseo-option-titles.php:204
+#: inc/options/class-wpseo-option-titles.php:210
 msgid "Error 404: Page not found"
 msgstr "Fel 404: Sidan finns inte"
 
-#: inc/class-wpseo-rank.php:107 languages/yoast-seo-js.php:409
+#: inc/class-wpseo-rank.php:107 languages/yoast-seo-js.php:440
 msgid "Good"
 msgstr "Bra"
 
@@ -3947,8 +3909,8 @@ msgid "Replaced with the slug which caused the 404"
 msgstr "Ersatte med sluggen som resulterade i 404an"
 
 #: inc/class-wpseo-replace-vars.php:1343
-msgid "Replaced with the posts focus keyword"
-msgstr "Ersatt med inläggets fokusnyckelord"
+msgid "Replaced with the posts focus keyphrase"
+msgstr "Ersatt med inläggens fokusnyckelordsfraser"
 
 #: inc/class-wpseo-replace-vars.php:1342
 msgid "Attachment caption"
@@ -4065,26 +4027,26 @@ msgstr "En ersättningsvariabel kan bara innehålla alfanumeriska tecken, ett un
 
 #. Translators: %1$s resolves to the SEO menu item, %2$s resolves to the Search
 #. Appearance submenu item.
-#: frontend/class-frontend.php:1221
+#: frontend/class-frontend.php:1182
 msgid "Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [%1$s - %2$s] menu and set up a template."
 msgstr "Meddelande endast till administratören: Denna sida visar ingen metabeskrivning eftersom den inte har någon. Skriv antingen en specifik beskrivning för denna sida eller gå till menyn [%1$s - %2$s] och skapa en mall."
 
-#: frontend/class-frontend.php:555
-#: inc/options/class-wpseo-option-titles.php:200
+#: frontend/class-frontend.php:516
+#: inc/options/class-wpseo-option-titles.php:206
 msgid "Page not found"
 msgstr "Sidan finns inte"
 
 #. translators: %s expands to a time period, i.e. month name, year or specific
 #. date.
 #. translators: %s expands to the variable used for term title.
-#: frontend/class-frontend.php:532 frontend/class-frontend.php:536
-#: frontend/class-frontend.php:540
-#: inc/options/class-wpseo-option-titles.php:264
+#: frontend/class-frontend.php:493 frontend/class-frontend.php:497
+#: frontend/class-frontend.php:501
+#: inc/options/class-wpseo-option-titles.php:265
 msgid "%s Archives"
 msgstr "%s-arkiv"
 
 #. translators: %s expands to the search phrase.
-#: frontend/class-frontend.php:491
+#: frontend/class-frontend.php:452
 msgid "Search for \"%s\""
 msgstr "Sök efter \"%s\""
 
@@ -4488,7 +4450,7 @@ msgid "author archives"
 msgstr "författararkiv"
 
 #: admin/views/tabs/social/facebook.php:44 admin/views/tool-bulk-editor.php:77
-#: inc/class-wpseo-replace-vars.php:1300 languages/wordpress-seojs.php:262
+#: inc/class-wpseo-replace-vars.php:1300 languages/wordpress-seojs.php:275
 msgid "Title"
 msgstr "Sidtitel"
 
@@ -4499,7 +4461,7 @@ msgstr "Sidtitel"
 msgid "%1$s Meta Box"
 msgstr "%1$s Metabox"
 
-#: admin/class-yoast-form.php:651
+#: admin/class-yoast-form.php:698
 msgid "Hide"
 msgstr "Göm"
 
@@ -4623,7 +4585,7 @@ msgstr "Webbplatsnamn"
 msgid "Webmaster Tools"
 msgstr "Verktyg för webbansvariga"
 
-#: admin/class-admin-init.php:225
+#: admin/class-admin-init.php:227
 msgid "You do not have your postname in the URL of your posts and pages, it is highly recommended that you do. Consider setting your permalink structure to <strong>/%postname%/</strong>."
 msgstr "Du har inte med inläggets/sidans namn i dina urler, något som verkligen kan rekommenderas. Överväg att ändra strukturen för permalänkar till <strong>/%postname%/</strong>."
 
@@ -4843,8 +4805,8 @@ msgstr "Inaktivera %s"
 msgid "The %1$s plugin might cause issues when used in conjunction with %2$s."
 msgstr "Tillägget %1$s kan orsaka problem när det används tillsammans med %2$s."
 
-#: admin/class-yoast-form.php:505 admin/metabox/class-metabox.php:604
-#: admin/taxonomy/class-taxonomy-fields-presenter.php:106
+#: admin/class-yoast-form.php:534 admin/metabox/class-metabox.php:626
+#: admin/taxonomy/class-taxonomy-fields-presenter.php:119
 msgid "Upload Image"
 msgstr "Ladda upp bild"
 
@@ -4877,7 +4839,7 @@ msgstr "Pinterest"
 msgid "Other"
 msgstr "Annan"
 
-#: admin/pages/metas.php:25 frontend/class-frontend.php:543
+#: admin/pages/metas.php:25 frontend/class-frontend.php:504
 msgid "Archives"
 msgstr "Arkiv"
 
@@ -4895,24 +4857,24 @@ msgstr "Nästa"
 
 #: admin/class-yoast-modal.php:84
 #: admin/google_search_console/views/gsc-redirect-nopremium.php:25
-#: languages/wordpress-seojs.php:32 languages/yoast-components.php:62
+#: languages/wordpress-seojs.php:38 languages/yoast-components.php:62
 msgid "Close"
 msgstr "Stäng"
 
 #. translators: %1$s expands to Yoast SEO, %2$s: 'Google XML Sitemaps' plugin
 #. name of possibly conflicting plugin with regard to the creation of sitemaps.
-#: admin/class-plugin-conflict.php:150
+#: admin/class-plugin-conflict.php:153
 msgid "Both %1$s and %2$s can create XML sitemaps. Having two XML sitemaps is not beneficial for search engines and might slow down your site."
 msgstr "Både %1$s och %2$s kan skapa XML-webbplatskartor. Att ha två XML-webbplatskartor gör ingen skillnad för sökmotorer och kan göra din webbplats långsammare."
 
 #. translators: %1$s expands to Yoast SEO.
-#: admin/class-plugin-conflict.php:143
+#: admin/class-plugin-conflict.php:146
 msgid "Configure %1$s's OpenGraph settings"
 msgstr "Konfigurera %1$ss OpenGraph-inställningar"
 
 #. translators: %1$s expands to Yoast SEO, %2%s: 'Facebook' plugin name of
 #. possibly conflicting plugin with regard to creating OpenGraph output.
-#: admin/class-plugin-conflict.php:139
+#: admin/class-plugin-conflict.php:142
 msgid "Both %1$s and %2$s create OpenGraph output, which might make Facebook, Twitter, LinkedIn and other social networks use the wrong texts and images when your pages are being shared."
 msgstr "Både  %1$s och %2$s skapar innehåll i OpenGraph, vilket kan leda till att Facebook, Twitter, Linkedin och andra sociala nätverk använder fel text och bilder när din sida delas."
 
@@ -4937,14 +4899,15 @@ msgstr "%s beskrivning"
 msgid "%s Title"
 msgstr "%s titel"
 
-#: admin/class-social-admin.php:43 admin/class-social-admin.php:166
+#: admin/class-social-admin.php:43 admin/class-social-admin.php:167
 #: admin/pages/social.php:20
-#: admin/taxonomy/class-taxonomy-social-fields.php:101
+#: admin/taxonomy/class-taxonomy-social-fields.php:106
 msgid "Twitter"
 msgstr "Twitter"
 
-#: admin/class-social-admin.php:42 admin/class-social-admin.php:163
-#: admin/pages/social.php:19 admin/taxonomy/class-taxonomy-social-fields.php:97
+#: admin/class-social-admin.php:42 admin/class-social-admin.php:164
+#: admin/pages/social.php:19
+#: admin/taxonomy/class-taxonomy-social-fields.php:102
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -4959,8 +4922,8 @@ msgstr "Den rekommenderade bildstorleken för %1$s är %2$spx"
 
 #. translators: %s expands to the social network's name.
 #: admin/class-social-admin.php:36
-msgid "If you want to override the image used on %s for this post, upload / choose an image or add the URL here."
-msgstr "Om du vill ändra bilden som används på %s för det här inlägget, ladda upp / välj en bild eller ange webbadressen till bilden här."
+msgid "If you want to override the image used on %s for this post, upload / choose an image here."
+msgstr "Om du vill åsidosätta bilden som används på %s för detta inlägg, ladda upp/välj en bild här."
 
 #. translators: %s expands to the social network's name.
 #: admin/class-social-admin.php:33
@@ -4972,170 +4935,41 @@ msgstr "Om du inte vill använda meta-beskrivningen för att dela inlägget på 
 msgid "If you don't want to use the post title for sharing the post on %s but instead want another title there, write it here."
 msgstr "Om du inte vill använda inläggets titel för att dela inlägget på %s utan istället vill använda en annan titel, ange den här."
 
-#: languages/yoast-seo-js.php:37
+#: languages/yoast-seo-js.php:42
 msgid "very difficult"
 msgstr "Väldigt svår"
 
-#: languages/yoast-seo-js.php:34
-msgid "Try to make shorter sentences, using less difficult words to improve readability."
-msgstr "Försök skriva kortare meningar med mindre svåra ord för att förbättra läsbarheten."
+#: languages/yoast-seo-js.php:39
+msgid "Try to make shorter sentences, using less difficult words to improve readability"
+msgstr "Försök att göra kortare meningar, med mindre svåra ord för att förbättra läsbarheten"
 
-#: languages/yoast-seo-js.php:30
+#: languages/yoast-seo-js.php:35
 msgid "difficult"
 msgstr "svårt"
 
-#: languages/yoast-seo-js.php:27
-msgid "Try to make shorter sentences to improve readability."
-msgstr "Försök göra meningarna kortare för att förbättra läsbarheten."
+#: languages/yoast-seo-js.php:32
+msgid "Try to make shorter sentences to improve readability"
+msgstr "Försök att göra kortare meningar för att förbättra läsbarheten"
 
-#: languages/yoast-seo-js.php:24
+#: languages/yoast-seo-js.php:29
 msgid "fairly difficult"
 msgstr "ganska svårt"
 
-#: inc/class-wpseo-rank.php:106 languages/yoast-seo-js.php:400
+#: inc/class-wpseo-rank.php:106 languages/yoast-seo-js.php:431
 msgid "OK"
 msgstr "OK"
 
-#: languages/yoast-seo-js.php:18
+#: languages/yoast-seo-js.php:23
 msgid "fairly easy"
 msgstr "ganska lätt"
 
-#: languages/yoast-seo-js.php:15
+#: languages/yoast-seo-js.php:20
 msgid "easy"
 msgstr "lätt"
 
-#: languages/yoast-seo-js.php:12
+#: languages/yoast-seo-js.php:17
 msgid "very easy"
 msgstr "mycket lätt"
-
-#. Translators: %1$s expands to the numeric Flesch reading ease score, 	   %2$s
-#. to a link to a Yoast.com article about Flesch reading ease score, 	   %3$s
-#. to the easyness of reading, 	   %4$s expands to a note about the flesch
-#. reading score.
-#: languages/yoast-seo-js.php:9
-msgid "The copy scores %1$s in the %2$s test, which is considered %3$s to read. %4$s"
-msgstr "Sidan/inlägget fick %1$s poäng i %2$s-testet, som anses vara %3$s att läsa. %4$s"
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:150
-msgid "The focus keyword appears in the %1$sfirst paragraph%2$s of the copy."
-msgstr "Fokusnyckelordet visas textens %1$sförsta stycke%2$s."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:154
-msgid "The focus keyword doesn't appear in the %1$sfirst paragraph%2$s of the copy. Make sure the topic is clear immediately."
-msgstr "Fokusnyckelordet visas inte i textens %1$sförsta stycke%2$s. Se till att det direkt framgår vad texten handlar om."
-
-#: languages/yoast-seo-js.php:171
-msgid "The exact-match %3$skeyword density%4$s is %1$s, which is great; the focus keyword was found %2$d time."
-msgid_plural "The exact-match %3$skeyword density%4$s is %1$s, which is great; the focus keyword was found %2$d times."
-msgstr[0] "Den exakta matchningens %3$snyckelordsdensitet%4$s är %1$s, vilket är utmärkt. Fokusnyckelordet hittades %2$d gång."
-msgstr[1] "Den exakta matchningens %3$snyckelordsdensitet%4$s är %1$s, vilket är utmärkt. Fokusnyckelordet hittades %2$d gånger."
-
-#: languages/yoast-seo-js.php:174
-msgid "The exact-match %4$skeyword density%5$s is %1$s, which is over the advised %3$s maximum; the focus keyword was found %2$d time."
-msgid_plural "The exact-match %4$skeyword density%5$s is %1$s, which is over the advised %3$s maximum; the focus keyword was found %2$d times."
-msgstr[0] "Den exakta matchningens %4$snyckelordsdensitet%5$s är %1$s, vilket är över det rekommenderade maxvärdet på %3$s. Fokusordet hittades %2$d gång."
-msgstr[1] "Den exakta matchningens %4$snyckelordsdensitet%5$s är %1$s, vilket är över det rekommenderade maxvärdet på %3$s. Fokusordet hittades %2$d gånger."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:205
-msgid "A meta description has been specified, but it %1$sdoes not contain the focus keyword%2$s."
-msgstr "En metabeskrivning har angetts, men den %1$sinnehåller inte fokusnyckelordet%2$s."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:209
-msgid "No %1$smeta description%2$s has been specified. Search engines will display copy from the page instead."
-msgstr "Ingen %1$smetabeskrivning%2$s har angetts. Sökmotorer kommer att visa text från sidan istället."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag, 	   %3$d expands to the number of characters in the meta
-#. description, %4$d expands to 	   the total available number of characters in
-#. the meta description
-#: languages/yoast-seo-js.php:215
-msgid "The %1$smeta description%2$s is under %3$d characters long. However, up to %4$d characters are available."
-msgstr "%1$sMetabeskrivningen%2$s är kortare än %3$d tecken. Men du kan använda upp till %4$d tecken."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:268
-msgid "You have not used the focus keyword in any %1$ssubheading%2$s (such as an H2) in your copy."
-msgstr "Du har inte använt fokusnyckelordet i någon %1$sunderrubrik%2$s (till exempel H2) i din text."
-
-#: languages/yoast-seo-js.php:326
-msgid "The %1$simages%2$s on this page are missing alt attributes."
-msgstr "%1$sBilderna%2$s på denna sida saknar alt-attribut."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag
-#: languages/yoast-seo-js.php:228
-msgid "No %1$soutbound links%2$s appear in this page, consider adding some as appropriate."
-msgstr "Det finns inga %1$sutgående länkar%2$s på denna sida, överväg att lägga till några som passar."
-
-#. Translators: %1$s expands to the number of nofollow links, %2$s expands to a
-#. link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s to the
-#. number of outbound links
-#: languages/yoast-seo-js.php:238
-msgid "This page has %1$s nofollowed %2$soutbound link(s)%3$s and %4$s normal outbound link(s)."
-msgstr "Denna sida har %1$s %2$sutgående länk(ar)%3$s med parametern nofollow och %4$s vanlig(a) utgående länk(ar)."
-
-#. Translators: %1$s expands the number of outbound links, %2$s expands to a
-#. link on yoast.com, 	   %3$s expands to the anchor end tag
-#: languages/yoast-seo-js.php:233
-msgid "This page has %1$s %2$soutbound link(s)%3$s, all nofollowed."
-msgstr "Denna sida har %1$s %2$sutgående länk(ar)%3$s, alla med nofollow."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:310
-msgid "You're %1$slinking to another page with the focus keyword%2$s you want this page to rank for. Consider changing that if you truly want this page to rank."
-msgstr "Du %1$slänkar till en annan sida med det fokusnyckelord%2$s du vill att denna sida ska rankas för. Överväg att ändra det om du verkligen vill att denna sida ska rankas."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:314
-msgid "No %1$simages%2$s appear in this page, consider adding some as appropriate."
-msgstr "Du har inga %1$sbilder%2$s på denna sida. Överväg att lägga till några som passar."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:339
-msgid "The %1$sSEO title%2$s contains the focus keyword, but it does not appear at the beginning; try and move it to the beginning."
-msgstr "%1$sSEO-rubriken%2$s innehåller fokusnyckelordet, men det står inte i början. Försök att flytta det till början."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:335
-msgid "The %1$sSEO title%2$s contains the focus keyword, at the beginning which is considered to improve rankings."
-msgstr "%1$sSEO-rubriken%2$s börjar med fokusnyckelordet, något som anses förbättra rankingen."
-
-#: languages/yoast-seo-js.php:350
-msgid "The slug for this page is a bit long, consider shortening it."
-msgstr "Urlen för denna sida är rätt så lång. Överväg att förkorta den."
-
-#. Translators:  %1$s expands to a link on yoast.com, %2$s expands to the
-#. anchor end tag
-#: languages/yoast-seo-js.php:343
-msgid "The focus keyword does not appear in the %1$sURL%2$s for this page. If you decide to rename the URL be sure to check the old URL 301 redirects to the new one!"
-msgstr "Fokusnyckelordet förekommer inte i denna sidas %1$sURL%2$s. Om du ändrar URL-adressen behöver du se till att sidans gamlar URL omdirigeras med 301 till den nya!"
-
-#: languages/yoast-seo-js.php:365
-msgid "You've %1$snever used this focus keyword before%2$s, very good."
-msgstr "Du har %1$saldrig använt detta fokusnyckelord tidigare%2$s, mycket bra."
-
-#. Translators: %1$s expands to a link on yoast.com, %2$s expands to the anchor
-#. end tag.
-#: languages/yoast-seo-js.php:158
-msgid "No %1$sfocus keyword%2$s was set for this page. If you do not set a focus keyword, no score can be calculated."
-msgstr "Inget %1$sfokusnyckelord%2$s har angetts för denna sida. Om du inte anger något fokusnyckelord kan inga poäng beräknas."
-
-#: admin/class-meta-columns.php:132 admin/class-meta-columns.php:616
-msgid "Focus keyword not set."
-msgstr "Fokusnyckelord har inte angetts."
 
 #: admin/class-meta-columns.php:78
 msgid "Focus KW"
@@ -5161,21 +4995,13 @@ msgstr "SEO: Bra"
 msgid "SEO: OK"
 msgstr "SEO: OK"
 
-#: inc/class-wpseo-rank.php:120
-msgid "SEO: No Focus Keyword"
-msgstr "SEO: Inget fokusnyckelord"
-
-#: admin/metabox/class-metabox.php:814
+#: admin/metabox/class-metabox.php:842
 msgid "SEO issue: The featured image should be at least 200 by 200 pixels to be picked up by Facebook and other social media sites."
 msgstr "SEO-problem: Den utvalda bilden bör vara minst 200 x 200 pixlar för att plockas upp av Facebook och andra sociala medier."
 
-#: admin/metabox/class-metabox.php:242 admin/taxonomy/class-taxonomy.php:231
+#: admin/metabox/class-metabox.php:250 admin/taxonomy/class-taxonomy.php:231
 msgid "(no parent)"
 msgstr "(ingen förälder)"
-
-#: admin/metabox/class-metabox.php:143
-msgid "No focus keyword set."
-msgstr "Inget fokusnyckelord är angivet."
 
 #: admin/class-meta-columns.php:607 admin/metabox/class-metabox.php:136
 msgid "Post is set to noindex."
@@ -5223,7 +5049,7 @@ msgstr "Inget bild-index"
 #: admin/class-yoast-network-admin.php:39 admin/metabox/class-metabox.php:83
 #: admin/views/tabs/metas/paper-content/breadcrumbs-content.php:46
 #: admin/views/tabs/metas/paper-content/breadcrumbs-content.php:75
-#: inc/class-wpseo-meta.php:373
+#: inc/class-wpseo-meta.php:374
 msgid "None"
 msgstr "Ingen"
 
@@ -5245,8 +5071,8 @@ msgstr "Meta-robotar avancerat"
 msgid "Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won't have an effect."
 msgstr "Varning: även om du kan ändra inställningarna för meta-robotar här, så är hela webbplatsen inställd på noindex i de övergripande sekretessinställningarna, så dessa inställningar har ingen effekt."
 
-#: admin/metabox/class-metabox.php:62 languages/yoast-components.php:217
-#: languages/yoast-seo-js.php:430
+#: admin/metabox/class-metabox.php:62 languages/yoast-components.php:214
+#: languages/yoast-seo-js.php:461
 msgid "Meta description"
 msgstr "Metabeskrivning"
 
@@ -5254,11 +5080,11 @@ msgstr "Metabeskrivning"
 msgid "SEO Title"
 msgstr "SEO-titel"
 
-#: inc/class-wpseo-replace-vars.php:1343 languages/wordpress-seojs.php:59
+#: inc/class-wpseo-replace-vars.php:1343
 msgid "Focus keyword"
 msgstr "Fokusnyckelord"
 
-#: languages/wordpress-seojs.php:29 languages/yoast-seo-js.php:436
+#: languages/wordpress-seojs.php:35 languages/yoast-seo-js.php:467
 msgid "Snippet preview"
 msgstr "Förhandsvisningstext"
 
@@ -5346,11 +5172,11 @@ msgid "Remove blog page from breadcrumbs"
 msgstr "Ta bort bloggsida från synliga sökvägar"
 
 #. translators: %s is the name of the plugin
-#: admin/class-customizer.php:54
+#: admin/class-customizer.php:53
 msgid "%s Breadcrumbs"
 msgstr "Synliga sökvägar från %s"
 
-#: admin/class-config.php:124 admin/metabox/class-metabox.php:826
+#: admin/class-config.php:124 admin/metabox/class-metabox.php:854
 #: admin/taxonomy/class-taxonomy.php:131
 msgid "Use Image"
 msgstr "Använd bild"
@@ -5442,7 +5268,7 @@ msgstr "Användarnamn på Twitter (utan @)"
 msgid "Google+"
 msgstr "Google+"
 
-#: admin/class-admin.php:224 languages/wordpress-seojs.php:123
+#: admin/class-admin.php:224 languages/wordpress-seojs.php:124
 msgid "FAQ"
 msgstr "Vanliga frågor"
 
@@ -5455,17 +5281,17 @@ msgstr "Premiumsupport"
 #: admin/taxonomy/class-taxonomy-metabox.php:156
 #: admin/taxonomy/class-taxonomy-metabox.php:164
 #: admin/taxonomy/class-taxonomy-metabox.php:167
-#: languages/wordpress-seojs.php:190
+#: languages/wordpress-seojs.php:188
 msgid "Settings"
 msgstr "Inställningar"
 
 #. translators: %1$s resolves to the opening tag of the link to the reading
 #. settings, %1$s resolves to the closing tag for the link
-#: admin/class-admin-init.php:149
+#: admin/class-admin-init.php:151
 msgid "You must %1$sgo to your Reading Settings%2$s and uncheck the box for Search Engine Visibility."
 msgstr "Du måste %1$sgå till läsinställningarna%2$s och avmarkera rutan för sökmotorsynlighet."
 
-#: admin/class-admin-init.php:146
+#: admin/class-admin-init.php:148
 msgid "Huge SEO Issue: You're blocking access to robots."
 msgstr "Stort SEO problem: Du blockerar sökmotorernas tillgång till din webbplats."
 
@@ -5477,38 +5303,38 @@ msgstr "Poster"
 msgid "Edit Files"
 msgstr "Redigera filer"
 
-#: admin/class-admin.php:523 admin/class-admin.php:524
+#: admin/class-admin.php:518 admin/class-admin.php:519
 #: admin/help_center/class-template-variables-tab.php:93
 msgid "Advanced Variables"
 msgstr "Avancerade variabler"
 
-#: admin/class-admin.php:515 admin/class-admin.php:516
+#: admin/class-admin.php:510 admin/class-admin.php:511
 #: admin/help_center/class-template-variables-tab.php:87
 msgid "Basic Variables"
 msgstr "Grundläggande variabler"
 
-#: admin/class-admin.php:508
+#: admin/class-admin.php:503
 msgid "Note that not all variables can be used in every template."
 msgstr "Notera att alla variablar inte kan användas i alla mallar"
 
 #. translators: %1$s expands to Yoast SEO.
-#: admin/class-admin.php:505
+#: admin/class-admin.php:500
 msgid "The title &amp; metas settings for %1$s are made up of variables that are replaced by specific values from the page when the page is displayed. The tabs on the left explain the available variables."
 msgstr "Inställningarna för rubrik och metadata för %1$s byggs upp av variabler som ersätts med specifika värden från sidan när sidan visas. Flikarna på vänster sida förklarar de tillgängliga variablerna."
 
-#: admin/class-admin.php:501 admin/class-admin.php:502
+#: admin/class-admin.php:496 admin/class-admin.php:497
 msgid "Template explanation"
 msgstr "Mallförklaring"
 
-#: admin/class-admin.php:495
+#: admin/class-admin.php:490
 msgid "Why Google won't display the right page title"
 msgstr "Varför Google inte visar den korrekta sidtiteln"
 
-#: admin/class-admin.php:494
+#: admin/class-admin.php:489
 msgid "Title optimization"
 msgstr "Titeloptimering"
 
-#: admin/class-admin.php:493
+#: admin/class-admin.php:488
 msgid "For more information:"
 msgstr "För mer information:"
 
@@ -5530,12 +5356,12 @@ msgstr "Sökkonsol"
 msgid "Tools"
 msgstr "Verktyg"
 
-#: admin/metabox/class-metabox.php:403 admin/metabox/class-metabox.php:411
-#: admin/metabox/class-metabox.php:414
+#: admin/metabox/class-metabox.php:411 admin/metabox/class-metabox.php:419
+#: admin/metabox/class-metabox.php:422
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: admin/views/tabs/dashboard/features.php:57
+#: admin/views/class-yoast-feature-toggles.php:96
 msgid "XML sitemaps"
 msgstr "XML-webbplatskartor"
 
@@ -5547,7 +5373,7 @@ msgid "Social"
 msgstr "Sociala medier"
 
 #: admin/menu/class-admin-menu.php:38
-#: admin/menu/class-network-admin-menu.php:35 frontend/class-frontend.php:1222
+#: admin/menu/class-network-admin-menu.php:35 frontend/class-frontend.php:1183
 #: inc/class-wpseo-admin-bar-menu.php:442
 msgid "SEO"
 msgstr "SEO"
@@ -5559,16 +5385,16 @@ msgstr "SEO"
 #. translators: %1$s expands to Yoast SEO, %2$s expands to the plugin version,
 #. %3$s expands to the plugin name
 #: admin/class-admin-gutenberg-compatibility-notification.php:72
-#: admin/class-admin-init.php:286 admin/class-admin-init.php:389
+#: admin/class-admin-init.php:288 admin/class-admin-init.php:391
 msgid "%1$s detected you are using version %2$s of %3$s, please update to the latest version to prevent compatibility issues."
 msgstr "%1$s upptäckte att du använder version %2$s av %3$s, vänligen uppdatera till den senaste versionen för att förhindra kompatibilitetsproblem."
 
-#: admin/class-admin-init.php:215
+#: admin/class-admin-init.php:217
 msgid "Just another WordPress site"
 msgstr "Bara en annan WordPress sida"
 
 #. translators: 1: link open tag; 2: link close tag.
-#: admin/class-admin-init.php:119
+#: admin/class-admin-init.php:121
 msgid "You still have the default WordPress tagline, even an empty one is probably better. %1$sYou can fix this in the customizer%2$s."
 msgstr "Du har fortfarande förvald WordPress-slogan, till och med en tom sådan är troligtvis bättre. %1$sDu kan fixa detta i anpassaren%2$s."
 
