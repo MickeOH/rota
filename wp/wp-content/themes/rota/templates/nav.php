@@ -8,6 +8,18 @@ $args = array(
 	'container'			=> false,
 ); 
 
+$show_static_page = get_field('show_static_page', 'option');
+
+
+
+if($show_static_page) :
+	$home_url = 'http://rota.nu/hem/';
+else:
+	$home_url = get_bloginfo('url');
+endif;
+
+
+
 
 ?>
 <header class="site-header container-fluid">
@@ -15,7 +27,7 @@ $args = array(
 	<div class="row">
 
 		<div class="col-md-3">
-			<a href="<?php echo get_bloginfo('url'); ?>">
+			<a href="<?php echo $home_url; ?>">
 				<?php if($logotype) : ?>
 					<?php echo wp_get_attachment_image( $logotype['ID'], $size = 'full' ); ?>
 				<?php else: ?>
