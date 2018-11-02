@@ -1,7 +1,11 @@
 .site-header {
 	margin-top: 20px;
-	margin-bottom: 20px;
-	
+
+	a img {
+		width: auto;
+		height: 125px;
+	}
+
 	.navbar {
 		text-align: right;
 
@@ -13,8 +17,36 @@
 
 			li {
 				display: inline-block;
-				font-size: 16px;
+				font-size: .875rem;
 				margin-left: 10px;
+			}
+		}
+
+		a {
+			color: $colorGrey2;
+			text-decoration: none;
+			transition: color 300ms ease-in-out;
+
+			&:hover {
+				text-decoration: none;
+				color: $colorPink;
+				color: $colorPurple;
+			}
+
+			&:after {
+				display:block;
+				content: '';
+				padding-top: 5px;
+				border-bottom: solid 1px $colorPink;
+				border-bottom: solid 1px $colorPurple;
+				transform: scaleX(0);
+				transition: transform 250ms ease-in-out;
+			}
+		}
+
+		a:hover {
+			&:after {
+				transform: scaleX(1);
 			}
 		}
 	}

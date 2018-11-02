@@ -1,6 +1,84 @@
 .component-articles {
+
+}
+
+.search-form-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 70%;
+}
+
+.search-form--startpage {
+	background: $colorPink;
+	background: $colorPurple;
+	padding: 40px;
+	margin-top: -68px;
+	margin-bottom: 40px;
+
+	.search-form-icon {
+		position: absolute;
+		top: 14px;
+		right: 40px;
+	}
+
+	.search-form-icon svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		z-index: 1;
+
+		path {
+			fill: white;
+		}
+	}
+
+	.search-submit {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 0;
+		width: 25px;
+		height: 25px;
+		border: none;
+		cursor: pointer;
+		background: transparent;
+		-webkit-appearance: none;
+		outline: none;
+		z-index: 2;
+
+		&:active + svg path {
+			fill: $colorPurple;
+		}
+	}
+	input[type="search"]{
+		padding-right: 50px;
+		width: 100%;
+		background: $colorPinkVague;
+		background: $colorPurpleVague;
+
+		&:focus {
+			background: white;
+			color: $colorPinkVague;
+			color: $colorPurple;
+		}
+		&:focus + .search-form-icon svg path {
+			fill: $colorPink;
+			fill: $colorPurple;
+		}
+	}
+
+
+	label {
+		margin: 0;
+		width: 100%;
+	}
+
 	.h1 {
 		text-align: center;
+		color: white;
+		margin-bottom: 30px;
 	}
 
 	.search-form {
@@ -22,5 +100,5 @@
 }
 
 .articles_container {
-	
+
 }

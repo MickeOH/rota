@@ -58,8 +58,6 @@ $url = get_permalink();
 ?>
 
 <section class="component component-articles">
-	<div class="container-fluid">
-
 		<?php if($active_cat) : ?>
 			<?php $back_url = url_remove_querystring($url, _('kategori') ); ?>
 			<p class="goback">
@@ -73,22 +71,34 @@ $url = get_permalink();
 			</<?php echo $header_tag; ?>>
 		<?php else: ?>
 			<?php if($header) : ?>
+			<div class="search-form--startpage">
+				<div class="container-fluid">
 				<<?php echo $header_tag; ?> class="h1">
 					<?php echo $header; ?>
 				</<?php echo $header_tag; ?>>
-				<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-					<label>
-						<span class="screen-reader-text"><?php echo _x( 'Sök efter:', 'label' ) ?></span>
-						<input	type="search" class="search-field"
-								placeholder="<?php echo esc_attr_x( 'Skriv t.ex. namn på en kreatör, en plats, ett livsmedel osv...', 'placeholder' ) ?>"
-								value="<?php echo get_search_query() ?>" name="s"
-								title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-					</label>
-						<input 	type="submit" class="search-submit"
-								value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-				</form>
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+						<div class="search-form-wrapper">
+							<label>
+								<span class="screen-reader-text"><?php echo _x( 'Sök efter:', 'label' ) ?></span>
+								<input	type="search" class="search-field"
+										placeholder="<?php echo esc_attr_x( 'Skriv t.ex. namn på en kreatör, en plats, ett livsmedel osv...', 'placeholder' ) ?>"
+										value="<?php echo get_search_query() ?>" name="s"
+										title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+                                <span class="search-form-icon">
+                                    <input 	type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" >
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 58.6 58.6" style="enable-background:new 0 0 58.6 58.6;" xml:space="preserve"><style type="text/css">.search-glass-path{fill:#305547;}</style><path class="search-glass-path" d="M48.5,10.2c-8.3-8.3-21.7-8.3-30,0c-4,4-6.2,9.3-6.2,15c0,5.2,1.9,10.2,5.4,14.1L4.4,52.5
+	c-0.5,0.5-0.5,1.3,0,1.8c0.2,0.2,0.6,0.4,0.9,0.4s0.6-0.1,0.9-0.4L19.4,41c3.9,3.5,8.8,5.4,14.1,5.4c5.7,0,11-2.2,15-6.2
+	C56.7,31.9,56.7,18.5,48.5,10.2z M46.7,38.4c-3.5,3.5-8.2,5.5-13.2,5.5c-5,0-9.7-1.9-13.2-5.5s-5.5-8.2-5.5-13.2
+	c0-5,1.9-9.7,5.5-13.2c3.6-3.6,8.4-5.5,13.2-5.5c4.8,0,9.6,1.8,13.2,5.5C54,19.3,54,31.1,46.7,38.4z"/></svg>
+                                </span>
+										</label>
+						</div>
+					</form>
+					</div>
+				</div>
 			<?php endif; ?>
 		<?php endif; ?>
+	<div class="container-fluid">
 
 		<?php
 
@@ -115,7 +125,7 @@ $url = get_permalink();
                 endforeach;
 			echo '</ul>';
 		endif;
-		
+
 		if ( $articles->have_posts() ) :
 			?><section class="articles_container row justify-content-center"><?php
 			while ( $articles->have_posts() ) :

@@ -36,3 +36,46 @@
     blockquote, q {}
 
 }
+
+.article_excerpt {
+
+    a, a:hover, a:active {
+        text-decoration: none;
+        color: $colorGrey1;
+        transition: ease-in-out color 250ms;
+    }
+
+    a:hover, a:active {
+        color: $colorPink;
+        color: lighten($colorPurple,15%);
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+
+
+    .article_thumbnail {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    img {
+        transition: ease-in-out all 750ms;
+        &:hover {
+            -webkit-filter: opacity(.5) sepia(.3);
+            filter: opacity(.5) sepia(.3);
+            transform: scale(1.2);
+        }
+    }
+
+    .postmeta_tags {
+        margin: 15px 0 0 0;
+        font-style: italic;
+    }
+
+    .postmeta_time {
+
+    }
+}
