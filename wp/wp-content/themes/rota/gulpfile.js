@@ -23,7 +23,7 @@ var sass = require('gulp-sass'),
 
 // Default config
 var config = {
-    url: 'http://rota.local.site',
+    url: 'http://localhost:8888/rota/wp',
     syncFiles : ['**/*.php', '**/**/*.php', '*.php', 'assets/img/**/*.{png,jpg,gif}'],
     styles : {
         input : './assets/sass/app.scss',

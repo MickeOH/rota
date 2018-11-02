@@ -1,15 +1,63 @@
 body {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.66em;
+  font-family: 'Quicksand', sans-serif;
+  font-size: .875em;  //14px base size
+  line-height: 1.5em;
+  color: $colorGrey1;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.786rem; //25px based on 14px base size
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.429rem; //20px based on 14px base size
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem; //14px based on 14px base size
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: lighten($colorGreen, 15%);
+
+  &:hover {
+    color: $colorGreen;
+  }
+}
+
+input[type="text"],input[type="search"] {
+  background: #e18b7f;
+  color: white;
+  border-radius: 30px;
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  transition: ease-in-out all .2s;
+}
+
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
 }
 
 .container-fluid {
-    width: 100%;
-    max-width: 1170px;
+  width: 100%;
+  max-width: 1170px;
 }
