@@ -1,6 +1,6 @@
 <section class="editor_content">
 	<h1><?php the_title(); ?></h1>
-	<?php the_content(); ?>
+	<?php the_field('content'); ?>
 	<p class="postmeta">
 		<?php
 		$article_tags = wp_get_post_terms( get_the_ID(), 'article_tag' );
