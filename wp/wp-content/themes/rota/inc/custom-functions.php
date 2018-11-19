@@ -48,6 +48,21 @@ function hide_editor() {
 	}
 }
 
+function excerpt($limit) {
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+
+	if (count($excerpt) >= $limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ", $excerpt) . '...';
+	} else {
+		$excerpt = implode(" ", $excerpt);
+	}
+
+	$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+	return $excerpt;
+}
+
 
 add_action( 'load-post.php', 'hide_editor' );
 add_action( 'wp', 'check_if_static_page' );

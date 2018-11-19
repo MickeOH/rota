@@ -3,27 +3,27 @@
 function create_article_cpt() {
 
 	$labels = array(
-		'name'                  => _x( 'Artiklar', 'Post Type General Name', 'rota' ),
-		'singular_name'         => _x( 'Artikel', 'Post Type Singular Name', 'rota' ),
-		'menu_name'             => __( 'Artiklar', 'rota' ),
-		'name_admin_bar'        => __( 'Artiklar', 'rota' ),
-		'all_items'             => __( 'Alla Artiklar', 'rota' ),
-		'add_new_item'          => __( 'Lägg till ny artikel', 'rota' ),
+		'name'                  => _x( 'Aktörer', 'Post Type General Name', 'rota' ),
+		'singular_name'         => _x( 'Akttör', 'Post Type Singular Name', 'rota' ),
+		'menu_name'             => __( 'Aktörer', 'rota' ),
+		'name_admin_bar'        => __( 'Aktörer', 'rota' ),
+		'all_items'             => __( 'Alla Aktörer', 'rota' ),
+		'add_new_item'          => __( 'Lägg till ny aktör', 'rota' ),
 		'add_new'               => __( 'Skapa ny', 'rota' ),
-		'new_item'              => __( 'Ny Artikel', 'rota' ),
-		'edit_item'             => __( 'Redigera Artikel', 'rota' ),
-		'update_item'           => __( 'Uppdatera Artikel', 'rota' ),
-		'view_item'             => __( 'Se Artikel', 'rota' ),
-		'view_items'            => __( 'Se Artiklar', 'rota' ),
+		'new_item'              => __( 'Ny Aktör', 'rota' ),
+		'edit_item'             => __( 'Redigera Aktör', 'rota' ),
+		'update_item'           => __( 'Uppdatera Aktör', 'rota' ),
+		'view_item'             => __( 'Se Aktör', 'rota' ),
+		'view_items'            => __( 'Se Aktörer', 'rota' ),
 	);
 
 	$slug_args = array(
-		'slug'					=> __('artikel', 'rota'),
+		'slug'					=> __('aktor', 'rota'),
 		'with_front'			=> false
 	);
 
 	$args = array(
-		'label'                 => __( 'Artikel', 'rota' ),
+		'label'                 => __( 'Aktör', 'rota' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'editor' ),
 		'hierarchical'          => false,

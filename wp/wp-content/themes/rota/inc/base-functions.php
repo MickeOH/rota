@@ -45,6 +45,8 @@ function theme_setup() {
 
     add_image_size( 'article_excerpt', 360, 240, true );
     add_image_size( 'category_image', 75, 75, true );
+    add_image_size( 'blog_featured', 1200, 415, true );
+    add_image_size( 'blog_excerpt', 500, 330, true );
 
 }
 add_action( 'after_setup_theme', 'theme_setup' );

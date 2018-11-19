@@ -19,7 +19,7 @@
                 "layout_5b4dd2ad0a768": {
                     "key": "layout_5b4dd2ad0a768",
                     "name": "articles",
-                    "label": "Artiklar",
+                    "label": "Aktörer",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -144,10 +144,10 @@
                         },
                         {
                             "key": "field_5bdb24bdbd7da",
-                            "label": "Visa specifika artiklar",
+                            "label": "Visa specifika aktörer",
                             "name": "show_featured_articles",
                             "type": "true_false",
-                            "instructions": "",
+                            "instructions": "Om denna är ikryssad kan du välja vilka aktörer som ska visas, annars visas dom senaste.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -163,7 +163,7 @@
                         },
                         {
                             "key": "field_5bdb24dcbd7db",
-                            "label": "Artiklar",
+                            "label": "Aktörer",
                             "name": "featured_articles",
                             "type": "relationship",
                             "instructions": "",
@@ -196,6 +196,25 @@
                             "min": "",
                             "max": "",
                             "return_format": "object"
+                        },
+                        {
+                            "key": "field_5bf2e422c3e4c",
+                            "label": "Visa inga aktörer",
+                            "name": "hide_articles",
+                            "type": "true_false",
+                            "instructions": "Om denna är ikryssad visas bara kategorier.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -307,6 +326,302 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5bf2e4b5d6823": {
+                    "key": "layout_5bf2e4b5d6823",
+                    "name": "latest_blogposts",
+                    "label": "Senaste blogginläggen",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bf2e4b5d6824",
+                            "label": "Sätt datum för komponent?",
+                            "name": "show_date_fields",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5bf2e4b5d6825",
+                            "label": "Datum",
+                            "name": "date",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5bf2e4b5d6824",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5bf2e4b5d6826",
+                                    "label": "Från",
+                                    "name": "date_from",
+                                    "type": "date_time_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y-m-d H:i",
+                                    "return_format": "Y-m-d H:i",
+                                    "first_day": 1
+                                },
+                                {
+                                    "key": "field_5bf2e4b5d6827",
+                                    "label": "Till",
+                                    "name": "date_to",
+                                    "type": "date_time_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y-m-d H:i",
+                                    "return_format": "Y-m-d H:i",
+                                    "first_day": 1
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5bf2e4b5d6828",
+                            "label": "Rubrik",
+                            "name": "header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bf2e4b5d6829",
+                            "label": "Rubrik-tagg",
+                            "name": "header_tag",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "h1": "H1",
+                                "h2": "H2",
+                                "h3": "H3"
+                            },
+                            "allow_null": 0,
+                            "default_value": "h1",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5bf2e4e9620a1",
+                            "label": "Antal blogginlägg att visa",
+                            "name": "nr_blogposts",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 3,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_5bf2e4fb620a2",
+                            "label": "Länk",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bf2ea172dc8d": {
+                    "key": "layout_5bf2ea172dc8d",
+                    "name": "blogposts",
+                    "label": "Blogginlägg flöde",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bf2ea172dc8e",
+                            "label": "Sätt datum för komponent?",
+                            "name": "show_date_fields",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5bf2ea172dc8f",
+                            "label": "Datum",
+                            "name": "date",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5bf2ea172dc8e",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5bf2ea172dc90",
+                                    "label": "Från",
+                                    "name": "date_from",
+                                    "type": "date_time_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y-m-d H:i",
+                                    "return_format": "Y-m-d H:i",
+                                    "first_day": 1
+                                },
+                                {
+                                    "key": "field_5bf2ea172dc91",
+                                    "label": "Till",
+                                    "name": "date_to",
+                                    "type": "date_time_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y-m-d H:i",
+                                    "return_format": "Y-m-d H:i",
+                                    "first_day": 1
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5bf2ea172dc92",
+                            "label": "Rubrik",
+                            "name": "header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bf2ea172dc93",
+                            "label": "Rubrik-tagg",
+                            "name": "header_tag",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "h1": "H1",
+                                "h2": "H2",
+                                "h3": "H3"
+                            },
+                            "allow_null": 0,
+                            "default_value": "h1",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Component",
@@ -338,5 +653,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1541088795
+    "modified": 1542646371
 }

@@ -3,6 +3,7 @@ $header = get_sub_field('header');
 $header_tag = get_sub_field('header_tag');
 $show_featured_articles = get_sub_field('show_featured_articles');
 $featured_articles = get_sub_field('featured_articles');
+$hide_articles = get_sub_field('hide_articles');
 
 $args = array(
 	'taxonomy' => 'article_category',
@@ -121,23 +122,26 @@ $url = get_permalink();
                 		</a>
                 	</li>
                 	<?php
-                    //echo '<li><a href="#">' . $term->name . '</li>';
                 endforeach;
 			echo '</ul>';
 		endif;
 
-		if ( $articles->have_posts() ) :
-			?><section class="articles_container row justify-content-center"><?php
-			while ( $articles->have_posts() ) :
-				$articles->the_post();
-				get_template_part('templates/content', 'article_excerpt');
-			endwhile;
-			?></section><?php
-		else:
-			
-		endif;
+		if(!$hide_articles) :
 
-		wp_reset_postdata();
+			if ( $articles->have_posts() ) :
+				?><section class="articles_container row justify-content-center"><?php
+				while ( $articles->have_posts() ) :
+					$articles->the_post();
+					get_template_part('templates/content', 'article_excerpt');
+				endwhile;
+				?></section><?php
+			else:
+				
+			endif;
+
+			wp_reset_postdata();
+
+		endif;
 
 		?>
 
