@@ -60,16 +60,18 @@ $url = get_permalink();
 
 <section class="component component-articles">
 		<?php if($active_cat) : ?>
-			<?php $back_url = url_remove_querystring($url, _('kategori') ); ?>
-			<p class="goback">
-				<a href="<?php echo $back_url; ?>">
-					<?php _e('Tillbaka'); ?>
-				</a>
-			</p>
+            <div class="container-fluid">
+                <?php $back_url = url_remove_querystring($url, _('kategori') ); ?>
+                <p class="goback">
+                    <a href="<?php echo $back_url; ?>">
+                        <?php _e('Tillbaka'); ?>
+                    </a>
+                </p>
 
-			<<?php echo $header_tag; ?> class="h1">
-				<?php echo $active_cat_title; ?>
-			</<?php echo $header_tag; ?>>
+                <<?php echo $header_tag; ?> class="h1">
+                    <?php echo $active_cat_title; ?>
+                </<?php echo $header_tag; ?>>
+            </div>
 		<?php else: ?>
 			<?php if($header) : ?>
 			<div class="search-form--startpage">
@@ -115,7 +117,7 @@ $url = get_permalink();
                 	<li>
                 		<a href="<?php echo $term_url; ?>">
                 			<?php if($image) : ?>
-                				<?php echo wp_get_attachment_image( $image['ID'], 'category_image', false, array('class' => 'category_image') ); ?>
+                				<?php echo wp_get_attachment_image( $image['ID'], '', false, array('class' => 'category_image') ); ?>
                 			<?php endif; ?>
 
                 			<?php echo $term_name; ?>
@@ -126,7 +128,7 @@ $url = get_permalink();
 			echo '</ul>';
 		endif;
 
-		if(!$hide_articles) :
+		if($active_cat) :
 
 			if ( $articles->have_posts() ) :
 				?><section class="articles_container row justify-content-center"><?php
