@@ -1,0 +1,115 @@
+input[type="text"],input[type="search"] {
+  background: #ececec;
+  color: #000;
+  border-radius: 30px;
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  transition: ease-in-out all .2s;
+
+  &:focus {
+    background: #ccc;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+
+textarea {
+  background: #ececec;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    background: #ccc;
+  }
+}
+
+button,input[type="submit"] {
+  background: $colorYellow;
+  border-radius: 30px;
+  border: none;
+  padding: 15px;
+  min-width: 150px;
+  cursor: pointer;
+  transition: all cubic-bezier(0.85, 0.01, 0.62, 1) .2s;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: lighten($colorYellow, 10%);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(.95);
+    outline: none;
+  }
+}
+
+.gform_wrapper {
+  input[type="text"],input[type="email"],textarea {
+   width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  label {
+    margin-top: 1em;
+  }
+
+  .validation_message {
+    background: #ffcec8;
+    border-radius: 15px;
+    padding: 5px 11px;
+    position: relative;
+    margin: 8px 0 15px 0;
+
+    &:before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      top: -8px;
+      left: 20px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #ffcec8;
+    }
+  }
+
+  .gfield_description:not([class*="validation_message"]) {
+    color: #999;
+    font-style: italic;
+  }
+
+  .gform_footer {
+    padding: 3em 0;
+  }
+
+  button, input[type=submit] {
+    width: 100%;
+  }
+}

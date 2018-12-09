@@ -8,6 +8,8 @@ body {
 h1 {
   font-weight: 300;
   font-size: 1.786rem; //25px based on 14px base size
+  text-align: center;
+  margin-bottom: 1.5em;
 }
 
 h2 {
@@ -33,31 +35,21 @@ a {
   }
 }
 
-input[type="text"],input[type="search"] {
-  background: #e18b7f;
-  color: white;
-  border-radius: 30px;
-  padding: 15px 25px;
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  transition: ease-in-out all .2s;
-}
-
-::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-}
-::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-}
-:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-}
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
+main {
+  padding-top: 60px;
 }
 
 .container-fluid {
   width: 100%;
   max-width: 1170px;
+}
+
+.goback {
+  a:before {
+    content: "";
+    border-top: solid 5px transparent;
+    border-right: solid 5px $colorGreen;
+    border-bottom: solid 5px transparent;
+    display: inline-block;
+  }
 }

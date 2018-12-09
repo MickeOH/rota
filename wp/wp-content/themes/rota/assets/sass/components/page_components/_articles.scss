@@ -11,8 +11,8 @@
 .search-form--startpage {
 	background: $colorPink;
 	background: $colorPurple;
-	padding: 40px;
-	margin-top: -68px;
+	padding: 60px;
+	margin-top: -128px;
 	margin-bottom: 40px;
 
 	.search-form-icon {
@@ -97,8 +97,17 @@
 		display: inline-block;
 		margin: 0 10px;
 	}
+
+	a {
+		color: black;
+	}
+
+	img {
+		display: block;
+		margin-bottom: 10px;
+		width: 60px;
+	}
 }
 
 .articles_container {
-
 }
