@@ -29,5 +29,9 @@
             echo get_the_time( 'd F Y' );
             ?>
         </p>
+
+        
+        <?php echo excerpt_article(20); ?>
+
     </a>
 </article>

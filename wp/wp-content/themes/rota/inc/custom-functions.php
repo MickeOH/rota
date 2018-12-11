@@ -63,6 +63,20 @@ function excerpt($limit) {
 	return $excerpt;
 }
 
+function excerpt_article($limit) {
+	global $post;
+	$text = get_field('content'); 
+	if ( '' != $text ) {
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]&gt;', ']]&gt;', $text);
+		$excerpt_length = $limit; // 20 words
+		$excerpt_more = apply_filters('excerpt_more', ' ' . '...');
+		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+	}
+	return apply_filters('the_excerpt', $text);
+}
+
 
 add_action( 'load-post.php', 'hide_editor' );
 add_action( 'wp', 'check_if_static_page' );
