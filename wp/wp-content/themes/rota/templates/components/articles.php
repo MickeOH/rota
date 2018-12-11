@@ -30,7 +30,7 @@ $article_cats = get_terms($args);
 
 $args = array(
 	'post_type'              => array( 'article' ),
-	'posts_per_page'         => '3',
+	'posts_per_page'         => '-1',
 );
 if($active_cat) :
 	$args['tax_query'] = array(
