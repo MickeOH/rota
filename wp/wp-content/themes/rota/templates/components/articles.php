@@ -68,9 +68,9 @@ $url = get_permalink();
                     </a>
                 </p>
 
-                <<?php echo $header_tag; ?> class="h1">
+                <h1 class="h1">
                     <?php echo $active_cat_title; ?>
-                </<?php echo $header_tag; ?>>
+                </h1>
             </div>
 		<?php else: ?>
 			<?php if($header) : ?>
@@ -84,7 +84,7 @@ $url = get_permalink();
 							<label>
 								<span class="screen-reader-text"><?php echo _x( 'Sök efter:', 'label' ) ?></span>
 								<input	type="search" class="search-field"
-										placeholder="<?php echo esc_attr_x( 'Skriv t.ex. namn på en kreatör, en plats, ett livsmedel osv...', 'placeholder' ) ?>"
+										placeholder="<?php echo esc_attr_x( 'Vad letar du efter idag? Skriv t.ex. namn på en kreatör, en plats, ett livsmedel osv...', 'placeholder' ) ?>"
 										value="<?php echo get_search_query() ?>" name="s"
 										title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
                                 <span class="search-form-icon">

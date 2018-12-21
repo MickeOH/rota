@@ -6,6 +6,10 @@
 	position: relative;
 	display: inline-block;
 	width: 70%;
+
+	@include screen-small {
+		width: 100%;
+	}
 }
 
 .search-form--startpage {
@@ -14,6 +18,10 @@
 	padding: 60px;
 	margin-top: -128px;
 	margin-bottom: 40px;
+
+	@include screen-small {
+		padding: 60px 10px;
+	}
 
 	.search-form-icon {
 		position: absolute;
@@ -27,10 +35,12 @@
 		left: 0;
 		height: 25px;
 		width: 25px;
+		min-width: 25px; //Reset common submit.
 		z-index: 1;
 
 		path {
 			fill: white;
+			transition: fill ease-in-out .2s;
 		}
 	}
 
@@ -48,8 +58,13 @@
 		outline: none;
 		z-index: 2;
 
-		&:active + svg path {
+		&:active + svg path,
+		&:hover + svg path {
 			fill: $colorPurple;
+		}
+
+		&:active, &:hover {
+			background: transparent;
 		}
 	}
 	input[type="search"]{
@@ -79,6 +94,10 @@
 		text-align: center;
 		color: white;
 		margin-bottom: 30px;
+
+		@include screen-small {
+			font-size: 1.17rem;
+		}
 	}
 
 	.search-form {
@@ -95,19 +114,60 @@
 
 	li {
 		display: inline-block;
-		margin: 0 10px;
-	}
+		margin: 0 15px;
 
-	a {
-		color: black;
+		@include screen-small {
+			display: block;
+			margin: 25px 0;
+		}
 	}
 
 	img {
 		display: block;
-		margin-bottom: 10px;
+		margin: 0 auto;
 		width: 60px;
+		transition: all ease-in-out .3s;
+	}
+
+	a {
+		color: $colorGrey1;
+		text-decoration: none;
+		transition: color 300ms ease-in-out;
+
+		&:hover {
+			text-decoration: none;
+			color: $colorPink;
+			color: $colorPurple;
+		}
+
+		&:after {
+			display:block;
+			content: '';
+			padding-top: 5px;
+			border-bottom: solid 1px $colorPink;
+			border-bottom: solid 1px $colorPurple;
+			transform: scaleX(0);
+			transition: transform 250ms ease-in-out;
+		}
+	}
+
+	a:hover {
+		&:after {
+			transform: scaleX(1);
+		}
+
+		img {
+			background: lighten($colorGreen, 60%);
+			border-radius: 50%;
+		}
 	}
 }
 
 .articles_container {
+	border-top: 1px dashed #e2e2e2;
+	padding-top: 20px;
+}
+
+.single-article h1 {
+	margin-bottom: 1.5em;
 }

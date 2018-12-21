@@ -32,8 +32,8 @@
     p {
         font-size: 1rem;
         margin: 0 0 1.44em 0;
-        &:last-of-type {
-            margin: 0 0 0 0;
+        &:last-of-type:not([class*="postmeta"]) {
+            margin: 0;
         }
         a {}
     }
@@ -49,6 +49,7 @@
         text-align: center;
         font-style: italic;
       font-size: 0.857rem; //12px based on 14px base size
+      margin-top: 30px;
     }
 
     strong {
@@ -91,6 +92,7 @@
 
     img {
         transition: ease-in-out all 750ms;
+        border: 1px solid #f1f1f1;
         &:hover {
             -webkit-filter: opacity(.5) sepia(.3);
             filter: opacity(.5) sepia(.3);

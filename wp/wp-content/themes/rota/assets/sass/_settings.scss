@@ -9,4 +9,23 @@ $colorGrey1: #3e3e3e;
 $colorGrey2: rgba(62, 62, 62, .6);
 
 
+@mixin screen-small() {
 
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-medium() {
+
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin screen-large() {
+
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}

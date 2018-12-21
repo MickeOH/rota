@@ -15,6 +15,7 @@ h1 {
 h2 {
   font-weight: 300;
   font-size: 1.429rem; //20px based on 14px base size
+  margin-bottom: 1em;
 }
 
 p {
@@ -37,6 +38,7 @@ a {
 
 main {
   padding-top: 60px;
+  min-height: 60vh;
 }
 
 .container-fluid {
@@ -45,6 +47,7 @@ main {
 }
 
 .goback {
+  display: inline-block;
   a:before {
     content: "";
     border-top: solid 5px transparent;
@@ -52,4 +55,73 @@ main {
     border-bottom: solid 5px transparent;
     display: inline-block;
   }
+
+  a {
+    color: lighten($colorGreen, 15%);
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      color: $colorGreen;
+    }
+
+    &:after {
+      display:block;
+      content: '';
+      padding-top: 5px;
+      border-bottom: solid 1px $colorGreen;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+
+  a:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.search-results article + article {
+  border-top: 1px dashed #e2e2e2;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.pagination .page-numbers:not([class*="next"]):not([class*="prev"]) {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: #3e3e3e;
+  text-decoration: none;
+}
+
+.pagination a.page-numbers:not([class*="next"]):not([class*="prev"]) {
+  background: $colorYellow;
+
+  &:hover {
+    background: lighten($colorYellow, 10%);
+    text-decoration: none;
+  }
+}
+.pagination .next {
+  margin-left: 10px;
+}
+
+.pagination .prev {
+  margin-right: 10px;
+}
+
+.pagination {
+  margin-top: 40px;
+}
+
+//Shortcodes ultimate slider
+
+.mfp-title {
+  opacity: 0;
 }

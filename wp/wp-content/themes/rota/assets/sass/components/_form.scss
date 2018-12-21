@@ -39,7 +39,7 @@ textarea {
   }
 }
 
-button,input[type="submit"] {
+button,input[type="submit"],.button--primary {
   background: $colorYellow;
   border-radius: 30px;
   border: none;
@@ -48,20 +48,41 @@ button,input[type="submit"] {
   cursor: pointer;
   transition: all cubic-bezier(0.85, 0.01, 0.62, 1) .2s;
   outline: none;
+  text-align: center;
+  color: #3e3e3e;
+  text-decoration: none;
 
   &:focus {
     outline: none;
+    text-decoration: none;
   }
 
   &:hover {
     background: lighten($colorYellow, 10%);
     transform: scale(1.05);
     outline: none;
+    text-decoration: none;
   }
 
   &:active {
     transform: scale(.95);
     outline: none;
+    text-decoration: none;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.button--backwards {
+  &:before {
+    content: "";
+    border-top: solid 5px transparent;
+    border-right: solid 5px $colorGreen;
+    border-bottom: solid 5px transparent;
+    display: inline-block;
+    margin-right: 10px;
   }
 }
 

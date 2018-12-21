@@ -40,17 +40,19 @@ $latest_blog_posts = new WP_Query( $args );
 
                     $i++;
                 endwhile;
+
+                if($link) : ?>
+                    <p class="link">
+                        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+                            <?php echo $link['title']; ?>
+                        </a>
+                    </p>
+                <?php
+                endif;
+
             endif;
             wp_reset_postdata();
             ?>
-
-            <?php if($link) : ?>
-                <p class="link">
-                    <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-                        <?php echo $link['title']; ?>
-                    </a>
-                </p>
-            <?php endif; ?>
         </div>
     </section>
 <?php endif; ?>
