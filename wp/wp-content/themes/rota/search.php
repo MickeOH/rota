@@ -23,7 +23,7 @@
                     <a href="<?php echo $prev_url; ?>" class="button--primary button--backwards">Gå tillbaka</a>
                     <a href="/tipsa-oss/" class="button--primary">Tipsa oss om aktörer!</a>
                 </div>
-            <? endif; ?>
+            <?php endif; ?>
 	</article>
 
     <section class="container-fluid">
